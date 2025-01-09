@@ -11,7 +11,7 @@
 
   <meta name="dcterms.date" content="2024-12-16">
   <meta name="keywords" content="Other topics">
-  <title>BST 260: Introduction to Data Science – Association Not Causation</title>
+  <title>BIOSTAT 620: Introduction to Health Data Science – Association Not Causation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -251,21 +251,21 @@
 <pre><code># A tibble: 1,000,000 × 2
     group     r
     &lt;int&gt; &lt;dbl&gt;
- 1 168326 0.779
- 2 667607 0.765
- 3 162303 0.759
- 4 725864 0.753
- 5 525223 0.752
- 6 992421 0.752
- 7 155551 0.749
- 8  67326 0.746
- 9 920098 0.743
-10 209263 0.741
+ 1 914223 0.786
+ 2 275611 0.775
+ 3 232813 0.771
+ 4 657205 0.764
+ 5 204935 0.762
+ 6  85891 0.760
+ 7  49169 0.758
+ 8 367856 0.750
+ 9 272370 0.747
+10 664171 0.747
 # ℹ 999,990 more rows</code></pre>
 </div>
 </div>
 <ul>
-<li>We see a maximum correlation of 0.779.</li>
+<li>We see a maximum correlation of 0.786.</li>
 </ul>
 </section>
 <section id="spurious-correlation-4" class="slide level2">
@@ -306,7 +306,7 @@
 <pre><code># A tibble: 1 × 5
   term  estimate std.error statistic    p.value
   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;
-1 x        0.984     0.165      5.96 0.00000448</code></pre>
+1 x        0.838     0.138      6.09 0.00000329</code></pre>
 </div>
 </div>
 </section>
@@ -947,7 +947,7 @@ X_i = \beta_0 + \beta_1 y_i + \varepsilon_i, i=1, \dots, N
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("http:\/\/datasciencelabs\.github\.io\/2024");
+          var filterRegex = new RegExp("https:\/\/dmcable\.github\.io\/BIOSTAT620\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

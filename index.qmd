@@ -1,17 +1,16 @@
 ---
-title: "BST 260 Introduction to Data Science"
+title: "BIOSTAT 620 Introduction to Health Data Science"
 ---
 
 ## Course Information
 
-* Instructor: [Rafael A.Irizarry](https://rafalab.dfci.harvard.edu/)
-* Teaching fellows:  Corri Sept, Nikhil Vytla, and Yuan Wang
-* Location: Kresge 202A and 202B,	Harvard School of Public Health
-* Date and time: Mon & Wed 9.45 - 11:15am
+* Instructor: [Dylan Cable](https://sph.umich.edu/faculty-profiles/cable-dylan.html) [[dmcable@umich.edu](mailto:dmcable@umich.edu)]
+* Teaching fellows:  Yize Hao [[yizehao@umich.edu](mailto:yizehao@umich.edu)]
+* Location: SPH I 1655
+* Date and time: Tue & Thu 8:30 - 10:00am
 * Textbooks: <https://github.com/rafalab/dsbook-part-1>, <https://github.com/rafalab/dsbook-part-2>
-* Slack: <https://bst260fall2024.slack.com/>
-* Canvas: <https://canvas.harvard.edu/courses/143922/pages/Course%20Information>
-* GitHub repo: <https://github.com/datasciencelabs/2024>
+* Canvas: <https://umich.instructure.com/courses/727331>
+* GitHub repo: <https://github.com/dmcable/BIOSTAT620>
 * Remember to read the [syllabus](syllabus.qmd), [listen to SD](https://www.youtube.com/embed/aL_fP5axQV4).
 
 ## Lectures 
@@ -20,9 +19,9 @@ Lecture slides, class notes, and problem sets are linked below. New material is 
 
 | Dates   | Topic  |    Slides | Reading |
 |:-------------------|:---------|:----------|:----------|
-| Sep 04 | Productivity Tools| [Intro](slides/00-intro.qmd), [Unix](slides/productivity/01-unix.qmd) | Installing R and RStudio on [Windows](https://teacherscollege.screenstepslive.com/a/1108074-install-r-and-rstudio-for-windows) or [Mac](https://teacherscollege.screenstepslive.com/a/1135059-install-r-and-rstudio-for-mac), [Getting Started](http://rafalab.dfci.harvard.edu/dsbook-part-1/R/getting-started.html), [Unix](http://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/unix.html)|
-| Sep 09,  Sep 11| Productivity Tools| [RStudio](slides/productivity/02-rstudio.qmd), [Quarto](slides/productivity/03-quarto.qmd), [Git and GitHub](slides/productivity/04-git.qmd) | [RStudio Projects, Quarto](https://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/reproducible-projects.html), [Git](http://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/git.html) |
-| Sep 16, Sep 19 | R | [R basics](slides/R/05-r-basics.qmd), [Vectorization](slides/R/06-vectorization.qmd) |  [R Basics](http://rafalab.dfci.harvard.edu/dsbook-part-1/R/R-basics.html), [Vectorization](http://rafalab.dfci.harvard.edu/dsbook-part-1/R/programming-basics.html#sec-vectorization) |
+| Jan 09 | Productivity Tools| [Intro](slides/00-intro.qmd), [Unix](slides/productivity/01-unix.qmd), [RStudio](slides/productivity/02-rstudio.qmd)| Installing R and RStudio on [Windows](https://teacherscollege.screenstepslive.com/a/1108074-install-r-and-rstudio-for-windows) or [Mac](https://teacherscollege.screenstepslive.com/a/1135059-install-r-and-rstudio-for-mac), [Getting Started](http://rafalab.dfci.harvard.edu/dsbook-part-1/R/getting-started.html), [Unix](http://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/unix.html)|
+| Jan 14,  Jan 16| Productivity Tools|  [Quarto](slides/productivity/03-quarto.qmd), [Git and GitHub](slides/productivity/04-git.qmd) | [RStudio Projects, Quarto](https://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/reproducible-projects.html), [Git](http://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/git.html) |
+<!--| Sep 16, Sep 19 | R | [R basics](slides/R/05-r-basics.qmd), [Vectorization](slides/R/06-vectorization.qmd) |  [R Basics](http://rafalab.dfci.harvard.edu/dsbook-part-1/R/R-basics.html), [Vectorization](http://rafalab.dfci.harvard.edu/dsbook-part-1/R/programming-basics.html#sec-vectorization) |
 | Sep 23 | R | [Tidyverse](slides/R/07-tidyverse.qmd), [ggplot2](slides/R/08-ggplot2.qmd) | [dplyr](http://rafalab.dfci.harvard.edu/dsbook-part-1/R/tidyverse.html), [ggplot2](http://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/ggplot2.html) |
 | Sep 25 | R | [Tyding data](slides/R/09-tidyr.qmd) | [Reshaping Data](http://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/reshaping-data.html)
 | Sep 30, Oct 02 | Wrangling  | [Intro](slides/wrangling/10-intro-to-wrangling.qmd), [Data Importing](slides/wrangling/11-importing-files.qmd), [Dates and Times](slides/wrangling/12-dates-and-times.qmd), [Locales](slides/wrangling/13-locales.qmd), [Data APIs](slides/wrangling/14-data-apis.qmd), [Web scraping](slides/wrangling/15-web-scraping.qmd), [Joining tables](slides/wrangling/16-joining-tables.qmd) | [Importing data](https://rafalab.dfci.harvard.edu/dsbook-part-1/R/importing-data.html), [dates and times](http://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/dates-and-times.html), [Locales](https://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/locales.html), [Joining Tables](http://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/joining-tables.html), [Extracting data from the web](https://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/web-scraping.html)|
@@ -39,12 +38,14 @@ Oct 07, Oct 09 | Data visualization  | [Data Viz Principles](slides/dataviz/17-d
 | Dec 04 | Machine Learning | [Intro](slides/ml/36-intro-ml.qmd), [Metrics](slides/ml/37-evaluation-metrics.qmd), [Conditionals](slides/ml/38-conditionals.qmd), [Smoothing](slides/ml/39-smoothing.qmd)|[Notation and terminology](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/notation-and-terminology.html), [Evaluation Metrics](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/evaluation-metrics.html), [conditional probabilities](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/conditionals.html), [smoothing](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/smoothing.html) |
 |  Dec 09, Dec 11 | Machine Learning | [kNN](slides/ml/40-knn.qmd), [Resampling methods](slides/ml/41-resampling-methods.qmd), [caret package](slides/ml/42-caret.qmd), [Algorithms](slides/ml/43-algorithms.qmd), [ML in practice](slides/ml/44-ml-in-practice.qmd)|[Resampling methods](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/resampling-methods.html), [ML algorithms](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/algorithms.html), [ML in practice](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/ml-in-practice.html) |
 | Dec 16, Dec 18 | Other topics  | [Association is not causation](slides/other-topics/45-association-not-causation.qmd), [Shiny](slides/other-topics/46-shiny.qmd), [Shiny example code](https://github.com/datasciencelabs/2024/tree/main/shiny)| [Association is not causation](https://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/association-not-causation.html) |
+-->
 
 ## Problem sets
 
 | Problem set| Topic | Due Date |  Difficulty |
 |:-------|:--------------|:---------|:----------|
-| [01](psets/pset-01-unix-quarto.qmd)   |  Unix, Quarto|Sep 11   | easy | 
+01 (To Be Released 01/09)<!--[01](psets/pset-01-unix-quarto.qmd) -->  |  Unix, Quarto|Jan 18   | easy | 
+<!--| [01](psets/pset-01-unix-quarto.qmd)   |  Unix, Quarto|Sep 11   | easy | 
 | [02](psets/pset-02-r-vectorization.qmd) |  R | Sep 19   |easy | 
 | [03](psets/pset-03-tidyverse.qmd)          |  Tidyverse | Sep 27   |medium | 
 | [04](psets/pset-04-wrangling.qmd)          | Wrangling | Oct 4   | medium | 
@@ -54,18 +55,18 @@ Oct 07, Oct 09 | Data visualization  | [Data Viz Principles](slides/dataviz/17-d
 | [08](psets/pset-08-linear-models.qmd)          | Excess mortality after Hurricane María |Nov 15   |  medium | 
 | [09](psets/pset-09-matrices.qmd)          | Matrices | Nov 22   | easy | 
 | [10](psets/pset-10-ml.qmd)          | Digit reading | Dec 16   | hard | 
-|Final Project| Your choice | Dec 20   | hard  |
+|Final Project| Your choice | Dec 20   | hard  |-->
 
 ## Office hour times
 
 | Meeting | Time  | Location                 |
 |---------|----------|------------------------|
-| Rafael Irizarry  | Mon  8:45-9:45AM  |   Kresge 203     |
-| Corri Sept | Tue      3:00-4:00PM     | Kresge 201         |
-| Nikhil Vytla   | Wed      2:00-3:00PM     | Kresge 201         |
-| Yuan Wang | Fri    1:00-2:00PM     | [Zoom](https://harvard.zoom.us/j/98901120095?pwd=CrhPTA0Nco2rY6ggzYIfq6kQmP4VZn.1) |
+| Dylan Cable  | TBA  |   TBA   |
+| Yize Hao | TBA     | TBA        |
+<!--| Nikhil Vytla   | Wed      2:00-3:00PM     | Kresge 201         |
+| Yuan Wang | Fri    1:00-2:00PM     | [Zoom](https://harvard.zoom.us/j/98901120095?pwd=CrhPTA0Nco2rY6ggzYIfq6kQmP4VZn.1) |-->
 
 ## Acknowledgments
 
-We thank [Maria Tackett](https://github.com/matackett) and [Mine Çetinkaya-Rundel](https://github.com/mine-cetinkaya-rundel) for sharing their [web page template](https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main), which we used in creating this website.
+We thank [Maria Tackett](https://github.com/matackett) and [Mine Çetinkaya-Rundel](https://github.com/mine-cetinkaya-rundel) for sharing their [web page template](https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main), which we used in creating this website. We thank [Rafael Irizarry](https://github.com/rafalab) for sharing materials.
 

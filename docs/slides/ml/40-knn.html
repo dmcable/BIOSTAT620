@@ -11,7 +11,7 @@
 
   <meta name="dcterms.date" content="2024-12-10">
   <meta name="keywords" content="Machine Learning">
-  <title>BST 260: Introduction to Data Science – k-nearest neighbors (knn)</title>
+  <title>BIOSTAT 620: Introduction to Health Data Science – k-nearest neighbors (knn)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -303,7 +303,7 @@ p(\mathbf{x}) = \mbox{Pr}(Y = 1 \mid X_1 = x_1 , X_2 = x_2).
 <span id="cb7-2"><a></a><span class="fu">confusionMatrix</span>(y_hat_knn, mnist_27<span class="sc">$</span>train<span class="sc">$</span>y)<span class="sc">$</span>overall[<span class="st">"Accuracy"</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy 
-   0.856 </code></pre>
+    0.86 </code></pre>
 </div>
 </div>
 <p>to</p>
@@ -324,7 +324,7 @@ p(\mathbf{x}) = \mbox{Pr}(Y = 1 \mid X_1 = x_1 , X_2 = x_2).
 <span id="cb11-2"><a></a>y_hat_knn_1 <span class="ot">&lt;-</span> <span class="fu">predict</span>(knn_fit_1, mnist_27<span class="sc">$</span>train, <span class="at">type =</span> <span class="st">"class"</span>) </span>
 <span id="cb11-3"><a></a><span class="fu">confusionMatrix</span>(y_hat_knn_1, mnist_27<span class="sc">$</span>train<span class="sc">$</span>y)<span class="sc">$</span>overall[[<span class="st">"Accuracy"</span>]] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.995</code></pre>
+<pre><code>[1] 0.999</code></pre>
 </div>
 </div>
 <p>to this:</p>
@@ -707,7 +707,7 @@ p(\mathbf{x}) = \mbox{Pr}(Y = 1 \mid X_1 = x_1 , X_2 = x_2).
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("http:\/\/datasciencelabs\.github\.io\/2024");
+          var filterRegex = new RegExp("https:\/\/dmcable\.github\.io\/BIOSTAT620\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

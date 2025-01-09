@@ -11,7 +11,7 @@
 
   <meta name="dcterms.date" content="2024-09-30">
   <meta name="keywords" content="Wrangling">
-  <title>BST 260: Introduction to Data Science – Dates And Times</title>
+  <title>BIOSTAT 620: Introduction to Health Data Science – Dates And Times</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -460,11 +460,11 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">now</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-01-08 18:30:23 EST"</code></pre>
+<pre><code>[1] "2025-01-08 23:30:04 EST"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">now</span>(<span class="st">"GMT"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-01-08 23:30:23 GMT"</code></pre>
+<pre><code>[1] "2025-01-09 04:30:04 GMT"</code></pre>
 </div>
 </div>
 </section>
@@ -788,7 +788,7 @@ attr(,"Version")
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">now</span>() <span class="sc">|&gt;</span> <span class="fu">hour</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 18</code></pre>
+<pre><code>[1] 23</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">now</span>() <span class="sc">|&gt;</span> <span class="fu">minute</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -796,7 +796,7 @@ attr(,"Version")
 </div>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">now</span>() <span class="sc">|&gt;</span> <span class="fu">second</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 23.27259</code></pre>
+<pre><code>[1] 4.784341</code></pre>
 </div>
 </div>
 </section>
@@ -1233,7 +1233,7 @@ attr(,"Version")
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("http:\/\/datasciencelabs\.github\.io\/2024");
+          var filterRegex = new RegExp("https:\/\/dmcable\.github\.io\/BIOSTAT620\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

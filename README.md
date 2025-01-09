@@ -1,4 +1,4 @@
-# Welcome to BST 260: Introduction to Data Science 
+# Welcome to BIOSTAT 620: Introduction to Health Data Science 
 
-* This repository provides the code for the [Fall 2024 course notes](https://datasciencelabs.github.io/2024/).
+* This repository provides the code for the [Winter 2025 course notes](https://dmcable.github.io/BIOSTAT620/).
 

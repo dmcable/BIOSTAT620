@@ -3,9 +3,9 @@ project:
   output-dir: docs
 
 website:
-  title: "BST 260: Introduction to Data Science"
-  site-url: http://datasciencelabs.github.io/2024
-  repo-url: https://github.com/datasciencelabs/2024
+  title: "BIOSTAT 620: Introduction to Health Data Science"
+  site-url: https://dmcable.github.io/BIOSTAT620/
+  repo-url: https://github.com/dmcable/BIOSTAT620
   repo-branch: main
   repo-actions: [source]
   sidebar:
@@ -15,7 +15,7 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/datasciencelabs/2024
+        href: https://github.com/dmcable/BIOSTAT620
         text: GitHub
     style: docked
     contents:
@@ -23,12 +23,12 @@ website:
       text: Home
     - href: slides.qmd
       text: Slides
-    - href: psets.qmd
-      text: Problem Sets
+    #- href: psets.qmd
+    #  text: Problem Sets
     - href: syllabus.qmd
       text: Syllabus
-    - href: final-project.qmd
-      text: Final Project
+    #- href: final-project.qmd
+    #  text: Final Project
     
 format:
   html:

@@ -1,7 +1,7 @@
 ---
 title: "Unix"
 keywords: "Productivity Tools"
-date: "2024-09-04"
+date: "2025-01-09"
 format:
   revealjs:
     theme: night
@@ -80,7 +80,7 @@ The structure on Windows looks something like this:
 
 ## Working directory
 
-- The working directory is the directly you are currently *in*. Later we will see that we can move to other directories using the command line.
+- The working directory is the directory you are currently *in*. Later we will see that we can move to other directories using the command line.
 - It's similar to clicking on folders.
 
 - You can see your working directory using the Unix command `pwd`
