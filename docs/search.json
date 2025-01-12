@@ -54,7 +54,7 @@
     "href": "syllabus.html#course-structure",
     "title": "Syllabus",
     "section": "Course Structure",
-    "text": "Course Structure\nFor each (approximately weekly) module, we will first teach in lecture the concepts, methods, and skills needed for problem sets. Then, we will start working together on problem sets in in-class labs. It is very important to attend class for this learning experience. On Saturdays, the problem sets will be due (see Key Dates and Problem Sets).\nPlease ensure that you read the chapters listed in the syllabus before each lecture. The lectures are designed with the assumption that you have completed the readings, enabling us to dive deeper into the nuances of data analysis and coding.\nLectures will not be recorded.",
+    "text": "Course Structure\nFor each (approximately weekly) module, we will first teach in lecture the concepts, methods, and skills needed for problem sets. Then, we will start working together on problem sets in in-class labs. It is very important to attend class for this learning experience. On Sundays, the problem sets will be due (see Key Dates and Problem Sets).\nPlease ensure that you read the chapters listed in the syllabus before each lecture. The lectures are designed with the assumption that you have completed the readings, enabling us to dive deeper into the nuances of data analysis and coding.\nLectures will not be recorded.",
     "crumbs": [
       "Syllabus"
     ]
@@ -114,7 +114,7 @@
     "href": "syllabus.html#key-dates",
     "title": "Syllabus",
     "section": "Key Dates",
-    "text": "Key Dates\n\n\n\n\n\n\n\nDate\nEvent\n\n\n\n\nJan 18\nPset 1 due\n\n\nJan 25\nPset 2 due\n\n\nFeb 18\nMidterm 1: covers material from Jan 09-Feb 17\n\n\nFeb 27\nStart final project. Obtain approval if you want to do a personal project instead.\n\n\nMar 04\nNo class: Spring break\n\n\nMar 06\nNo class: Spring break\n\n\nApr 01\nMidterm 2: cover material from Jan 09-Mar 27\n\n\nApr 22\nLast day of class\n\n\nApr 24\nFinal Project due",
+    "text": "Key Dates\n\n\n\n\n\n\n\nDate\nEvent\n\n\n\n\nJan 19\nPset 1 due\n\n\nJan 26\nPset 2 due\n\n\nFeb 18\nMidterm 1: covers material from Jan 09-Feb 17\n\n\nFeb 27\nStart final project. Obtain approval if you want to do a personal project instead.\n\n\nMar 04\nNo class: Spring break\n\n\nMar 06\nNo class: Spring break\n\n\nApr 01\nMidterm 2: cover material from Jan 09-Mar 27\n\n\nApr 22\nLast day of class\n\n\nApr 24\nFinal Project due",
     "crumbs": [
       "Syllabus"
     ]
@@ -1188,7 +1188,7 @@
     "href": "slides/inference/23-parameters-estimates.html#a-monte-carlo-simulation-3",
     "title": "Parameters and Estimates",
     "section": "A Monte Carlo simulation",
-    "text": "A Monte Carlo simulation\n\nTo review, the theory tells us that \\(\\bar{X}\\) is approximately normally distributed, has expected value \\(p=\\) 0.45, and standard error \\(\\sqrt{p(1-p)/N}\\) = 0.0157321.\nThe simulation confirms this:\n\n\nmean(x_hat) \n\n[1] 0.450108\n\nsd(x_hat) \n\n[1] 0.01593503"
+    "text": "A Monte Carlo simulation\n\nTo review, the theory tells us that \\(\\bar{X}\\) is approximately normally distributed, has expected value \\(p=\\) 0.45, and standard error \\(\\sqrt{p(1-p)/N}\\) = 0.0157321.\nThe simulation confirms this:\n\n\nmean(x_hat) \n\n[1] 0.4498893\n\nsd(x_hat) \n\n[1] 0.01588933"
   },
   {
     "objectID": "slides/inference/23-parameters-estimates.html#a-monte-carlo-simulation-4",
@@ -1482,7 +1482,7 @@
     "href": "slides/wrangling/12-dates-and-times.html#the-lubridate-package-9",
     "title": "Dates And Times",
     "section": "The lubridate package",
-    "text": "The lubridate package\n\nThe lubridate package is also useful for dealing with times.\nIn base R, you can get the current time typing Sys.time().\nThe lubridate package provides a slightly more advanced function, now, that permits you to define the time zone:\n\n\nnow() \n\n[1] \"2025-01-08 23:30:04 EST\"\n\nnow(\"GMT\") \n\n[1] \"2025-01-09 04:30:04 GMT\""
+    "text": "The lubridate package\n\nThe lubridate package is also useful for dealing with times.\nIn base R, you can get the current time typing Sys.time().\nThe lubridate package provides a slightly more advanced function, now, that permits you to define the time zone:\n\n\nnow() \n\n[1] \"2025-01-11 20:57:21 EST\"\n\nnow(\"GMT\") \n\n[1] \"2025-01-12 01:57:21 GMT\""
   },
   {
     "objectID": "slides/wrangling/12-dates-and-times.html#the-lubridate-package-10",
@@ -1496,7 +1496,7 @@
     "href": "slides/wrangling/12-dates-and-times.html#the-lubridate-package-11",
     "title": "Dates And Times",
     "section": "The lubridate package",
-    "text": "The lubridate package\n\nWe can also extract hours, minutes, and seconds:\n\n\nnow() |&gt; hour() \n\n[1] 23\n\nnow() |&gt; minute() \n\n[1] 30\n\nnow() |&gt; second() \n\n[1] 4.784341"
+    "text": "The lubridate package\n\nWe can also extract hours, minutes, and seconds:\n\n\nnow() |&gt; hour() \n\n[1] 20\n\nnow() |&gt; minute() \n\n[1] 57\n\nnow() |&gt; second() \n\n[1] 21.25211"
   },
   {
     "objectID": "slides/wrangling/12-dates-and-times.html#the-lubridate-package-12",
@@ -3092,7 +3092,7 @@
     "href": "slides/R/06-vectorization.html#vectorization-4",
     "title": "Vectorization",
     "section": "Vectorization",
-    "text": "Vectorization\n\nIf we operate on two vectors, vectorization is componentwise.\nHere is an example:\n\n\nheights &lt;- c(69, 62, 66, 70, 70, 73, 67, 73, 67, 70)\nerror &lt;- rnorm(length(heights), 0, 0.1)\nheights + error\n\n [1] 69.05478 61.99581 65.90056 70.15996 70.00653 72.95637 66.83087 72.85752\n [9] 66.93279 69.82469"
+    "text": "Vectorization\n\nIf we operate on two vectors, vectorization is componentwise.\nHere is an example:\n\n\nheights &lt;- c(69, 62, 66, 70, 70, 73, 67, 73, 67, 70)\nerror &lt;- rnorm(length(heights), 0, 0.1)\nheights + error\n\n [1] 68.91143 61.86629 66.08839 70.16045 70.00347 73.12468 67.07966 72.86074\n [9] 66.99301 69.90634"
   },
   {
     "objectID": "slides/R/06-vectorization.html#exercise",
@@ -3407,7 +3407,7 @@
     "href": "slides/R/05-r-basics.html#factors-3",
     "title": "R Basics",
     "section": "Factors",
-    "text": "Factors\nExercise: How can we make this go much faster?\n\nsystem.time({levels(y) &lt;- tolower(levels(y))})\n\n   user  system elapsed \n  0.014   0.001   0.015"
+    "text": "Factors\nExercise: How can we make this go much faster?\n\nsystem.time({levels(y) &lt;- tolower(levels(y))})\n\n   user  system elapsed \n  0.014   0.001   0.016"
   },
   {
     "objectID": "slides/R/05-r-basics.html#factors-can-be-confusing",
@@ -6384,7 +6384,7 @@
     "href": "index.html#problem-sets",
     "title": "BIOSTAT 620 Introduction to Health Data Science",
     "section": "Problem sets",
-    "text": "Problem sets\n\n\n\n\n\n\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\n\n\n\n\n01 (To Be Released 01/09)\nUnix, Quarto\nJan 18\neasy",
+    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date (11:59pm)\nDifficulty\n\n\n\n\n01\nUnix, Quarto\nJan 19\neasy",
     "crumbs": [
       "Home"
     ]
@@ -6477,7 +6477,7 @@
     "href": "psets/pset-01-unix-quarto.html",
     "title": "Problem set 1",
     "section": "",
-    "text": "After finishing the homework, you are to turn in all the code to GitHub using git.\n\nStart an RStudio project. Pick a good name following a naming convention. Start a Quarto document called beginning.qmd.\nCreate a directory called img and save a screen shot of your RStudio session for the project. Include your screenshot in the Quarto document.\nNext, in your Quarto document, define variables \\(a=1, b=-1, c=-2\\) and print out the solutions to \\(f(x) = ax^2+bx+c=0\\). Do not report complex solutions, only real numbers.\nInclude a graph of \\(f(x)\\) versus \\(x\\) for \\(x \\in (-5,5)\\).\n\n\nx &lt;- seq(-5, 5, length = 100)\n# Hint: Use the plot function\n\n\nCreate a directory called docs. Use the command quarto render to create a PDF and save it to the docs directory. Show us the command you typed:\n\n# Your code here\n\nUse Unix to create a directory called data in the project home directory. Include the Unix command you used to create the directory.\n\n# Your code here\n\nUse a terminal-based text editor to create a file coefs.txt in the data directory and save three coefficients, 1 -1 -2 for example. Show us the Unix commands you used to achieve this:\n\n# Your code here\n\nMake a directory called code. Use Unix to copy the file beginning.qmd to a file called quadratic.qmd in the code directory. Show us the Unix commands you used.\n\n# Your code here\n\nEdit the quadratic.qmd file to read in a, b, and c from the file coefs.txt. Make sure to use a relative path when reading the file. As before, print out the solutions to \\(f(x) = ax^2+bx+c=0\\). Do not report complex solutions, only real numbers.\nChange the path of the file you are reading to the full path you get when you type file.path(getwd(), \"data/coefs.txt\"). Confirm that the file still renders. Then move the entire pset-01-rmarkdown project to a directory called RtmpyDknq4. Does the file render? Change the path back to a relative path and see if it renders."
+    "text": "After finishing the homework (10 points max), you are to turn in all the code to GitHub using git, described below.\n\nStart an RStudio Quarto project titled p1. Place it inside a folder named BIOSTAT620_pset_sol. Start a Quarto document called beginning.qmd. We recommend you edit in source mode rather than visual. Also copy this file pset-01-unix-quarto.qmd and move it to the p1 directory. You will input some answers to this file.\n(1 points) Create a directory called img and save a screen shot of your RStudio session for the project (titled img_2). Include your screenshot in the Quarto document.\n(1 point) Next, in your Quarto document, define variables \\(a=1, b=-1, c=-2\\) and print out the solutions to \\(f(x) = ax^2+bx+c=0\\). Solving the equation with the quadratic formula, do not report complex solutions, only real numbers.\n(1 point) Include a graph of \\(f(x)\\) versus \\(x\\) for \\(x \\in (-5,5)\\).\n\n\nx &lt;- seq(-5, 5, length = 100)\n# Hint: Use the plot function\n\nAlso include the x-axis (hint: use the lines function immediately after the plot function).\n\n(1 point) Create a directory called docs. Use the command quarto render to create a PDF and save it to the docs directory. Show us the command you typed:\n\n# Your code here\n\n(1 point) Use Unix to create a directory called data in the project home directory. Include the Unix command you used to create the directory. Also create a results directory in the home directory.\n\n# Your code here\n\n(1 point) Use a terminal-based text editor to create a file coefs1.txt in the data directory and save three coefficients, 1 -1 -2 for example. Show us the Unix commands you used to achieve this:\n\n# Your code here\n\n(1 point) Make a directory called code. Use Unix to copy the file beginning.qmd to a file called quadratic.qmd in the code directory. Show us the Unix commands you used.\n\n# Your code here\n\n(2 points) Edit the quadratic.qmd file to read in a, b, and c from the file coefs.txt. Make sure to use a relative path when reading the file. As before, print out the solutions to \\(f(x) = ax^2+bx+c=0\\). Do not report complex solutions or duplicates, only real numbers. If no real solutions exist, output “no real solutions”.\n\nTest your code on 3 different examples: coefs1.txt as above, coefs2.txt (a = -1, b = 2, c = -1), and coefs3.txt (a = -1, b = 1, c = -1) (note: you should create these files in data). In addition to printing, save the solutions in results/results{n}.txt as n ranges from 1 to 3. Hint: Generalize solve_quadratic as a function and run a for loop over the indices 1, 2, and 3.\n\n(1 point) Change the path of the file you are reading to the full path you get when you type file.path(getwd(), \"data/coefs.txt\"). Confirm that the file still renders. Then move the entire pset-01-rmarkdown project to a directory called RtmpyDknq4. Does the file render? Change the path back to a relative path and see if it renders. Move your file back to the original directory when you are done.\n\n# Your code here\n\nNavigate to BIOSTAT620_pset_sol in Terminal using cd. Create a Github instance by using:\n\ngit init\nAdd all files using:\ngit add .\nCheck the status using:\ngit status\nCommit the files using:\ngit commit -m \"pset1\"\nCreate a new private repository on Github titled BIOSTAT620_pset_sol by clicking the New button and following instructions. On your local machine, add the Github remote url:\ngit remote add origin https://github.com/yourusername/BIOSTAT620_pset_sol.git\nPush your commit to Github using:\ngit push origin main\nGo to Github and check that your code has been added. Add Yize yhaoum as a collaborator to your Github private project."
   },
   {
     "objectID": "psets/pset-09-matrices.html",
@@ -6529,7 +6529,10 @@
     "href": "psets.html",
     "title": "Problem Sets",
     "section": "",
-    "text": "Topic\n\n\nDue date (at 11:59 PM)\n\n\n\n\n\n\nProblem set 1\n\n\nWed, Sep 11\n\n\n\n\nProblem set 2\n\n\nThu, Sep 19\n\n\n\n\nProblem set 3\n\n\nFri, Sep 27\n\n\n\n\nProblem set 4\n\n\nFri, Oct 04\n\n\n\n\nProblem set 5\n\n\nFri, Oct 11\n\n\n\n\nProblem set 6\n\n\nFri, Oct 25\n\n\n\n\nProblem set 7\n\n\nMon, Nov 04\n\n\n\n\nProblem set 8\n\n\nFri, Nov 15\n\n\n\n\nProblem set 9\n\n\nFri, Nov 22\n\n\n\n\nProblem set 10\n\n\nMon, Dec 16\n\n\n\n\n\nNo matching items"
+    "text": "Topic\n\n\nDue date (at 11:59 PM)\n\n\n\n\n\n\nProblem set 1\n\n\nSun, Jan 19\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Problem Sets"
+    ]
   },
   {
     "objectID": "slides/dataviz/18-distributions.html#visualizing-data-distributions",
@@ -10316,14 +10319,14 @@
     "href": "slides/ml/40-knn.html#over-training",
     "title": "k-nearest neighbors (knn)",
     "section": "Over-training",
-    "text": "Over-training\nCompare\n\ny_hat_knn &lt;- predict(knn_fit, mnist_27$train, type = \"class\") \nconfusionMatrix(y_hat_knn, mnist_27$train$y)$overall[\"Accuracy\"] \n\nAccuracy \n    0.86 \n\n\nto\n\ny_hat_knn &lt;- predict(knn_fit, mnist_27$test, type = \"class\") \nconfusionMatrix(y_hat_knn, mnist_27$test$y)$overall[\"Accuracy\"] \n\nAccuracy \n   0.815"
+    "text": "Over-training\nCompare\n\ny_hat_knn &lt;- predict(knn_fit, mnist_27$train, type = \"class\") \nconfusionMatrix(y_hat_knn, mnist_27$train$y)$overall[\"Accuracy\"] \n\nAccuracy \n   0.856 \n\n\nto\n\ny_hat_knn &lt;- predict(knn_fit, mnist_27$test, type = \"class\") \nconfusionMatrix(y_hat_knn, mnist_27$test$y)$overall[\"Accuracy\"] \n\nAccuracy \n   0.815"
   },
   {
     "objectID": "slides/ml/40-knn.html#over-training-1",
     "href": "slides/ml/40-knn.html#over-training-1",
     "title": "k-nearest neighbors (knn)",
     "section": "Over-training",
-    "text": "Over-training\nCompare this:\n\nknn_fit_1 &lt;- knn3(y ~ ., data = mnist_27$train, k = 1) \ny_hat_knn_1 &lt;- predict(knn_fit_1, mnist_27$train, type = \"class\") \nconfusionMatrix(y_hat_knn_1, mnist_27$train$y)$overall[[\"Accuracy\"]] \n\n[1] 0.999\n\n\nto this:\n\ny_hat_knn_1 &lt;- predict(knn_fit_1, mnist_27$test, type = \"class\") \nconfusionMatrix(y_hat_knn_1, mnist_27$test$y)$overall[\"Accuracy\"] \n\nAccuracy \n    0.81 \n\n\n\nWe can see the over-fitting problem by plotting the decision rule boundaries produced by \\(p(\\mathbf{x})\\):"
+    "text": "Over-training\nCompare this:\n\nknn_fit_1 &lt;- knn3(y ~ ., data = mnist_27$train, k = 1) \ny_hat_knn_1 &lt;- predict(knn_fit_1, mnist_27$train, type = \"class\") \nconfusionMatrix(y_hat_knn_1, mnist_27$train$y)$overall[[\"Accuracy\"]] \n\n[1] 0.996\n\n\nto this:\n\ny_hat_knn_1 &lt;- predict(knn_fit_1, mnist_27$test, type = \"class\") \nconfusionMatrix(y_hat_knn_1, mnist_27$test$y)$overall[\"Accuracy\"] \n\nAccuracy \n    0.81 \n\n\n\nWe can see the over-fitting problem by plotting the decision rule boundaries produced by \\(p(\\mathbf{x})\\):"
   },
   {
     "objectID": "slides/ml/40-knn.html#over-training-2",
@@ -11226,7 +11229,7 @@
     "href": "slides/inference/24-confidence-intervals.html#confidence-intervals-7",
     "title": "Confidence Intervals",
     "section": "Confidence intervals",
-    "text": "Confidence intervals\n\nAnd notice that the interval here:\n\n\nx &lt;- sample(c(0, 1), size = N, replace = TRUE, prob = c(1 - p, p)) \nx_hat &lt;- mean(x) \nse_hat &lt;- sqrt(x_hat*(1 - x_hat)/N) \nc(x_hat - 1.96*se_hat, x_hat + 1.96*se_hat) \n\n[1] 0.4211528 0.4828472\n\n\n\nis different from this one:\n\n\nx &lt;- sample(c(0,1), size = N, replace = TRUE, prob = c(1 - p, p)) \nx_hat &lt;- mean(x) \nse_hat &lt;- sqrt(x_hat*(1 - x_hat)/N) \nc(x_hat - 1.96*se_hat, x_hat + 1.96*se_hat) \n\n[1] 0.4251299 0.4868701\n\n\n\nKeep sampling and creating intervals, and you will see the random variation."
+    "text": "Confidence intervals\n\nAnd notice that the interval here:\n\n\nx &lt;- sample(c(0, 1), size = N, replace = TRUE, prob = c(1 - p, p)) \nx_hat &lt;- mean(x) \nse_hat &lt;- sqrt(x_hat*(1 - x_hat)/N) \nc(x_hat - 1.96*se_hat, x_hat + 1.96*se_hat) \n\n[1] 0.4122117 0.4737883\n\n\n\nis different from this one:\n\n\nx &lt;- sample(c(0,1), size = N, replace = TRUE, prob = c(1 - p, p)) \nx_hat &lt;- mean(x) \nse_hat &lt;- sqrt(x_hat*(1 - x_hat)/N) \nc(x_hat - 1.96*se_hat, x_hat + 1.96*se_hat) \n\n[1] 0.4102262 0.4717738\n\n\n\nKeep sampling and creating intervals, and you will see the random variation."
   },
   {
     "objectID": "slides/inference/24-confidence-intervals.html#confidence-intervals-8",
@@ -11268,7 +11271,7 @@
     "href": "slides/inference/24-confidence-intervals.html#a-monte-carlo-simulation",
     "title": "Confidence Intervals",
     "section": "A Monte Carlo simulation",
-    "text": "A Monte Carlo simulation\n\nWe can run a Monte Carlo simulation to confirm that, in fact, a 95% confidence interval includes \\(p\\) 95% of the time.\n\n\nN &lt;- 1000 \nB &lt;- 10000 \ninside &lt;- replicate(B, { \n  x &lt;- sample(c(0,1), size = N, replace = TRUE, prob = c(1 - p, p)) \n  x_hat &lt;- mean(x) \n  se_hat &lt;- sqrt(x_hat*(1 - x_hat)/N) \n  between(p, x_hat - 1.96*se_hat, x_hat + 1.96*se_hat) \n}) \nmean(inside) \n\n[1] 0.9522"
+    "text": "A Monte Carlo simulation\n\nWe can run a Monte Carlo simulation to confirm that, in fact, a 95% confidence interval includes \\(p\\) 95% of the time.\n\n\nN &lt;- 1000 \nB &lt;- 10000 \ninside &lt;- replicate(B, { \n  x &lt;- sample(c(0,1), size = N, replace = TRUE, prob = c(1 - p, p)) \n  x_hat &lt;- mean(x) \n  se_hat &lt;- sqrt(x_hat*(1 - x_hat)/N) \n  between(p, x_hat - 1.96*se_hat, x_hat + 1.96*se_hat) \n}) \nmean(inside) \n\n[1] 0.9483"
   },
   {
     "objectID": "slides/inference/24-confidence-intervals.html#a-monte-carlo-simulation-1",
@@ -11793,7 +11796,7 @@
     "href": "slides/other-topics/45-association-not-causation.html#spurious-correlation-3",
     "title": "Association Not Causation",
     "section": "Spurious correlation",
-    "text": "Spurious correlation\n\nres &lt;- sim_data |&gt;  \n  group_by(group) |&gt;  \n  summarize(r = cor(x, y)) |&gt;  \n  arrange(desc(r)) \nres \n\n# A tibble: 1,000,000 × 2\n    group     r\n    &lt;int&gt; &lt;dbl&gt;\n 1 914223 0.786\n 2 275611 0.775\n 3 232813 0.771\n 4 657205 0.764\n 5 204935 0.762\n 6  85891 0.760\n 7  49169 0.758\n 8 367856 0.750\n 9 272370 0.747\n10 664171 0.747\n# ℹ 999,990 more rows\n\n\n\nWe see a maximum correlation of 0.786."
+    "text": "Spurious correlation\n\nres &lt;- sim_data |&gt;  \n  group_by(group) |&gt;  \n  summarize(r = cor(x, y)) |&gt;  \n  arrange(desc(r)) \nres \n\n# A tibble: 1,000,000 × 2\n    group     r\n    &lt;int&gt; &lt;dbl&gt;\n 1 505897 0.795\n 2 676842 0.784\n 3 157863 0.765\n 4 681675 0.762\n 5  83994 0.748\n 6  45040 0.747\n 7 850466 0.745\n 8 131076 0.743\n 9  69099 0.742\n10 349174 0.741\n# ℹ 999,990 more rows\n\n\n\nWe see a maximum correlation of 0.795."
   },
   {
     "objectID": "slides/other-topics/45-association-not-causation.html#spurious-correlation-4",
@@ -11828,7 +11831,7 @@
     "href": "slides/other-topics/45-association-not-causation.html#spurious-correlation-8",
     "title": "Association Not Causation",
     "section": "Spurious correlation",
-    "text": "Spurious correlation\n\nlibrary(broom) \nsim_data |&gt;  \n  filter(group == res$group[which.max(res$r)]) |&gt; \n  summarize(tidy(lm(y ~ x))) |&gt;  \n  filter(term == \"x\") \n\n# A tibble: 1 × 5\n  term  estimate std.error statistic    p.value\n  &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n1 x        0.838     0.138      6.09 0.00000329"
+    "text": "Spurious correlation\n\nlibrary(broom) \nsim_data |&gt;  \n  filter(group == res$group[which.max(res$r)]) |&gt; \n  summarize(tidy(lm(y ~ x))) |&gt;  \n  filter(term == \"x\") \n\n# A tibble: 1 × 5\n  term  estimate std.error statistic    p.value\n  &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n1 x        0.913     0.145      6.29 0.00000202"
   },
   {
     "objectID": "slides/other-topics/45-association-not-causation.html#spurious-correlation-9",

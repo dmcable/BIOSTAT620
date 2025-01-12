@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-09-11">
+<meta name="dcterms.date" content="2025-01-19">
 
 <title>Problem set 1 – BIOSTAT 620: Introduction to Health Data Science</title>
 <style>
@@ -184,6 +184,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../psets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Problem Sets</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
@@ -212,7 +218,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 11, 2024</p>
+      <p class="date">January 19, 2025</p>
     </div>
   </div>
   
@@ -224,37 +230,57 @@ window.Quarto = {
 </header>
 
 
-<p>After finishing the homework, you are to turn in all the code to GitHub using git.</p>
+<p>After finishing the homework (10 points max), you are to turn in all the code to GitHub using git, described below.</p>
 <ol type="1">
-<li><p>Start an RStudio project. Pick a good name following a naming convention. Start a Quarto document called <code>beginning.qmd</code>.</p></li>
-<li><p>Create a directory called <code>img</code> and save a screen shot of your RStudio session for the project. Include your screenshot in the Quarto document.</p></li>
-<li><p>Next, in your Quarto document, define variables <span class="math inline">\(a=1, b=-1, c=-2\)</span> and print out the solutions to <span class="math inline">\(f(x) = ax^2+bx+c=0\)</span>. Do not report complex solutions, only real numbers.</p></li>
-<li><p>Include a graph of <span class="math inline">\(f(x)\)</span> versus <span class="math inline">\(x\)</span> for <span class="math inline">\(x \in (-5,5)\)</span>.</p></li>
+<li><p>Start an RStudio Quarto project titled <code>p1</code>. Place it inside a folder named <code>BIOSTAT620_pset_sol</code>. Start a Quarto document called <code>beginning.qmd</code>. We recommend you edit in source mode rather than visual. Also copy this file <code>pset-01-unix-quarto.qmd</code> and move it to the <code>p1</code> directory. You will input some answers to this file.</p></li>
+<li><p>(1 points) Create a directory called <code>img</code> and save a screen shot of your RStudio session for the project (titled img_2). Include your screenshot in the Quarto document.</p></li>
+<li><p>(1 point) Next, in your Quarto document, define variables <span class="math inline">\(a=1, b=-1, c=-2\)</span> and print out the solutions to <span class="math inline">\(f(x) = ax^2+bx+c=0\)</span>. Solving the equation with the quadratic formula, do not report complex solutions, only real numbers.</p></li>
+<li><p>(1 point) Include a graph of <span class="math inline">\(f(x)\)</span> versus <span class="math inline">\(x\)</span> for <span class="math inline">\(x \in (-5,5)\)</span>.</p></li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="at">length =</span> <span class="dv">100</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Hint: Use the plot function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Also include the x-axis (hint: use the <code>lines</code> function immediately after the <code>plot</code> function).</p>
 <ol start="5" type="1">
-<li>Create a directory called <code>docs</code>. Use the command <code>quarto render</code> to create a PDF and save it to the <code>docs</code> directory. Show us the command you typed:</li>
+<li>(1 point) Create a directory called <code>docs</code>. Use the command <code>quarto render</code> to create a PDF and save it to the <code>docs</code> directory. Show us the command you typed:</li>
 </ol>
 <pre><code># Your code here</code></pre>
 <ol start="6" type="1">
-<li>Use Unix to create a directory called <code>data</code> in the project home directory. Include the Unix command you used to create the directory.</li>
+<li>(1 point) Use Unix to create a directory called <code>data</code> in the project home directory. Include the Unix command you used to create the directory. Also create a <code>results</code> directory in the home directory.</li>
 </ol>
 <pre><code># Your code here</code></pre>
 <ol start="7" type="1">
-<li>Use a terminal-based text editor to create a file <code>coefs.txt</code> in the <code>data</code> directory and save three coefficients, <code>1 -1 -2</code> for example. Show us the Unix commands you used to achieve this:</li>
+<li>(1 point) Use a terminal-based text editor to create a file <code>coefs1.txt</code> in the <code>data</code> directory and save three coefficients, <code>1 -1 -2</code> for example. Show us the Unix commands you used to achieve this:</li>
 </ol>
 <pre><code># Your code here</code></pre>
 <ol start="8" type="1">
-<li>Make a directory called <code>code</code>. Use Unix to copy the file <code>beginning.qmd</code> to a file called <code>quadratic.qmd</code> in the code directory. Show us the Unix commands you used.</li>
+<li>(1 point) Make a directory called <code>code</code>. Use Unix to copy the file <code>beginning.qmd</code> to a file called <code>quadratic.qmd</code> in the code directory. Show us the Unix commands you used.</li>
 </ol>
 <pre><code># Your code here</code></pre>
 <ol start="9" type="1">
-<li><p>Edit the <code>quadratic.qmd</code> file to read in <code>a</code>, <code>b</code>, and <code>c</code> from the file <code>coefs.txt</code>. Make sure to use a relative path when reading the file. As before, print out the solutions to <span class="math inline">\(f(x) = ax^2+bx+c=0\)</span>. Do not report complex solutions, only real numbers.</p></li>
-<li><p>Change the path of the file you are reading to the full path you get when you type <code>file.path(getwd(), "data/coefs.txt")</code>. Confirm that the file still renders. Then move the entire <code>pset-01-rmarkdown</code> project to a directory called <code>RtmpyDknq4</code>. Does the file render? Change the path back to a relative path and see if it renders.</p></li>
+<li>(2 points) Edit the <code>quadratic.qmd</code> file to read in <code>a</code>, <code>b</code>, and <code>c</code> from the file <code>coefs.txt</code>. Make sure to use a relative path when reading the file. As before, print out the solutions to <span class="math inline">\(f(x) = ax^2+bx+c=0\)</span>. Do not report complex solutions or duplicates, only real numbers. If no real solutions exist, output “no real solutions”.</li>
 </ol>
+<p>Test your code on 3 different examples: <code>coefs1.txt</code> as above, <code>coefs2.txt</code> (a = -1, b = 2, c = -1), and <code>coefs3.txt</code> (a = -1, b = 1, c = -1) (note: you should create these files in <code>data</code>). In addition to printing, save the solutions in <code>results/results{n}.txt</code> as n ranges from 1 to 3. Hint: Generalize <code>solve_quadratic</code> as a function and run a for loop over the indices 1, 2, and 3.</p>
+<ol start="10" type="1">
+<li>(1 point) Change the path of the file you are reading to the full path you get when you type <code>file.path(getwd(), "data/coefs.txt")</code>. Confirm that the file still renders. Then move the entire <code>pset-01-rmarkdown</code> project to a directory called <code>RtmpyDknq4</code>. Does the file render? Change the path back to a relative path and see if it renders. Move your file back to the original directory when you are done.</li>
+</ol>
+<pre><code># Your code here</code></pre>
+<ol start="11" type="1">
+<li>Navigate to <code>BIOSTAT620_pset_sol</code> in Terminal using <code>cd</code>. Create a Github instance by using:</li>
+</ol>
+<pre><code>git init</code></pre>
+<p>Add all files using:</p>
+<pre><code>git add .</code></pre>
+<p>Check the status using:</p>
+<pre><code>git status</code></pre>
+<p>Commit the files using:</p>
+<pre><code>git commit -m "pset1"</code></pre>
+<p>Create a new <strong>private</strong> repository on Github titled <code>BIOSTAT620_pset_sol</code> by clicking the <strong>New</strong> button and following instructions. On your local machine, add the Github remote url:</p>
+<pre><code>git remote add origin https://github.com/yourusername/BIOSTAT620_pset_sol.git</code></pre>
+<p>Push your commit to Github using:</p>
+<pre><code>git push origin main</code></pre>
+<p>Go to Github and check that your code has been added. Add Yize <code>yhaoum</code> as a collaborator to your Github private project.</p>
 
 
 

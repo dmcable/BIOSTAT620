@@ -23,8 +23,8 @@ website:
       text: Home
     - href: slides.qmd
       text: Slides
-    #- href: psets.qmd
-    #  text: Problem Sets
+    - href: psets.qmd
+      text: Problem Sets
     - href: syllabus.qmd
       text: Syllabus
     #- href: final-project.qmd

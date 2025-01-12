@@ -42,9 +42,9 @@ Oct 07, Oct 09 | Data visualization  | [Data Viz Principles](slides/dataviz/17-d
 
 ## Problem sets
 
-| Problem set| Topic | Due Date |  Difficulty |
+| Problem set| Topic | Due Date (11:59pm) |  Difficulty |
 |:-------|:--------------|:---------|:----------|
-01 (To Be Released 01/09)<!--[01](psets/pset-01-unix-quarto.qmd) -->  |  Unix, Quarto|Jan 18   | easy | 
+[01](psets/pset-01-unix-quarto.qmd)   |  Unix, Quarto|Jan 19   | easy | 
 <!--| [01](psets/pset-01-unix-quarto.qmd)   |  Unix, Quarto|Sep 11   | easy | 
 | [02](psets/pset-02-r-vectorization.qmd) |  R | Sep 19   |easy | 
 | [03](psets/pset-03-tidyverse.qmd)          |  Tidyverse | Sep 27   |medium | 

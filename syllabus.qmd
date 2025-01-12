@@ -44,7 +44,7 @@ Throughout the course, **we use motivating case studies and data analysis proble
 
 ## Course Structure
 
-For each (approximately weekly) module, we will first teach in lecture the concepts, methods, and skills needed for problem sets. Then, we will start working together on problem sets in in-class labs. It is very important to attend class for this learning experience. On Saturdays, the problem sets will be due (see Key Dates and Problem Sets).
+For each (approximately weekly) module, we will first teach in lecture the concepts, methods, and skills needed for problem sets. Then, we will start working together on problem sets in in-class labs. It is very important to attend class for this learning experience. On Sundays, the problem sets will be due (see Key Dates and Problem Sets).
 
 **Please ensure that you read the chapters listed in the syllabus before each lecture.** The lectures are designed with the assumption that you have completed the readings, enabling us to dive deeper into the nuances of data analysis and coding.
 
@@ -100,8 +100,8 @@ You can use ChatGPT and other AI tools to assist with questions you may have abo
 
 | Date | Event |
 |------|-------|
-| Jan 18 | Pset 1 due |
-| Jan 25 | Pset 2 due |
+| Jan 19 | Pset 1 due |
+| Jan 26 | Pset 2 due |
 | Feb 18 | Midterm 1: covers material from Jan 09-Feb 17 |
 | Feb 27 | Start final project. Obtain approval if you want to do a personal project instead. |
 | Mar 04 | No class: Spring break |

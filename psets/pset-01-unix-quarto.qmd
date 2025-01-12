@@ -1,50 +1,97 @@
 ---
 title: Problem set 1 
-date: 2024-09-11
+date: 2025-01-19
 ---
 
-After finishing the homework, you are to turn in all the code to GitHub using git.
+After finishing the homework (10 points max), you are to turn in all the code to GitHub using git, described below.
 
-1. Start an RStudio project. Pick a good name following a naming convention. Start a Quarto document called `beginning.qmd`.
+1. Start an RStudio Quarto project titled `p1`. Place it inside a folder named `BIOSTAT620_pset_sol`. Start a Quarto document called `beginning.qmd`. We recommend you edit in source mode rather than visual. Also copy this file `pset-01-unix-quarto.qmd` and move it to the `p1` directory. You will input some answers to this file.
 
-2. Create a directory called `img` and save a screen shot of your RStudio session for the project. Include your screenshot in the Quarto document.
+2. (1 points) Create a directory called `img` and save a screen shot of your RStudio session for the project (titled img_2). Include your screenshot in the Quarto document. 
 
-3. Next, in your Quarto document, define variables $a=1, b=-1, c=-2$ and print out the solutions to $f(x) = ax^2+bx+c=0$. Do not report complex solutions, only real numbers. 
+3. (1 point) Next, in your Quarto document, define variables $a=1, b=-1, c=-2$ and print out the solutions to $f(x) = ax^2+bx+c=0$. Solving the equation with the quadratic formula, do not report complex solutions, only real numbers. 
 
-4. Include a graph of $f(x)$ versus $x$ for $x \in (-5,5)$.
+4. (1 point) Include a graph of $f(x)$ versus $x$ for $x \in (-5,5)$. 
 
 ```{r}
 x <- seq(-5, 5, length = 100)
 # Hint: Use the plot function
 ```
 
-5. Create a directory called `docs`. Use the command `quarto render` to create a PDF and save it to the `docs` directory. Show us the command you typed:
+Also include the x-axis (hint: use the `lines` function immediately after the `plot` function).
+
+5. (1 point) Create a directory called `docs`. Use the command `quarto render` to create a PDF and save it to the `docs` directory. Show us the command you typed:
 
 ```
 # Your code here
 ```
 
-6. Use Unix to create a directory called `data` in the project home directory. Include the Unix command you used to create the directory.
+6. (1 point) Use Unix to create a directory called `data` in the project home directory. Include the Unix command you used to create the directory. Also create a `results` directory in the home directory.
 
 ```
 # Your code here
 ```
 
-7. Use a terminal-based text editor to create a file `coefs.txt` in the `data` directory and save three coefficients, `1 -1 -2` for example. Show us the Unix commands you used to achieve this:
+7. (1 point) Use a terminal-based text editor to create a file `coefs1.txt` in the `data` directory and save three coefficients, `1 -1 -2` for example. Show us the Unix commands you used to achieve this:
 
 ```
 # Your code here
 ```
 
-8. Make a directory called `code`. Use Unix to copy the file `beginning.qmd` to a file called `quadratic.qmd` in the code directory. Show us the Unix commands you used.
+8. (1 point) Make a directory called `code`. Use Unix to copy the file `beginning.qmd` to a file called `quadratic.qmd` in the code directory. Show us the Unix commands you used.
 
 ```
 # Your code here
 ```
 
-9. Edit the `quadratic.qmd` file to read in `a`, `b`, and `c` from the file `coefs.txt`. Make sure to use a relative path when reading the file. As before, print out the solutions to $f(x) = ax^2+bx+c=0$. Do not report complex solutions, only real numbers. 
+9. (2 points) Edit the `quadratic.qmd` file to read in `a`, `b`, and `c` from the file `coefs.txt`. Make sure to use a relative path when reading the file. As before, print out the solutions to $f(x) = ax^2+bx+c=0$. Do not report complex solutions or duplicates, only real numbers. If no real solutions exist, output "no real solutions".
 
-10. Change the path of the file you are reading to the full path you get when you type `file.path(getwd(), "data/coefs.txt")`. Confirm that the file still renders. Then move the entire `pset-01-rmarkdown` project to a directory called `RtmpyDknq4`.  Does the file render? Change the path back to a relative path and see if it renders.
+Test your code on 3 different examples: `coefs1.txt` as above, `coefs2.txt` (a = -1, b = 2, c = -1), and `coefs3.txt` (a = -1, b = 1, c = -1) (note: you should create these files in `data`). In addition to printing, save the solutions in `results/results{n}.txt` as n ranges from 1 to 3. Hint: Generalize `solve_quadratic` as a function and run a for loop over the indices 1, 2, and 3.
+
+10.  (1 point) Change the path of the file you are reading to the full path you get when you type `file.path(getwd(), "data/coefs.txt")`. Confirm that the file still renders. Then move the entire `pset-01-rmarkdown` project to a directory called `RtmpyDknq4`.  Does the file render? Change the path back to a relative path and see if it renders. Move your file back to the original directory when you are done.
+
+```
+# Your code here
+```
+
+11. Navigate to `BIOSTAT620_pset_sol` in Terminal using `cd`. Create a Github instance by using:
+
+```
+git init
+```
+
+Add all files using:
+
+```
+git add .
+```
+
+Check the status using:
+
+```
+git status
+```
+
+Commit the files using:
+
+```
+git commit -m "pset1"
+```
+
+Create a new **private** repository on Github titled `BIOSTAT620_pset_sol` by clicking the **New** button and following instructions. On your local machine, add the Github remote url:
+
+```
+git remote add origin https://github.com/yourusername/BIOSTAT620_pset_sol.git
+```
+
+Push your commit to Github using:
+
+```
+git push origin main
+```
+
+Go to Github and check that your code has been added. Add Yize `yhaoum` as a collaborator to your Github private project.
+
 
 
 
