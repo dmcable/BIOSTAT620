@@ -232,10 +232,15 @@ window.Quarto = {
 
 <p>After finishing the homework (10 points max), you are to turn in all the code to GitHub using git, described below.</p>
 <ol type="1">
-<li><p>Start an RStudio Quarto project titled <code>p1</code>. Place it inside a folder named <code>BIOSTAT620_pset_sol</code>. Start a Quarto document called <code>beginning.qmd</code>. We recommend you edit in source mode rather than visual. Also copy this file <code>pset-01-unix-quarto.qmd</code> and move it to the <code>p1</code> directory. You will input some answers to this file.</p></li>
+<li>Start an RStudio Quarto project titled <code>p1</code>. Place it inside a folder named <code>BIOSTAT620_pset_sol</code>.</li>
+</ol>
+<p>You will have two different types of <code>.qmd</code> files in this project: code files and an answer sheet. The code files will be used to run code for this assignment. The answer sheet will not run code, but you will input your answers to various questions.</p>
+<p>Start a Quarto document called <code>beginning.qmd</code> (code file). This file will be used to run code for problems 3-4. We recommend you edit in source mode rather than visual.</p>
+<p>Also copy this file <code>pset-01-unix-quarto.qmd</code> (answer sheet) and move it to the <code>p1</code> directory. You will input some answers and code lines to this file.</p>
+<ol start="2" type="1">
 <li><p>(1 points) Create a directory called <code>img</code> and save a screen shot of your RStudio session for the project (titled img_2). Include your screenshot in the Quarto document.</p></li>
-<li><p>(1 point) Next, in your Quarto document, define variables <span class="math inline">\(a=1, b=-1, c=-2\)</span> and print out the solutions to <span class="math inline">\(f(x) = ax^2+bx+c=0\)</span>. Solving the equation with the quadratic formula, do not report complex solutions, only real numbers.</p></li>
-<li><p>(1 point) Include a graph of <span class="math inline">\(f(x)\)</span> versus <span class="math inline">\(x\)</span> for <span class="math inline">\(x \in (-5,5)\)</span>.</p></li>
+<li><p>(1 point) Next, in your <code>beginning.qmd</code> Quarto document, define variables <span class="math inline">\(a=1, b=-1, c=-2\)</span> and print out the solutions to <span class="math inline">\(f(x) = ax^2+bx+c=0\)</span>. Solving the equation with the quadratic formula, do not report complex solutions, only real numbers.</p></li>
+<li><p>(1 point) Include in <code>beginning.qmd</code> a graph of <span class="math inline">\(f(x)\)</span> versus <span class="math inline">\(x\)</span> for <span class="math inline">\(x \in (-5,5)\)</span>.</p></li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="at">length =</span> <span class="dv">100</span>)</span>
@@ -263,7 +268,7 @@ window.Quarto = {
 </ol>
 <p>Test your code on 3 different examples: <code>coefs1.txt</code> as above, <code>coefs2.txt</code> (a = -1, b = 2, c = -1), and <code>coefs3.txt</code> (a = -1, b = 1, c = -1) (note: you should create these files in <code>data</code>). In addition to printing, save the solutions in <code>results/results{n}.txt</code> as n ranges from 1 to 3. Hint: Generalize <code>solve_quadratic</code> as a function and run a for loop over the indices 1, 2, and 3.</p>
 <ol start="10" type="1">
-<li>(1 point) Change the path of the file you are reading to the full path you get when you type <code>file.path(getwd(), "data/coefs.txt")</code>. Confirm that the file still renders. Then move the entire <code>pset-01-rmarkdown</code> project to a directory called <code>RtmpyDknq4</code>. Does the file render? Change the path back to a relative path and see if it renders. Move your file back to the original directory when you are done.</li>
+<li>(1 point) Change the path of the file you are reading to the full path you get when you type <code>file.path(getwd(), "data/coefs.txt")</code>. Confirm that the file still renders. Then move the entire <code>p1</code> project to a directory called <code>RtmpyDknq4</code>. Does the file render? Change the path back to a relative path and see if it renders. Move your file back to the original directory when you are done.</li>
 </ol>
 <pre><code># Your code here</code></pre>
 <ol start="11" type="1">

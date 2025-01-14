@@ -5,13 +5,19 @@ date: 2025-01-19
 
 After finishing the homework (10 points max), you are to turn in all the code to GitHub using git, described below.
 
-1. Start an RStudio Quarto project titled `p1`. Place it inside a folder named `BIOSTAT620_pset_sol`. Start a Quarto document called `beginning.qmd`. We recommend you edit in source mode rather than visual. Also copy this file `pset-01-unix-quarto.qmd` and move it to the `p1` directory. You will input some answers to this file.
+1. Start an RStudio Quarto project titled `p1`. Place it inside a folder named `BIOSTAT620_pset_sol`. 
+
+You will have two different types of `.qmd` files in this project: code files and an answer sheet. The code files will be used to run code for this assignment. The answer sheet will not run code, but you will input your answers to various questions.
+
+Start a Quarto document called `beginning.qmd` (code file). This file will be used to run code for problems 3-4. We recommend you edit in source mode rather than visual. 
+
+Also copy this file `pset-01-unix-quarto.qmd` (answer sheet) and move it to the `p1` directory. You will input some answers and code lines to this file.
 
 2. (1 points) Create a directory called `img` and save a screen shot of your RStudio session for the project (titled img_2). Include your screenshot in the Quarto document. 
 
-3. (1 point) Next, in your Quarto document, define variables $a=1, b=-1, c=-2$ and print out the solutions to $f(x) = ax^2+bx+c=0$. Solving the equation with the quadratic formula, do not report complex solutions, only real numbers. 
+3. (1 point) Next, in your `beginning.qmd` Quarto document, define variables $a=1, b=-1, c=-2$ and print out the solutions to $f(x) = ax^2+bx+c=0$. Solving the equation with the quadratic formula, do not report complex solutions, only real numbers. 
 
-4. (1 point) Include a graph of $f(x)$ versus $x$ for $x \in (-5,5)$. 
+4. (1 point) Include in `beginning.qmd` a graph of $f(x)$ versus $x$ for $x \in (-5,5)$. 
 
 ```{r}
 x <- seq(-5, 5, length = 100)
@@ -48,7 +54,7 @@ Also include the x-axis (hint: use the `lines` function immediately after the `p
 
 Test your code on 3 different examples: `coefs1.txt` as above, `coefs2.txt` (a = -1, b = 2, c = -1), and `coefs3.txt` (a = -1, b = 1, c = -1) (note: you should create these files in `data`). In addition to printing, save the solutions in `results/results{n}.txt` as n ranges from 1 to 3. Hint: Generalize `solve_quadratic` as a function and run a for loop over the indices 1, 2, and 3.
 
-10.  (1 point) Change the path of the file you are reading to the full path you get when you type `file.path(getwd(), "data/coefs.txt")`. Confirm that the file still renders. Then move the entire `pset-01-rmarkdown` project to a directory called `RtmpyDknq4`.  Does the file render? Change the path back to a relative path and see if it renders. Move your file back to the original directory when you are done.
+10.  (1 point) Change the path of the file you are reading to the full path you get when you type `file.path(getwd(), "data/coefs.txt")`. Confirm that the file still renders. Then move the entire `p1` project to a directory called `RtmpyDknq4`.  Does the file render? Change the path back to a relative path and see if it renders. Move your file back to the original directory when you are done.
 
 ```
 # Your code here
