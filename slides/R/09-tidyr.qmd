@@ -12,7 +12,7 @@ execute:
 ## Tidying data 
 
 
-* We will a _wide format dataset_ as an example:
+* We will work with a _wide format dataset_ as an example:
 
 ```{r, message=FALSE, warning=FALSE}
 library(tidyverse) 

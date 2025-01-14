@@ -3057,7 +3057,7 @@
     "href": "slides/R/08-ggplot2.html#grids-of-plots-1",
     "title": "ggplot2",
     "section": "Grids of plots",
-    "text": "Grids of plots\n\nThere are several additional packages for combining ggplot2 plots into visually appealing layouts:**\ncowplot: A versatile package designed for publication-quality plots, offering seamless integration with ggplot2.\nggpubr: Provides user-friendly functions for combining and annotating ggplot2 plots with minimal effort.\nNew packages frequently emerge. Explore beyond these options and stay curious—there might be new tools that suit your needs even better!"
+    "text": "Grids of plots\n\nThere are several additional packages for combining ggplot2 plots into visually appealing layouts:\ncowplot: A versatile package designed for publication-quality plots, offering seamless integration with ggplot2.\nggpubr: Provides user-friendly functions for combining and annotating ggplot2 plots with minimal effort.\nNew packages frequently emerge. Explore beyond these options and stay curious—there might be new tools that suit your needs even better!"
   },
   {
     "objectID": "slides/R/06-vectorization.html#vectorization",
@@ -6374,7 +6374,7 @@
     "href": "index.html#lectures",
     "title": "BIOSTAT 620 Introduction to Health Data Science",
     "section": "Lectures",
-    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading\n\n\n\n\nJan 09\nProductivity Tools\nIntro, Unix, RStudio\nInstalling R and RStudio on Windows or Mac, Getting Started, Unix\n\n\nJan 14\nProductivity Tools\nQuarto, Git and GitHub\nRStudio Projects, Quarto, Git\n\n\nJan 14, Jan 16\nData processing in R\nR basics, Vectorization\nR Basics, Vectorization\n\n\nJan 16\nData Processing in R\nTidyverse, ggplot2\ndplyr, ggplot2",
+    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading\n\n\n\n\nJan 09\nProductivity Tools\nIntro, Unix, RStudio\nInstalling R and RStudio on Windows or Mac, Getting Started, Unix\n\n\nJan 14\nProductivity Tools\nQuarto, Git and GitHub\nRStudio Projects, Quarto, Git\n\n\nJan 16\nData processing in R\nR basics, Vectorization\nR Basics, Vectorization\n\n\nJan 16\nData Processing in R\nTidyverse, ggplot2\ndplyr, ggplot2\n\n\nJan 16, Jan 21\nData Processing in R\nTyding data\nReshaping Data\n\n\nJan 21, Jan 23\nWrangling\nIntro, Data Importing, Dates and Times, Locales, Data APIs, Web scraping, Joining tables\nImporting data, dates and times, Locales, Joining Tables, Extracting data from the web",
     "crumbs": [
       "Home"
     ]
@@ -9255,7 +9255,7 @@
     "href": "slides/R/09-tidyr.html#tidying-data",
     "title": "Tidying data",
     "section": "Tidying data",
-    "text": "Tidying data\n\nWe will a wide format dataset as an example:\n\n\nlibrary(tidyverse) \nlibrary(dslabs)\npath &lt;- system.file(\"extdata\", package = \"dslabs\")\nfilename &lt;- file.path(path, \"fertility-two-countries-example.csv\")\nwide_data &lt;- read_csv(filename)\nselect(wide_data, 1:10)\n\n# A tibble: 2 × 10\n  country     `1960` `1961` `1962` `1963` `1964` `1965` `1966` `1967` `1968`\n  &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 Germany       2.41   2.44   2.47   2.49   2.49   2.48   2.44   2.37   2.28\n2 South Korea   6.16   5.99   5.79   5.57   5.36   5.16   4.99   4.85   4.73"
+    "text": "Tidying data\n\nWe will work with a wide format dataset as an example:\n\n\nlibrary(tidyverse) \nlibrary(dslabs)\npath &lt;- system.file(\"extdata\", package = \"dslabs\")\nfilename &lt;- file.path(path, \"fertility-two-countries-example.csv\")\nwide_data &lt;- read_csv(filename)\nselect(wide_data, 1:10)\n\n# A tibble: 2 × 10\n  country     `1960` `1961` `1962` `1963` `1964` `1965` `1966` `1967` `1968`\n  &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 Germany       2.41   2.44   2.47   2.49   2.49   2.48   2.44   2.37   2.28\n2 South Korea   6.16   5.99   5.79   5.57   5.36   5.16   4.99   4.85   4.73"
   },
   {
     "objectID": "slides/R/09-tidyr.html#pivot_longer",
