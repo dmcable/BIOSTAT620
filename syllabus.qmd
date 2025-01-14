@@ -4,11 +4,13 @@ title: "Syllabus"
 
 ## General Information
 
-- BIOSTAT 620 Introduction to Health Data Science
+- BIOSTAT 620 Introduction to Health Data Science W25
 - SPH I 1655
 - Tue & Thu 8:30 - 10:00am
 - Lecture notes: [https://dmcable.github.io/BIOSTAT620/](https://dmcable.github.io/BIOSTAT620/)
 - Canvas: <https://umich.instructure.com/courses/727331>
+* Instructor: [Dylan Cable](https://sph.umich.edu/faculty-profiles/cable-dylan.html) [[dmcable@umich.edu](mailto:dmcable@umich.edu)]
+* Graduate student instructor:  Yize Hao [[yizehao@umich.edu](mailto:yizehao@umich.edu)]
 
 ## Prerequisites
 
@@ -75,7 +77,7 @@ Problem set submissions need to be completely reproducible Quarto documents. **I
 ## Midterm Policy
 
 **Both midterms are closed book, no internet, and in-class**. 
-You are expected to complete them in 1 hour. 
+You are expected to complete them in 1 hour. A one-page, double-sided, handwritten formula sheet is allowed.
 
 Questions will be drawn mostly or entirely from the problem sets.
 
@@ -110,3 +112,37 @@ You can use ChatGPT and other AI tools to assist with questions you may have abo
 | Apr 22 | Last day of class |
 | Apr 24 | Final Project due | 
 
+## Course Goals
+
+After taking this class, students are expected to have a practical understanding of important statistical issues for health data analysis in different areas, along with basic software and programming skills for data cleaning, data sharing, code sharing, exploratory data analysis, results visualization, as well as making the analyses sharable and reproducible.
+
+## Competencies
+This is the list of competencies covered by Biostatistics 620:
+
+1. Understand the roles and principles biostatistics serves in the analysis of public health data.
+2. Apply preferred methodological alternatives to commonly used statistical methods when assumptions are not met.
+3. Distinguish among the different measurement scales and data quality, as well as their implications for selection of statistical methods to be used based on these distinctions.
+4. Apply quantitative techniques commonly used to summarize and display big public health data.
+5. Apply descriptive and inferential methodologies according to the type of study design or sampling technique for answering a particular public health question.
+6. Apply basic informatics and computational techniques in the analysis of big health data, and interpret results of statistical analyses.
+
+## Classroom Expectations/Etiquette
+Students in BIOSTAT 620 are expected to attend lectures **in person**. Students are expected to bring a computer to class, as some in-class exercises will require the use of a computer. Some in-class exercises may be done in groups, so students are expected to respect and allow for the opinions of all members of their groups, and all members of the entire class. Much of the learning in class will be done through active participation, so students should be prepared to speak during class or be called upon to provide answers to questions.
+
+## Academic Integrity
+The faculty and staff of the School of Public Health believe that the conduct of a student registered or taking courses in the School should be consistent with that of a professional person. Courtesy, honesty, and respect should be shown by students toward faculty members, guest lecturers, administrative support staff, community partners, and fellow students. Similarly, students should expect faculty to treat them fairly, showing respect for their ideas and opinions and striving to help them achieve maximum benefits from their experience in the School. Student academic misconduct refers to behavior that may include plagiarism, cheating, fabrication, falsification of records or official documents, intentional misuse of equipment or materials (including library materials),and aiding and abetting the perpetration of such acts. Please visit Policies and Procedures for MPH & MHSA Students for the full Policy on Student Academic Conduct Standards and Procedures.
+
+## SPH Writing Lab
+The SPH Writing Lab is located in 5025 SPH II and offers writing support to all SPH students for course papers, manuscripts, grant proposals, dissertations, personal statements, and all other academic writing tasks. The Lab can also help answer questions on academic integrity. To learn more or make an appointment, please visit the SPH writing lab website.
+
+## Student Well-Being
+SPH faculty and staff believe it is important to support the physical and emotional well-being of our students. If you have a physical or mental health issue that is affecting your performance or participation in any course, and/or if you need help connecting with University services, please contact the instructor or the Office for Student Affairs. Please visit our [Wellness Resources](https://sph.umich.edu/community/student-experience/health-well-being.html) page for information on wellness resources available to you.
+
+## Student Accommodations
+Students should speak with their instructors before or during the first week of classes regarding any special needs. Students can also visit the Office for Student Affairs for assistance in coordinating communications around accommodations.
+
+Students seeking academic accommodations should register with Services for Students with Disabilities (SSD). SSD arranges reasonable and appropriate academic accommodations for students with disabilities. Please visit the Services for Students with Disabilities website for more information on student accommodations.
+
+Students who expect to miss classes, examinations, or other assignments as a consequence of their religious observance shall be provided with a reasonable alternative opportunity to complete such academic responsibilities. It is the obligation of students to provide faculty with reasonable notice of the dates of religious holidays on which they will be absent. Please visit the Office of the Provost website for the complete University policy.
+
+Students who are feeling ill should not come to class in-person. Your grade will not be negatively impacted by not attending class due to illness. If you need flexibility due to being ill, having caregiving responsibilities, childcare responsibilities, etc., please email me as soon as possible so that we can come up with a plan to allow flexibility in assignment due dates.
