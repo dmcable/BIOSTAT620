@@ -30,13 +30,6 @@ execute:
 
 ---
 
-:::{.callout-important}
-For problem set 2 you can only use R base.
-:::
-
----
-
-
 ## Prebuilt functions
 
 * Example of prebuilt functions that we will use today: `ls`, `rm`, `library`, `search`, `factor`, `list`, `exists`, `str`, `typeof`, and `class`.
@@ -736,7 +729,7 @@ dplyr::filter
 
 ## Namespaces 
 
-* Restart yoru R Consuole and study this example:
+* Restart yoru R Console and study this example:
 
 ```{r}
 library(dslabs)

@@ -9,6 +9,20 @@ execute:
   echo: true
 ---
 
+
+
+### Office hours
+
+Office hour time and locations will be:
+
+* Dylan Cable: Wednesdays at 2:00-3:00PM in SPH I 4635 
+
+* Yize Hao: Fridays at 10:00-11:00AM in TBA
+
+* If you are unable to make this office hours, you can ask questions after class or request an appointment.
+
+--- 
+
 ## The header
 
 * Start a new empty document. 
@@ -297,4 +311,10 @@ There is a lot more you can do with R markdown. We highly recommend you continue
 
 * You can specify the default in the YAML header using:
 `format: html`, `format: pdf`,`format: docx`, or `format: gfm` (gfm stands for GitHub flavored markdown, a convenient way to share your reports).
+
+---
+
+## quarto preview
+
+* Another useful command is `quarto preview`, which allows your quarto project to update (as a preview) in real time as you make changes.
 
