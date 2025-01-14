@@ -5,7 +5,7 @@ title: "BIOSTAT 620 Introduction to Health Data Science"
 ## Course Information
 
 * Instructor: [Dylan Cable](https://sph.umich.edu/faculty-profiles/cable-dylan.html) [[dmcable@umich.edu](mailto:dmcable@umich.edu)]
-* Teaching fellows:  Yize Hao [[yizehao@umich.edu](mailto:yizehao@umich.edu)]
+* Graduate student instructor:  Yize Hao [[yizehao@umich.edu](mailto:yizehao@umich.edu)]
 * Location: SPH I 1655
 * Date and time: Tue & Thu 8:30 - 10:00am
 * Textbooks: <https://github.com/rafalab/dsbook-part-1>, <https://github.com/rafalab/dsbook-part-2>
