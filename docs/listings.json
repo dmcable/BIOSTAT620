@@ -12,7 +12,8 @@
   {
     "listing": "/psets.html",
     "items": [
-      "/psets/pset-01-unix-quarto.html"
+      "/psets/pset-01-unix-quarto.html",
+      "/psets/pset-02-R-data-analysis.html"
     ]
   }
 ]
