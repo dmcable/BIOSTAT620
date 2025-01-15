@@ -45,7 +45,7 @@ Jan 16 | Data processing in R | [R basics](slides/R/05-r-basics.qmd), [Vectoriza
 | Problem set| Topic | Due Date (11:59pm) |  Difficulty |
 |:-------|:--------------|:---------|:----------|
 [01](psets/pset-01-unix-quarto.html)   |  Unix, Quarto|Jan 19   | easy | 
-[02](psets/pset-02-r-data-analysis.html) |  R | Jan 26  |medium | 
+[02](psets/pset-02-R-data-analysis.html) |  R | Jan 26  |medium | 
 <!--| [01](psets/pset-01-unix-quarto.qmd)   |  Unix, Quarto|Sep 11   | easy | 
 | [02](psets/pset-02-r-data-analysis.qmd) |  R | Sep 19   |easy | 
 | [03](psets/pset-03-tidyverse.qmd)          |  Tidyverse | Sep 27   |medium | 
