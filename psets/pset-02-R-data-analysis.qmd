@@ -3,6 +3,8 @@ title: Problem set 2
 date: 2025-01-26
 ---
 
+Total points: 16.
+
 In these exercises, we will explore a subset of the NHANES dataset to investigate potential differences in systolic blood pressure across groups defined by self reported race.
 
 ### Instructions {.unnumbered}
@@ -56,19 +58,19 @@ options(digits = 2)
 ### Exercises {.unnumbered}
 
 
-1. Filter the `NHANES` data to only include survey year 2011-2012. Save the resulting table in `dat`. This table should have 5,000 rows and 76 columns and can be accessed via the variable `NHANES`.
+1. (1 point) Filter the `NHANES` data to only include survey year 2011-2012. Save the resulting table in `dat`. This table should have 5,000 rows and 76 columns and can be accessed via the variable `NHANES`.
 
 ```{r}
 ## code here
 ```
 
-2. Using `dat`, compute the average and standard deviation (SD) for the _combined systolic blood pressure_ (SBP) (given by `BPSysAve`) reading for males and females separately. Show us a data frame with two rows (female and male) and two columns (average and SD). `NA` values should be removed.
+2. (1 point) Using `dat`, compute the average and standard deviation (SD) for the _combined systolic blood pressure_ (SBP) (given by `BPSysAve`) reading for males and females separately. Show us a data frame with two rows (female and male) and two columns (average and SD). `NA` values should be removed.
 
 ```{r} 
 ## code here
 ```
 
-3. Because of the large difference in the average between males and females, we will perform the rest of the analysis separately for males and females. 
+3. (1 point) Because of the large difference in the average between males and females, we will perform the rest of the analysis separately for males and females. 
 
 Compute the average and SD for SBP  for each race variable in column `Race3` for females and males separately. 
 The resulting table should have four columns for sex, race, average, and SD, respectively, and 12 rows (one for each strata). 
@@ -79,7 +81,7 @@ Arrange the result from highest to lowest average.
 ```
 
 
-4. Repeat the previous exercise but add two columns to the final table to show a 95% confidence interval for the mean. Specifically, add columns with the lower and upper bounds of the interval with names `lower` and `upper`, respectively. The formula for these values is 
+4. (1 point) Repeat the previous exercise but add two columns to the final table to show a 95% confidence interval for the mean. Specifically, add columns with the lower and upper bounds of the interval with names `lower` and `upper`, respectively. The formula for these values is 
 
 $$
 \bar{X} \pm 1.96 \, s / \sqrt{n}
@@ -90,13 +92,13 @@ with $\bar{X}$ the sample average and $s$ the sample standard deviation. This ta
 ## code here
 ```
 
-5. Make a graph of showing the results from the previous exercise. Specifically, plot the averages for each group as points and confidence intervals as error bars (use the geometry `geom_errorbar`). Order the groups from lowest to highest average (the average of the males and females averages). Use `facet_wrap` to make a separate plot for females and males. Label your axes with _Race_ and _Average_ respectively, add the title _Comparing systolic blood pressure across groups_, and the caption  _Bars represent 95% confidence intervals_.
+5. (1 point) Make a graph of showing the results from the previous exercise. Specifically, plot the averages for each group as points and confidence intervals as error bars (use the geometry `geom_errorbar`). Order the groups from lowest to highest average (the average of the males and females averages). Use `facet_wrap` to make a separate plot for females and males. Label your axes with _Race_ and _Average_ respectively, add the title _Comparing systolic blood pressure across groups_, and the caption  _Bars represent 95% confidence intervals_.
 
 ```{r}
 ## code here
 ```
 
-6. In the plot above we see that the confidence intervals don't overlap when comparing the `White` and `Mexican` groups. We also see a substantial difference between `Mexican` and `Hispnanic`. Before concluding that there is a difference between groups, we will explore if differences in age, a very common _confounder_, explain the differences. 
+6. (2 points) In the plot above we see that the confidence intervals don't overlap when comparing the `White` and `Mexican` groups. We also see a substantial difference between `Mexican` and `Hispnanic`. Before concluding that there is a difference between groups, we will explore if differences in age, a very common _confounder_, explain the differences. 
 
 Ignoring race for now, create a table like the one in the previous exercise but show the average SBP by sex and age group (`AgeDecade`) including upper and lower bounds. The groups should be ordered chronologically. As before make a separate plot for males and females. Make sure to filter our observations with no `AgeDecade` listed.
 
@@ -104,7 +106,7 @@ Ignoring race for now, create a table like the one in the previous exercise but 
 ## code here
 ```
 
-7. We note that for both males and females the SBP increases with age. To explore if age is indeed a confounder we need to check if the groups have different age distributions.
+7. (2 points) We note that for both males and females the SBP increases with age. To explore if age is indeed a confounder we need to check if the groups have different age distributions.
 
 Explore the age distributions of each `Race3` group to determine if the groups are comparable. Make a histogram of `Age` for each `Race3` group and stack them vertically. Generate two columns of graphs for males and females, respectively. That is, create a grid of plots. In the histograms, create bins increments of 5 years up to 80. Make sure to give each row a seperate y-scale. 
 
@@ -115,22 +117,22 @@ Below the graph, comment on what you notice about the age distributions and how 
 ## code here
 ```
 
-8. Summarize the results shown in the graph by 
+8. (1 point) Summarize the results shown in the graph by 
 compute the median age for each `Race3` group and the percent of individuals that are younger than 18. Order the rows by median age. The resulting data frame should have 6 rows (one for each group) and three columns to denote group, median age, and children respectively.
 
 ```{r}
 ## code here
 ```
 
-9. Given the age distribution between two populations, we can't conclude that there are differences in SBP based just on the population averages. The observed differences are likely due to age differences rather than genetic differences. We will therefore stratify by group and then compare SBP. But before we do this, we might need redefine `dat` to avoid small groups. 
+9. (1 point) Given the age distribution between two populations, we can't conclude that there are differences in SBP based just on the population averages. The observed differences are likely due to age differences rather than genetic differences. We will therefore stratify by group and then compare SBP. But before we do this, we might need redefine `dat` to avoid small groups. 
 
-Write a function that computes the number of observations in each gender, age decade, and race combination. Show the groups with less than five observations. Make sure to remove the rows with no BPSysAve measurments before calculating the number of observations. Show a table with four columns representing gender, age stratum, group, and the number of individuals in that group. Make sure to include combinations with 0 individuals (hint: use `complete`).
+Write code that computes the number of observations in each gender, age decade, and race combination. Show the groups with less than five observations. Make sure to remove the rows with no BPSysAve measurments before calculating the number of observations. Show a table with four columns representing gender, age stratum, group, and the number of individuals in that group. Make sure to include combinations with 0 individuals (hint: use `complete`).
 
 ```{r}
 ## code here
 ```
 
-10. Based on the observations made in the previous exercise, we will redefine `dat` but with the following:
+10. (1 point) Based on the observations made in the previous exercise, we will redefine `dat` but with the following:
 
     * As before, include only survey year 2011-2012.
     * Remove the observations with no age group reported.
@@ -148,21 +150,21 @@ Write a function that computes the number of observations in each gender, age de
 ## code here
 ```
 
-11. Crete a plot that shows the average BPS for each age decade. Show the different race groups with color and lines joining them. Generate two plots: one for males and one for females.
+11. (1 point) Create a plot that shows the average BPS for each age decade. Show the different race groups with color and lines joining them. Generate two plots: one for males and one for females.
  
 ```{r}
 ## code here
 ```
 
 
-12. Based on the plot above, pick two groups that you think are consistently different, and remake the plot from the previous exercise but just for these two groups. Add confidence intervals, and remove the lines. Put the confidence intervals for each age stratum next to each other, and use color to represent the two groups. Comment on your finding.
+12. (2 points) Based on the plot above, pick two groups that you think are consistently different, and remake the plot from the previous exercise but just for these two groups. Add confidence intervals, and remove the lines. Put the confidence intervals for each age stratum next to each other, and use color to represent the two groups. Comment on your finding.
 
 ```{r}
 ## code here
 ```
 
 
-13. For the two groups that you selected above, compute the difference in average SBP between the two groups for each age strata. Show a table with three columns representing age strata, difference for females, difference for males. 
+13. (1 point) For the two groups that you selected above, compute the difference in average SBP between the two groups for each age strata. Show a table with three columns representing age strata, difference for females, difference for males. 
 
 ```{r}
 ## code here

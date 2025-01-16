@@ -13,7 +13,7 @@ Start a Quarto document called `beginning.qmd` (code file). This file will be us
 
 Also copy this file `pset-01-unix-quarto.qmd` (answer sheet) and move it to the `p1` directory. You will input some answers and code lines to this file.
 
-2. (1 points) Create a directory called `img` and save a screen shot of your RStudio session for the project (titled img_2). Include your screenshot in the Quarto document. 
+2. (1 point) Create a directory called `img` and save a screen shot of your RStudio session for the project (titled img_2). Include your screenshot in the Quarto document. 
 
 3. (1 point) Next, in your `beginning.qmd` Quarto document, define variables $a=1, b=-1, c=-2$ and print out the solutions to $f(x) = ax^2+bx+c=0$. Solving the equation with the quadratic formula, do not report complex solutions, only real numbers. 
 
@@ -60,7 +60,7 @@ Test your code on 3 different examples: `coefs1.txt` as above, `coefs2.txt` (a =
 # Your code here
 ```
 
-11. Navigate to `BIOSTAT620_pset_sol` in Terminal using `cd`. Create a Github instance by using:
+11. Navigate to `BIOSTAT620_pset_sol` in Terminal using `cd`. Create a git instance by using:
 
 ```
 git init

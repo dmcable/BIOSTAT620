@@ -63,7 +63,7 @@ Jan 16 | Data processing in R | [R basics](slides/R/05-r-basics.qmd), [Vectoriza
 | Meeting | Time  | Location                 |
 |---------|----------|------------------------|
 | Dylan Cable  | Wed      2:00-3:00PM   |  SPH I 4635   |
-| Yize Hao | Fri 10:00-11:00AM     | TBA        |
+| Yize Hao | Fri 10:00-11:00AM     | SPH II M4034      |
 <!--| Nikhil Vytla   | Wed      2:00-3:00PM     | Kresge 201         |
 | Yuan Wang | Fri    1:00-2:00PM     | [Zoom](https://harvard.zoom.us/j/98901120095?pwd=CrhPTA0Nco2rY6ggzYIfq6kQmP4VZn.1) |-->
 
