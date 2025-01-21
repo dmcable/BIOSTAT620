@@ -406,7 +406,7 @@
 <ul>
 <li><p>But, what if you encounter dates such as “09/01/02”? This could be September 1, 2002 or January 2, 2009 or January 9, 2002.</p></li>
 <li><p>In these cases, examining the entire vector of dates will help you determine what format it is by process of elimination.</p></li>
-<li><p>Once you know, you can use the many parses provided by <strong>lubridate</strong>.</p></li>
+<li><p>Once you know, you can use the many parsers provided by <strong>lubridate</strong>.</p></li>
 <li><p>For example, if the string is:</p></li>
 </ul>
 <div class="cell">
@@ -460,11 +460,11 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">now</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-01-20 20:28:09 EST"</code></pre>
+<pre><code>[1] "2025-01-20 21:30:11 EST"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">now</span>(<span class="st">"GMT"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-01-21 01:28:09 GMT"</code></pre>
+<pre><code>[1] "2025-01-21 02:30:11 GMT"</code></pre>
 </div>
 </div>
 </section>
@@ -788,15 +788,15 @@ attr(,"Version")
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">now</span>() <span class="sc">|&gt;</span> <span class="fu">hour</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 20</code></pre>
+<pre><code>[1] 21</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">now</span>() <span class="sc">|&gt;</span> <span class="fu">minute</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 28</code></pre>
+<pre><code>[1] 30</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">now</span>() <span class="sc">|&gt;</span> <span class="fu">second</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 9.90398</code></pre>
+<pre><code>[1] 11.31084</code></pre>
 </div>
 </div>
 </section>
@@ -887,8 +887,8 @@ attr(,"Version")
 <section id="final-pointers" class="slide level2">
 <h2>Final pointers</h2>
 <ul>
-<li><p>You should be aware the there are useful function for computing operations on time such a <code>difftime</code>, <code>time_length</code>, and <code>interval</code>.</p></li>
-<li><p>We don’t cover it here but be aware that The <strong>data.table</strong> package includes some of the same functionality as <strong>lubridate</strong>.</p></li>
+<li><p>You should be aware the there are useful functions for computing operations on time such a <code>difftime</code>, <code>time_length</code>, and <code>interval</code>.</p></li>
+<li><p>We don’t cover it here but be aware that the <strong>data.table</strong> package includes some of the same functionality as <strong>lubridate</strong>.</p></li>
 </ul>
 
 

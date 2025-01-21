@@ -188,7 +188,7 @@ tab <- response |> resp_body_string() |> read_csv()
 
 - We note that the returned object is only `r nrow(tab)` entries.
 
-- API often limit how much you can download.
+- APIs often limit how much you can download.
 
 
 

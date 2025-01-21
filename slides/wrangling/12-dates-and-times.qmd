@@ -191,7 +191,7 @@ ymd(x)
 
 - In these cases, examining the entire vector of dates will help you determine what format it is by process of elimination.
 
-- Once you know, you can use the many parses provided by __lubridate__.
+- Once you know, you can use the many parsers provided by __lubridate__.
 
 - For example, if the string is:
 
@@ -337,6 +337,6 @@ polls_us_election_2016 |>
 
 ## Final pointers
 
-- You should be aware the there are useful function for computing operations on time such a `difftime`, `time_length`, and `interval`.
+- You should be aware the there are useful functions for computing operations on time such a `difftime`, `time_length`, and `interval`.
 
--  We don't cover it here but be aware that  The **data.table** package includes some of the same functionality as **lubridate**.
+-  We don't cover it here but be aware that the **data.table** package includes some of the same functionality as **lubridate**.

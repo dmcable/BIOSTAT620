@@ -11,7 +11,7 @@ execute:
 
 ## Data Wrangling
 
-- The two datasets used in the problem sets are already tidy data frames.
+- The datasets used in the problem sets so far are already tidy data frames.
 
 - However, very rarely in a data science project is data already available in this form.
 
@@ -34,7 +34,7 @@ Data wrangling can involve several complicated steps such as:
 - extracting data from a file,
 - converting nested key-value pairs into a data frame, 
 - integrating data from different source, and
-- constructing requests for data bases.
+- constructing requests for databases.
 
 ## Data Wrangling
 

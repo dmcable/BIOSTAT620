@@ -242,7 +242,7 @@ time_length(today() - dat$f.n., unit = "years") |> floor()
 dat$estampa >= make_date(2023, 9, 22) 
 ``` 
 
-- We see that two students where late.
+- We see that three students were late.
 
 
 - However, with times we have to be particularly careful as some functions default to the UTC timezone:

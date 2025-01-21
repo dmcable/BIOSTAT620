@@ -251,7 +251,7 @@ dat <- read_csv("calificaciones.csv", show_col_types = FALSE,
                 locale = locale(encoding = "ISO-8859-1")) 
 ``` 
 
-- We learn about locales in later.
+- We'll learn more about locales later.
 
 ## Encoding
 
@@ -279,7 +279,7 @@ x <- read.csv(url)
 
 ## Downloading files
 
-- If you want a local copy, you can use `download.file:
+- If you want a local copy, you can use `download.file`:
 
 ```{r} 
 download.file(url, "murders.csv") 

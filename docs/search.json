@@ -1454,7 +1454,7 @@
     "href": "slides/wrangling/12-dates-and-times.html#the-lubridate-package-5",
     "title": "Dates And Times",
     "section": "The lubridate package",
-    "text": "The lubridate package\n\nBut, what if you encounter dates such as “09/01/02”? This could be September 1, 2002 or January 2, 2009 or January 9, 2002.\nIn these cases, examining the entire vector of dates will help you determine what format it is by process of elimination.\nOnce you know, you can use the many parses provided by lubridate.\nFor example, if the string is:\n\n\nx &lt;- \"09/01/02\""
+    "text": "The lubridate package\n\nBut, what if you encounter dates such as “09/01/02”? This could be September 1, 2002 or January 2, 2009 or January 9, 2002.\nIn these cases, examining the entire vector of dates will help you determine what format it is by process of elimination.\nOnce you know, you can use the many parsers provided by lubridate.\nFor example, if the string is:\n\n\nx &lt;- \"09/01/02\""
   },
   {
     "objectID": "slides/wrangling/12-dates-and-times.html#the-lubridate-package-6",
@@ -1482,7 +1482,7 @@
     "href": "slides/wrangling/12-dates-and-times.html#the-lubridate-package-9",
     "title": "Dates And Times",
     "section": "The lubridate package",
-    "text": "The lubridate package\n\nThe lubridate package is also useful for dealing with times.\nIn base R, you can get the current time typing Sys.time().\nThe lubridate package provides a slightly more advanced function, now, that permits you to define the time zone:\n\n\nnow() \n\n[1] \"2025-01-20 20:28:09 EST\"\n\nnow(\"GMT\") \n\n[1] \"2025-01-21 01:28:09 GMT\""
+    "text": "The lubridate package\n\nThe lubridate package is also useful for dealing with times.\nIn base R, you can get the current time typing Sys.time().\nThe lubridate package provides a slightly more advanced function, now, that permits you to define the time zone:\n\n\nnow() \n\n[1] \"2025-01-20 21:30:11 EST\"\n\nnow(\"GMT\") \n\n[1] \"2025-01-21 02:30:11 GMT\""
   },
   {
     "objectID": "slides/wrangling/12-dates-and-times.html#the-lubridate-package-10",
@@ -1496,7 +1496,7 @@
     "href": "slides/wrangling/12-dates-and-times.html#the-lubridate-package-11",
     "title": "Dates And Times",
     "section": "The lubridate package",
-    "text": "The lubridate package\n\nWe can also extract hours, minutes, and seconds:\n\n\nnow() |&gt; hour() \n\n[1] 20\n\nnow() |&gt; minute() \n\n[1] 28\n\nnow() |&gt; second() \n\n[1] 9.90398"
+    "text": "The lubridate package\n\nWe can also extract hours, minutes, and seconds:\n\n\nnow() |&gt; hour() \n\n[1] 21\n\nnow() |&gt; minute() \n\n[1] 30\n\nnow() |&gt; second() \n\n[1] 11.31084"
   },
   {
     "objectID": "slides/wrangling/12-dates-and-times.html#the-lubridate-package-12",
@@ -1538,7 +1538,7 @@
     "href": "slides/wrangling/12-dates-and-times.html#final-pointers",
     "title": "Dates And Times",
     "section": "Final pointers",
-    "text": "Final pointers\n\nYou should be aware the there are useful function for computing operations on time such a difftime, time_length, and interval.\nWe don’t cover it here but be aware that The data.table package includes some of the same functionality as lubridate."
+    "text": "Final pointers\n\nYou should be aware the there are useful functions for computing operations on time such a difftime, time_length, and interval.\nWe don’t cover it here but be aware that the data.table package includes some of the same functionality as lubridate."
   },
   {
     "objectID": "slides/wrangling/13-locales.html#locales",
@@ -1685,7 +1685,7 @@
     "href": "slides/wrangling/13-locales.html#example-10",
     "title": "Locales",
     "section": "Example",
-    "text": "Example\n\nLet’s check which students turned in their homework past the deadline of September 22:\n\n\ndat$estampa &gt;= make_date(2023, 9, 22) \n\n[1]  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE\n\n\n\nWe see that two students where late.\nHowever, with times we have to be particularly careful as some functions default to the UTC timezone:\n\n\ntz(dat$estampa) \n\n[1] \"UTC\""
+    "text": "Example\n\nLet’s check which students turned in their homework past the deadline of September 22:\n\n\ndat$estampa &gt;= make_date(2023, 9, 22) \n\n[1]  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE\n\n\n\nWe see that three students were late.\nHowever, with times we have to be particularly careful as some functions default to the UTC timezone:\n\n\ntz(dat$estampa) \n\n[1] \"UTC\""
   },
   {
     "objectID": "slides/wrangling/13-locales.html#example-11",
@@ -6374,7 +6374,7 @@
     "href": "index.html#lectures",
     "title": "BIOSTAT 620 Introduction to Health Data Science",
     "section": "Lectures",
-    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading\n\n\n\n\nJan 09\nProductivity Tools\nIntro, Unix, RStudio\nInstalling R and RStudio on Windows or Mac, Getting Started, Unix\n\n\nJan 14\nProductivity Tools\nQuarto, Git and GitHub\nRStudio Projects, Quarto, Git\n\n\nJan 16\nData processing in R\nR basics, Vectorization\nR Basics, Vectorization\n\n\nJan 16\nData Processing in R\nTidyverse, ggplot2\ndplyr, ggplot2\n\n\nJan 16, Jan 21\nData Processing in R\nTyding data\nReshaping Data\n\n\nJan 21, Jan 23\nWrangling\nIntro, Data Importing, Dates and Times, Locales, Data APIs, Web scraping, Joining tables\nImporting data, dates and times, Locales, Joining Tables, Extracting data from the web",
+    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading\n\n\n\n\nJan 09\nProductivity Tools\nIntro, Unix, RStudio\nInstalling R and RStudio on Windows or Mac, Getting Started, Unix\n\n\nJan 14\nProductivity Tools\nQuarto, Git and GitHub\nRStudio Projects, Quarto, Git\n\n\nJan 16\nData processing in R\nR basics, Vectorization\nR Basics, Vectorization\n\n\nJan 16\nData Processing in R\nTidyverse, ggplot2\ndplyr, ggplot2\n\n\nJan 21\nData Processing in R\nTyding data\nReshaping Data\n\n\nJan 21, Jan 23\nWrangling\nIntro, Data Importing, Dates and Times, Locales, Data APIs, Web scraping, Joining tables\nImporting data, dates and times, Locales, Joining Tables, Extracting data from the web",
     "crumbs": [
       "Home"
     ]
@@ -10851,7 +10851,7 @@
     "href": "slides/wrangling/10-intro-to-wrangling.html#data-wrangling",
     "title": "Introduction to Wrangling",
     "section": "Data Wrangling",
-    "text": "Data Wrangling\n\nThe two datasets used in the problem sets are already tidy data frames.\nHowever, very rarely in a data science project is data already available in this form.\nMuch more typical is for the data to be in a file, a database, or extracted from a document, including web pages, tweets, or PDFs.\nAs a result, data might be unstructured in complex ways."
+    "text": "Data Wrangling\n\nThe datasets used in the problem sets so far are already tidy data frames.\nHowever, very rarely in a data science project is data already available in this form.\nMuch more typical is for the data to be in a file, a database, or extracted from a document, including web pages, tweets, or PDFs.\nAs a result, data might be unstructured in complex ways."
   },
   {
     "objectID": "slides/wrangling/10-intro-to-wrangling.html#data-wrangling-1",
@@ -10865,7 +10865,7 @@
     "href": "slides/wrangling/10-intro-to-wrangling.html#data-wrangling-2",
     "title": "Introduction to Wrangling",
     "section": "Data Wrangling",
-    "text": "Data Wrangling\nData wrangling can involve several complicated steps such as:\n\nextracting data from a file,\nconverting nested key-value pairs into a data frame,\nintegrating data from different source, and\nconstructing requests for data bases."
+    "text": "Data Wrangling\nData wrangling can involve several complicated steps such as:\n\nextracting data from a file,\nconverting nested key-value pairs into a data frame,\nintegrating data from different source, and\nconstructing requests for databases."
   },
   {
     "objectID": "slides/wrangling/10-intro-to-wrangling.html#data-wrangling-3",
@@ -10977,7 +10977,7 @@
     "href": "slides/wrangling/14-data-apis.html#the-httr2-package-4",
     "title": "Data APIs",
     "section": "The httr2 package",
-    "text": "The httr2 package\n\nTo extract the body, which is where the data are, we can use resp_body_string and send the result, a comma delimited string, to read_csv.\n\n\nlibrary(readr) \ntab &lt;- response |&gt; resp_body_string() |&gt; read_csv() \n\n\nWe note that the returned object is only 1000 entries.\nAPI often limit how much you can download."
+    "text": "The httr2 package\n\nTo extract the body, which is where the data are, we can use resp_body_string and send the result, a comma delimited string, to read_csv.\n\n\nlibrary(readr) \ntab &lt;- response |&gt; resp_body_string() |&gt; read_csv() \n\n\nWe note that the returned object is only 1000 entries.\nAPIs often limit how much you can download."
   },
   {
     "objectID": "slides/wrangling/14-data-apis.html#the-httr2-package-5",
@@ -11145,7 +11145,7 @@
     "href": "slides/wrangling/11-importing-files.html#encoding-4",
     "title": "Importing files",
     "section": "Encoding",
-    "text": "Encoding\n\nOnce we know the encoding we can specify it through the locale argument:\n\n\ndat &lt;- read_csv(\"calificaciones.csv\", show_col_types = FALSE, \n                locale = locale(encoding = \"ISO-8859-1\")) \n\n\nWe learn about locales in later."
+    "text": "Encoding\n\nOnce we know the encoding we can specify it through the locale argument:\n\n\ndat &lt;- read_csv(\"calificaciones.csv\", show_col_types = FALSE, \n                locale = locale(encoding = \"ISO-8859-1\")) \n\n\nWe’ll learn more about locales later."
   },
   {
     "objectID": "slides/wrangling/11-importing-files.html#encoding-5",
@@ -11166,7 +11166,7 @@
     "href": "slides/wrangling/11-importing-files.html#downloading-files-1",
     "title": "Importing files",
     "section": "Downloading files",
-    "text": "Downloading files\n\nIf you want a local copy, you can use `download.file:\n\n\ndownload.file(url, \"murders.csv\") \n\n\nThis will download the file and save it on your system with the name murders.csv.\nNote You can use any name here, not necessarily murders.csv."
+    "text": "Downloading files\n\nIf you want a local copy, you can use download.file:\n\n\ndownload.file(url, \"murders.csv\") \n\n\nThis will download the file and save it on your system with the name murders.csv.\nNote You can use any name here, not necessarily murders.csv."
   },
   {
     "objectID": "slides/wrangling/11-importing-files.html#downloading-files-2",
