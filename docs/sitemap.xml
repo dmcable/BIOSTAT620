@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/index.html</loc>
-    <lastmod>2025-01-21T01:29:12.566Z</lastmod>
+    <lastmod>2025-01-24T01:46:59.698Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/psets/pset-08-linear-models.html</loc>
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/psets/pset-01-unix-quarto.html</loc>
-    <lastmod>2025-01-16T18:41:51.529Z</lastmod>
+    <lastmod>2025-01-22T19:57:51.599Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/psets/pset-09-matrices.html</loc>
@@ -146,11 +146,11 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides.html</loc>
-    <lastmod>2025-01-09T02:57:07.920Z</lastmod>
+    <lastmod>2025-01-22T18:50:58.051Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/psets.html</loc>
-    <lastmod>2025-01-15T18:31:41.670Z</lastmod>
+    <lastmod>2025-01-24T01:48:12.540Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/dataviz/18-distributions.html</loc>
@@ -250,6 +250,10 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/psets/pset-02-R-data-analysis.html</loc>
-    <lastmod>2025-01-16T18:46:57.552Z</lastmod>
+    <lastmod>2025-01-23T15:06:05.945Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dmcable.github.io/BIOSTAT620/psets/pset-03-wrangling.html</loc>
+    <lastmod>2025-01-24T01:43:38.406Z</lastmod>
   </url>
 </urlset>

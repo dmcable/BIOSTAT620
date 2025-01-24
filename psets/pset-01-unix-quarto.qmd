@@ -54,10 +54,10 @@ Also include the x-axis (hint: use the `lines` function immediately after the `p
 
 Test your code on 3 different examples: `coefs1.txt` as above, `coefs2.txt` (a = -1, b = 2, c = -1), and `coefs3.txt` (a = -1, b = 1, c = -1) (note: you should create these files in `data`). In addition to printing, save the solutions in `results/results{n}.txt` as n ranges from 1 to 3. Hint: Generalize `solve_quadratic` as a function and run a for loop over the indices 1, 2, and 3.
 
-10.  (1 point) Change the path of the file you are reading to the full path you get when you type `file.path(getwd(), "data/coefs.txt")`. Confirm that the file still renders. Then move the entire `p1` project to a directory called `RtmpyDknq4`.  Does the file render? Change the path back to a relative path and see if it renders. Move your file back to the original directory when you are done.
+10.  (1 point) Change the path of the file you are reading to the full path you get when you type `file.path(getwd(), "data/coefs.txt")` (change the `coefs.txt` filename as appropriate). Confirm that the file still renders. Then move the entire `p1` project to a directory called `RtmpyDknq4`. Does the file render? Change the path back to a relative path and see if it renders. Move your file back to the original directory when you are done.
 
 ```
-# Your code here
+# Your text response here. Does the file render with relative path? Does the file render with global hard-coded path?
 ```
 
 11. Navigate to `BIOSTAT620_pset_sol` in Terminal using `cd`. Create a git instance by using:

@@ -137,7 +137,7 @@ Write code that computes the number of observations in each gender, age decade, 
     * As before, include only survey year 2011-2012.
     * Remove the observations with no age group reported.
     * Remove the 0-9 age group and drop it as a factor in `AgeDecade`.
-    * Combine the 60-69 and 70+ ageroups into a 60+ group.
+    * Combine the 60-69 and 70+ age groups into a 60+ group.
     * Remove observations reporting `Other` in `Race3` and drop it as a factor.
     * Rename the variable `Race3` to `Race`. 
 
