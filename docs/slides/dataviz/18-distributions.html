@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <meta name="dcterms.date" content="2024-10-09">
+  <meta name="dcterms.date" content="2025-01-28">
   <meta name="keywords" content="Data Visualization">
   <title>BIOSTAT 620: Introduction to Health Data Science – Distributions</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -198,7 +198,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2024-10-09</p>
+  <p class="date">2025-01-28</p>
 </section>
 <section id="visualizing-data-distributions" class="slide level2">
 <h2>Visualizing data distributions</h2>
@@ -441,7 +441,7 @@ Female   Male
 <h2>Boxplots</h2>
 <ul>
 <li><p>The <em>boxplot</em> provides a five-number summary composed of the range (the minimum and maximum) along with the <em>quartiles</em> (the 25th, 50th, and 75th percentiles).</p></li>
-<li><p>The R implementation of boxplots ignore <em>outliers</em> when computing the range and instead plot these as independent points.</p></li>
+<li><p>The R implementation of boxplots ignores <em>outliers</em> when computing the range and instead plot these as independent points.</p></li>
 <li><p>The help file provides a specific definition of outliers.</p></li>
 </ul>
 </section>
@@ -486,14 +486,14 @@ Female   Male
 <h2>Case study continued</h2>
 <ul>
 <li><p>The plot immediately reveals that males are, on average, taller than females.</p></li>
-<li><p>However, exploratory plots reveal that the approximation is not as useful:</p></li>
+<li><p>However, exploratory plots reveal that the Gaussian approximation is not as useful:</p></li>
 </ul>
 
 <img data-src="18-distributions_files/figure-revealjs/histogram-qqplot-female-heights-1.png" width="960" class="r-stretch"></section>
 <section id="case-study-continued-2" class="slide level2">
 <h2>Case study continued</h2>
 <ul>
-<li><p>A likely for the second <em>bump</em> is that <code>female</code> as the default in the reporting tool.</p></li>
+<li><p>A likely explanation for the second <em>bump</em> is that <code>female</code> as the default in the reporting tool.</p></li>
 <li><p>The unexpected five smallest values are likely cases of <code>5'x''</code> reported as <code>5x</code></p></li>
 </ul>
 <div class="cell">

@@ -1,7 +1,7 @@
 ---
 title: "Distributions"
 keywords: "Data Visualization"
-date: 2024-10-09
+date: 2025-01-28
 format:
   revealjs:
     theme: night
@@ -318,7 +318,7 @@ murders |> ggplot(aes(x = rate)) + geom_histogram(binwidth = 0.5, color = "black
 
 - The *boxplot* provides a five-number summary composed of the range (the minimum and maximum) along with the *quartiles* (the 25th, 50th, and 75th percentiles).
 
-- The R implementation of boxplots ignore *outliers* when computing the range and instead plot these as independent points.
+- The R implementation of boxplots ignores *outliers* when computing the range and instead plot these as independent points.
 
 - The help file provides a specific definition of outliers.
 
@@ -375,7 +375,7 @@ heights |> ggplot(aes(x = sex, y = height, fill = sex)) +
 
 - The plot immediately reveals that males are, on average, taller than females.
 
-- However, exploratory plots reveal that the approximation is not as useful:
+- However, exploratory plots reveal that the Gaussian approximation is not as useful:
 
 
 ```{r histogram-qqplot-female-heights, echo=FALSE} 
@@ -388,7 +388,7 @@ heights |> filter(sex == "Female") |>
 ## Case study continued
 
 
-- A likely for the second _bump_ is that `female` as the default in the reporting tool.
+- A likely explanation for the second _bump_ is that `female` as the default in the reporting tool.
 
 - The unexpected five smallest values are likely cases of `5'x''` reported as `5x`
 

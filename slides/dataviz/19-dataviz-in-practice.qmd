@@ -1,7 +1,7 @@
 ---
 title: "Dataviz In Practice"
 keywords: "Data Visualization"
-date: 2024-10-09
+date: 2025-01-30
 format:
   revealjs:
     theme: night
@@ -600,7 +600,7 @@ We need to compute $10^{1.5}$, which is a bit of extra work.
 ## Transform  values or  scale?
 
 
-- To show logged sclaes, instead of logging the values first, we apply this layer:
+- To show logged scales, instead of logging the values first, we apply this layer:
 
 ```{r dollars-per-day-log-scale, eval=FALSE} 
 gapminder |>  

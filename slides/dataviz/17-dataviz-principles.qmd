@@ -1,7 +1,7 @@
 ---
 title: "Data Visualization Principles"
 keywords: "Data Visualization"
-date: 2024-10-07
+date: 2025-01-28
 format:
   revealjs:
     theme: night
@@ -11,7 +11,7 @@ execute:
 
 ## Some motivation
 
-* The next few slides are examples of infogrpahics that don't follow data visualization principles.
+* The next few slides are examples of infographics that don't follow data visualization principles.
 
 * We use them as motivation.
 
@@ -52,7 +52,7 @@ execute:
 
 * We provide some general principles we can use as a guide for effective data visualization. 
 
-* Much of this section is based on a talk by [Karl Broman](http://kbroman.org/) titled [_Creating Effective Figures and Tables_](https://www.biostat.wisc.edu/~kbroman/presentations/graphs2017.pdf) and includes some of the figures which were made with code that Karl makes available on his [GitHub repository](https://github.com/kbroman/Talk_Graphs), as well as class notes from Peter Aldhous' Introduction to [Data Visualization course](http://paldhous.github.io/ucb/2016/dataviz/index.html). 
+* Much of this section is based on a talk by [Karl Broman](http://kbroman.org/) titled [_Creating Effective Figures and Tables_](https://www.biostat.wisc.edu/~kbroman/presentations/graphs2017.pdf) and includes some of the figures which were made with code that Karl makes available on his [GitHub repository](https://github.com/kbroman/Talk_Graphs), as well as class notes from Peter Aldhous' Introduction to [Data Visualization course](https://www.peteraldhous.com/ucb/2014/dataviz/index.html). 
 
 ## Data visualization principles
 
@@ -85,7 +85,7 @@ library(tidyverse)
 
 ## Encoding data using visual cues
 
-We start by describing some principles for visualy encoding numerical values:
+We start by describing some principles for visually encoding numerical values:
 
 * aligned lengths
 * position
@@ -107,7 +107,7 @@ Example:
 
 * Suppose we want to report the results from two hypothetical polls regarding browser preference taken in 2000 and then 2015. 
 
-* For each year, we are simply comparing five quantities – the five percentages for Opera, Safari, Firefox,IE, and Chrome.
+* For each year, we are simply comparing five quantities – the five percentages for Opera, Safari, Firefox, IE, and Chrome.
 
 
 ## Encoding data using visual cues
@@ -253,7 +253,7 @@ data.frame(Year = as.character(c(2011, 2012, 2013)),Southwest_Border_Apprehensio
 
 ## Know when to include 0
 
-Another examples: 
+Another example: 
 
 ![](https://raw.githubusercontent.com/datasciencelabs/2022/refs/heads/master/dataviz/img/Bush-cuts.png){fig-align="center" height=500}
 
@@ -510,7 +510,7 @@ p2
 ```
 
 
-## Boxplot is a vertical 
+## Boxplot is vertical 
 
 Stack horizontally
 
@@ -913,7 +913,7 @@ options(digits = tmp)
 
 ## Avoid too many significant digits
 
-* In this case, two significant figures is more than enough and clearly makes the point that rates are decreasing:
+* In this case, one decimal point is more than enough and clearly makes the point that rates are decreasing:
 
 ```{r, echo = FALSE}
 dat0 <- dat |> 
