@@ -47,7 +47,8 @@ Jan 16 | Data processing in R | [R basics](slides/R/05-r-basics.qmd), [Vectoriza
 |:-------|:--------------|:---------|:----------|
 [01](psets/pset-01-unix-quarto.html)   |  Unix, Quarto|Jan 19   | easy | 
 [02](psets/pset-02-R-data-analysis.html) |  Data analysis with R | Jan 26  |medium | 
-[03](psets/pset-03-wrangling.qmd)          | Wrangling | Feb 02   |medium 
+[03](psets/pset-03-wrangling.qmd)          | Wrangling | Feb 2   |medium 
+[04](psets/pset-04-dataviz.qmd)          | Dataviz | Feb 9   | medium |
 <!--| [01](psets/pset-01-unix-quarto.qmd)   |  Unix, Quarto|Sep 11   | easy | 
 | [02](psets/pset-02-r-data-analysis.qmd) |  R | Sep 19   |easy | 
 | [03](psets/pset-03-tidyverse.qmd)          |  Tidyverse | Sep 27   |medium | 

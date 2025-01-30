@@ -5,7 +5,7 @@ date: ""
 listing:
   - id: psets
     contents:
-      - psets/pset-0[1-3]-*.qmd
+      - psets/pset-0[1-4]-*.qmd
     type: table
     fields: [title, date]
     date-format: "ddd, MMM DD"

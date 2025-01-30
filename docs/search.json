@@ -6384,7 +6384,7 @@
     "href": "index.html#problem-sets",
     "title": "BIOSTAT 620 Introduction to Health Data Science",
     "section": "Problem sets",
-    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date (11:59pm)\nDifficulty\n\n\n\n\n01\nUnix, Quarto\nJan 19\neasy\n\n\n02\nData analysis with R\nJan 26\nmedium\n\n\n03\nWrangling\nFeb 02\nmedium",
+    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date (11:59pm)\nDifficulty\n\n\n\n\n01\nUnix, Quarto\nJan 19\neasy\n\n\n02\nData analysis with R\nJan 26\nmedium\n\n\n03\nWrangling\nFeb 2\nmedium\n\n\n04\nDataviz\nFeb 9\nmedium",
     "crumbs": [
       "Home"
     ]
@@ -6529,7 +6529,7 @@
     "href": "psets.html",
     "title": "Problem Sets",
     "section": "",
-    "text": "Topic\n\n\nDue date (at 11:59 PM)\n\n\n\n\n\n\nProblem set 1\n\n\nSun, Jan 19\n\n\n\n\nProblem set 2\n\n\nSun, Jan 26\n\n\n\n\nProblem set 3\n\n\nSun, Feb 02\n\n\n\n\n\nNo matching items",
+    "text": "Topic\n\n\nDue date (at 11:59 PM)\n\n\n\n\n\n\nProblem set 1\n\n\nSun, Jan 19\n\n\n\n\nProblem set 2\n\n\nSun, Jan 26\n\n\n\n\nProblem set 3\n\n\nSun, Feb 02\n\n\n\n\nProblem set 4\n\n\nSun, Feb 09\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Problem Sets"
     ]
@@ -12483,5 +12483,47 @@
     "title": "Data Visualization Principles",
     "section": "Boxplot is vertical",
     "text": "Boxplot is vertical\nStack horizontally"
+  },
+  {
+    "objectID": "psets/pset-04-dataviz.html",
+    "href": "psets/pset-04-dataviz.html",
+    "title": "Problem set 4",
+    "section": "",
+    "text": "Total points: 15."
+  },
+  {
+    "objectID": "psets/pset-04-dataviz.html#introduction",
+    "href": "psets/pset-04-dataviz.html#introduction",
+    "title": "Problem set 4",
+    "section": "Introduction",
+    "text": "Introduction\nIn this problem set, we aim to use data visualization to explore the following questions:\n\nBased on SARS-Cov-2 cases, COVID-19 deaths and hospitalizations what periods defined the worst two waves of 2020-2021?\nDid states with higher vaccination rates experience lower COVID-19 death rates?\nWere there regional differences in vaccination rates?\n\nWe are not providing definitive answers to these questions but rather generating visualizations that may offer insights.\n\nObjective\nWe will create a single data frame that contains relevant observations for each jurisdiction, for each Morbidity and Mortality Weekly Report (MMWR) period in 2020 and 2021. The key outcomes of interest are:\n\nSARS-CoV-2 cases\nCOVID-19 hospitalizations\nCOVID-19 deaths\nIndividuals receiving their first COVID-19 vaccine dose\nIndividuals receiving a booster dose\n\n\n\nTask Breakdown\nYour task is divided into three parts:\n\nDownload the data: Retrieve population data from the US Census API and COVID-19 statistics from the CDC API.\nWrangle the data: Clean and join the datasets to create a final table containing all the necessary information.\nCreate visualizations: Generate graphs to explore potential insights into the questions posed above."
+  },
+  {
+    "objectID": "psets/pset-04-dataviz.html#instructions",
+    "href": "psets/pset-04-dataviz.html#instructions",
+    "title": "Problem set 4",
+    "section": "Instructions",
+    "text": "Instructions\n\nAs usual, copy and place the pset-04-dataviz.qmd file in a new directory called p4.\nWithin your p4 directory, create the following directory:\n\ncode\n\nInside the code directory, include the following files:\n\nfuncs.R\nwrangle.R\n\n\nDetailed instructions follow for each of the tasks."
+  },
+  {
+    "objectID": "psets/pset-04-dataviz.html#download-data",
+    "href": "psets/pset-04-dataviz.html#download-data",
+    "title": "Problem set 4",
+    "section": "Download data",
+    "text": "Download data\nFor this part we want the following:\n\nSave all your code in a file called wrangle.R that produces the final data frame.\nWhen executed, this code should save the final data frame in an RDA file in the data directory.\n\n\n(1 point) Copy the relevant code from the previous homework to create the population data frame. Put this code in the the wrangle.R file in the code directory. Comment the code so we know where the population is created, where the regions are read in, and where we combine these.\n\nTest that your wrangling code works. Comment the following code out:\n\n# comment this out to run\n# source(\"./code/wrangle.R\")\n# head(population)\n\n\n(1 point) In the previous problem set we wrote the following script to download cases data:\n\n\napi &lt;- \"https://data.cdc.gov/resource/pwn4-m3yp.json\"\ncases_raw &lt;- request(api) |&gt; \n  req_url_query(\"$limit\" = 10000000) |&gt;\n  req_perform() |&gt; \n  resp_body_json(simplifyVector = TRUE)\n\nWe are now going to download three other datasets from CDC that provide hospitalization, provisional COVID deaths, and vaccine data. A different endpoint is provided for each one, but the requests are the same otherwise. To avoid rewriting the same code more than once, write a function called get_cdc_data that receives and endpoint and returns a data frame. Save this code in a file called funcs.R.\n\n(1 point) Use the function get_cdc_data to download the cases, hospitalization, deaths, and vaccination data and save the data frames. We recommend saving them into objects called: cases_raw, hosp_raw, deaths_raw, and vax_raw.\n\n\ncases - https://data.cdc.gov/resource/pwn4-m3yp.json\nhospitalizations - https://data.cdc.gov/resource/39z2-9zu6.json\ndeaths - https://data.cdc.gov/resource/r8kw-7aab.json\nvaccinations https://data.cdc.gov/resource/rh2h-3yt2.json\n\nWe recommend saving them into objects called: cases_raw, hosp_raw, deaths_raw, and vax_raw.\n\n### YOUR CODE HERE\n# comment this out:\n# source(\"./code/funcs.R\")\n\nTake a look at all the dataframes you just read in.\n\n### Uncomment this to run this\n#print(head(cases_raw))\n#print(head(hosp_raw))\n#print(head(deaths_raw))\n#print(head(vax_raw))"
+  },
+  {
+    "objectID": "psets/pset-04-dataviz.html#wrangling-challenge",
+    "href": "psets/pset-04-dataviz.html#wrangling-challenge",
+    "title": "Problem set 4",
+    "section": "Wrangling Challenge",
+    "text": "Wrangling Challenge\nIn this section, you will wrangle the files downloaded in the previous step into a single data frame containing all the necessary information. We recommend using the following column names: date, state, cases, hosp, deaths, vax, booster, and population.\n\nKey Considerations\n\nAlign reporting periods: Ensure that the time periods for which each outcome is reported are consistent. Specifically, calculate the totals for each Morbidity and Mortality Weekly Report (MMWR) period.\nHarmonize variable names: To facilitate the joining of datasets, rename variables so that they match across all datasets.\n\n\n(1 point) One challenge is data frames use different column names to represent the same variable. Examine each data frame and report back 1) the name of the column with state abbreviations, 2) if the rate is yearly, monthly, or weekly, daily data, 3) all the column names that provide date information.\n\n\n\n\nOutcome\nJurisdiction variable name\nRate\ntime variable names\n\n\n\n\ncases\n\n\n\n\n\nhospitalizations\n\n\n\n\n\ndeaths\n\n\n\n\n\nvaccines\n\n\n\n\n\n\n\n(1 point) Wrangle the cases data frame to keep state, MMWR year, MMWR week, and the total number of cases for that week in that state. Keep only states for which we have population estimates. Hint: Use as_date, ymd_hms, epiweek and epiyear functions in the lubridate package. Comment appropriately. Display the result.\n\n\n### YOUR CODE HERE\n\n\n(1 point) Now repeat the same exercise for hospitalizations. Note that you will have to collapse the data into weekly data and keep the same columns as in the cases dataset, except keep total weekly hospitalizations instead of cases. Remove weeks with less than 7 days reporting. Display your result and comment appropriately.\n\n\n### YOUR CODE HERE\n\n\n(1 point) Repeat what you did in the previous two exercises for provisional COVID-19 deaths. Display the result and comment appropriately.\n\n\n### YOUR CODE HERE\n\n\n(1 point) Repeat this now for vaccination data. Keep the variables series_complete and booster along with state and date. Display the result and comment appropriately. Hint: only use the rows with date_type == 'Admin' to only include vaccine data based on the day it was administered, rather than reported.\n\n\n### YOUR CODE HERE\n\n\n(1 point) Now we are ready to join the tables. We will only consider 2020 and 2021 as we don’t have population sizes for 2022. However, because we want to guarantee that all dates are included we will create a data frame with all possible weeks. We can use this:\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n## Make dates data frame\nall_dates &lt;- data.frame(date = seq(make_date(2020, 1, 25),\n                                   make_date(2021, 12, 31), \n                                   by = \"week\")) |&gt;\n  mutate(date = ceiling_date(date, unit = \"week\", week_start = 7) - days(1)) |&gt;\n  mutate(mmwr_year = epiyear(date), mmwr_week = epiweek(date)) \n\n#Uncomment to run\n#dates_and_pop &lt;- cross_join(all_dates, data.frame(state = unique(population$state))) |&gt; left_join(population, by = c(\"state\", \"mmwr_year\" = \"year\"))\n\nNow join all the tables to create your final table. Make sure it is ordered by date within each state. Call it dat. Show a few rows here."
+  },
+  {
+    "objectID": "psets/pset-04-dataviz.html#data-visualization-generate-some-plots",
+    "href": "psets/pset-04-dataviz.html#data-visualization-generate-some-plots",
+    "title": "Problem set 4",
+    "section": "Data visualization: generate some plots",
+    "text": "Data visualization: generate some plots\nWe are now ready to create some figures. For each question below, write code that generates a plot that addresses the question.\n\n(1 point) Plot a trend plot for cases, hospitalizations and deaths for each state. Color by region. Plot rates per \\(100,000\\) people. Place the plots on top of each other. Hint: Use pivot_longer and facet_wrap.\n\n\n### YOUR CODE HERE\n\n\n(1 point) To determine when vaccination started and when most of the population was vaccinated, compute the percent of the US population (including DC and Puerto Rico) vaccinated by date. Do the same for the booster. Then plot both percentages.\n\n\n### YOUR CODE HERE\n\n\n(1 point) Plot the distribution of vaccination rates across states on July 1, 2021.\n\n\n### YOUR CODE HERE\n\n\n(1 point) Is there a difference across region? Generate a plot of your choice.\n\n\n### YOUR CODE HERE\n\nDiscuss what the plot shows.\nYOUR SHORT ANSWER HERE\n\n(1 point) Using the previous figures, identify a time period that meets the following criteria:\n\n\nA significant COVID-19 wave occurred across the United States.\nA sufficient number of people had been vaccinated.\n\nNext, follow these steps:\n\nFor each state, calculate the COVID-19 deaths per day per 100,000 people during the selected time period.\nDetermine the vaccination rate (primary series) in each state as of the last day of the period.\nCreate a scatter plot to visualize the relationship between these two variables:\n\nThe x-axis should represent the vaccination rate.\nThe y-axis should represent the deaths per day per 100,000 people.\n\n\n\n### YOUR CODE HERE\n\n\n(1 point) Repeat the exercise for the booster.\n\n\n### YOUR CODE HERE"
   }
 ]
