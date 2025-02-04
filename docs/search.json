@@ -6868,7 +6868,7 @@
     "href": "slides/prob/20-intro-to-prob.html#multiplication-rule-example",
     "title": "Introduction to Probability",
     "section": "Multiplication rule example",
-    "text": "Multiplication rule example\n\nImagine a court case in which the suspect was described as having a mustache and a beard.\nThe defendant has both and an “expert” testifies that 1/10 men have beards and 1/5 have mustaches.\nUsing the multiplication rule, he concludes that \\(1/10 \\times 1/5\\) or 0.02 have both.\nBut this assumes independence!\nIf the conditional probability of a man having a mustache, conditional on him having a beard, is .95, then the probability is: \\(1/10 \\times 95/100 = 0.095\\)"
+    "text": "Multiplication rule example\n\nImagine a court case in which the suspect was described as having a mustache and a beard.\nThe defendant has an “expert” testify that 1/10 men have beards and 1/5 have mustaches.\nUsing the multiplication rule, he concludes that \\(1/10 \\times 1/5\\) or 0.02 have both.\nBut this assumes independence!\nIf the conditional probability of a man having a mustache, conditional on him having a beard, is .95, then the probability is: \\(1/10 \\times 95/100 = 0.095\\)"
   },
   {
     "objectID": "slides/prob/20-intro-to-prob.html#multiplication-rule-under",
@@ -6938,7 +6938,7 @@
     "href": "slides/prob/20-intro-to-prob.html#monte-carlo-1",
     "title": "Introduction to Probability",
     "section": "Monte Carlo",
-    "text": "Monte Carlo\n\nIf we repeat the experiment over and over, we can define the probability using the frequentists definition\n\n\nn &lt;- 10^7\nx &lt;- sample(beads, n, replace = TRUE)\ntable(x)/n\n\nx\n     blue       red \n0.6002232 0.3997768 \n\n\n\nNote the definition is for \\(n=\\infty\\). In practice we use very large numbers tp get very close."
+    "text": "Monte Carlo\n\nIf we repeat the experiment over and over, we can define the probability using the frequentists definition\n\n\nn &lt;- 10^7\nx &lt;- sample(beads, n, replace = TRUE)\ntable(x)/n\n\nx\n     blue       red \n0.6002232 0.3997768 \n\n\n\nNote the definition is for \\(n=\\infty\\). In practice we use very large numbers to get very close."
   },
   {
     "objectID": "slides/prob/20-intro-to-prob.html#probability-distributions",
@@ -6959,7 +6959,7 @@
     "href": "slides/prob/20-intro-to-prob.html#combinations-and-permutations",
     "title": "Introduction to Probability",
     "section": "Combinations and permutations",
-    "text": "Combinations and permutations\n\nBeing able to count combinations and permutations is an important part of performing discrete probability computations.\nWe will not cover this but you should know the function expand.grid\nand the gtools functions permutatios and combinations."
+    "text": "Combinations and permutations\n\nBeing able to count combinations and permutations is an important part of performing discrete probability computations.\nWe will not cover this but you should know the function expand.grid\nand the gtools functions permutations and combinations."
   },
   {
     "objectID": "slides/prob/20-intro-to-prob.html#combinations-and-permutations-1",
@@ -7183,7 +7183,7 @@
     "href": "slides/prob/20-intro-to-prob.html#the-probability-density-3",
     "title": "Introduction to Probability",
     "section": "The probability density",
-    "text": "The probability density\n\nFor those that know calculus, remember that the integral is related to a sum: it is the sum of bars with widths approximating 0.\nIf you don’t know calculus, you can think of \\(f(x)\\) as a curve for which the area under that curve, up to the value \\(a\\), gives you the probability \\(\\mbox{Pr}(X\\leq a)\\)."
+    "text": "The probability density\n\nFor those that know calculus, remember that the integral is related to a sum: it is the sum of bars with widths approximating 0.\nYou can think of \\(f(x)\\) as a curve for which the area under that curve, up to the value \\(a\\), gives you the probability \\(\\mbox{Pr}(X\\leq a)\\)."
   },
   {
     "objectID": "slides/prob/20-intro-to-prob.html#the-probability-density-4",

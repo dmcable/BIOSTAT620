@@ -206,7 +206,7 @@ $$
 
 - Imagine a court case in which the suspect was described as having a mustache and a beard.
 
-- The defendant has both and an "expert" testifies that 1/10 men have beards and 1/5 have mustaches.
+- The defendant has an "expert" testify that 1/10 men have beards and 1/5 have mustaches.
 
 - Using the multiplication rule, he concludes that $1/10 \times 1/5$ or 0.02 have both.
 
@@ -315,7 +315,7 @@ x <- sample(beads, n, replace = TRUE)
 table(x)/n
 ```
 
-* Note the definition is for $n=\infty$. In practice we use _very large_ numbers tp get _very close_.
+* Note the definition is for $n=\infty$. In practice we use _very large_ numbers to get _very close_.
 
 
 ## Probability distributions
@@ -355,7 +355,7 @@ set.seed(2020-10-13)
 
 - We will not cover this but you should know the function `expand.grid` 
 
-- and the **gtools** functions `permutatios` and `combinations`.
+- and the **gtools** functions `permutations` and `combinations`.
 
 
 ## Combinations and permutations
@@ -708,7 +708,7 @@ $$
 
 - For those that know calculus, remember that the integral is related to a sum: it is the sum of bars with widths approximating 0.
 
-- If you don't know calculus, you can think of $f(x)$ as a curve for which the area under that curve, up to the value $a$, gives you the probability $\mbox{Pr}(X\leq a)$.
+- You can think of $f(x)$ as a curve for which the area under that curve, up to the value $a$, gives you the probability $\mbox{Pr}(X\leq a)$.
 
 ## The probability density
 
