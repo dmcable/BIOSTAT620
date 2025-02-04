@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Probability"
 keywords: "Probability"
-date: 2024-10-21
+date: 2025-02-04
 format:
   revealjs:
     theme: night
@@ -15,14 +15,14 @@ execute:
 
 - Yet answering questions about probability is often hard, if not impossible.
 
-- In contrast probability has a very intuitive definition in games of chance.
+- In contrast, probability has a very intuitive definition in games of chance.
 
 - Today we discuss a mathematical definition of *probability* that allows us to give precise answers to certain questions.
 
 
 ## Probability
 
-- Probability Theory was born because certain mathematcial computations can give an advantage in games of chance.
+- Probability Theory was born because certain mathematical computations can give an advantage in games of chance.
 
 - Probability continues to be highly useful in modern games of chance.
 

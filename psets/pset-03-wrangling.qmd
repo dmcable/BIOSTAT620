@@ -24,7 +24,7 @@ Write a first line of code for your problem set that defines `census_key` by run
 ```
 
 2. (1 point) The [US Census API User Guide](https://www.census.gov/content/dam/Census/data/developers/api-user-guide/api-user-guide.pdf)
-provides details on how to leverage this valuable resource. We are interested in vintage population estimates for years 2021 and 2022. From the documentation we find that the _endpoint_ is:
+provides details on how to leverage this valuable resource. We are interested in vintage population estimates for years 2020 and 2021. From the documentation we find that the _endpoint_ is:
 
 
 ```{r}
