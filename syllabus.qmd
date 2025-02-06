@@ -57,8 +57,8 @@ For each (approximately weekly) module, we will first teach in lecture the conce
 | Component | Weight |
 |-----------|--------|
 | 10 problem sets | 50% |
-| Midterm 1 | 10% |
-| Midterm 2 | 20% |
+| Midterm 1 | 15% |
+| Midterm 2 | 15% |
 | Final project | 20% |
 
 ## Problem Sets 
@@ -89,6 +89,8 @@ For your final project we ask that you turn in a 4-6 page report using data to a
 
 * Based on state-level data, how effective where vaccines against SARS-CoV-2 reported cases and COVID-19 hospitalizations and deaths, and vaccination rates.
 * What was the excess mortality after Hurricane María in Puerto Rico? Where different age groups affected differently?
+
+The final project will contain a presentation component.
  
 Optionally, you can select a question that align with your ongoing research. This way, it can be directly beneficial to your work. This will require prior approval from the instructor by February 27th.
 
@@ -104,11 +106,16 @@ You can use ChatGPT and other AI tools to assist with questions you may have abo
 |------|-------|
 | Jan 19 | Pset 1 due |
 | Jan 26 | Pset 2 due |
+| Feb 2 | Pset 3 due |
+| Feb 9 | Pset 4 due |
 | Feb 18 | Midterm 1: covers material from Jan 09-Feb 17 |
+| Feb 23 | Pset 5 due |
 | Feb 27 | Start final project. Obtain approval if you want to do a personal project instead. |
 | Mar 04 | No class: Spring break |
 | Mar 06 | No class: Spring break |
 | Apr 01 | Midterm 2: cover material from Jan 09-Mar 27 | 
+| Apr 17 | Final project presentations day 1 |
+| Apr 22 | Final project presentations day 2 |
 | Apr 22 | Last day of class |
 | Apr 24 | Final Project due | 
 

@@ -122,7 +122,7 @@ In this section, you will wrangle the files downloaded in the previous step into
 | vaccines | | | |
 
 
-5. (1 point) Wrangle the cases data frame to keep state, MMWR year, MMWR week, and the total number of cases for that week in that state. Keep only states for which we have population estimates.
+5. (1 point) Wrangle the cases data frame to keep state, MMWR year, MMWR week, and the total number of cases for that week in that state. 
 Hint: Use `as_date`, `ymd_hms`, `epiweek` and `epiyear` functions in the **lubridate** package. Comment appropriately. Display the result.
 
 ```{r}
