@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <meta name="dcterms.date" content="2024-10-23">
+  <meta name="dcterms.date" content="2025-02-06">
   <meta name="keywords" content="Inference">
   <title>BIOSTAT 620: Introduction to Health Data Science – Parameters and Estimates</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -198,7 +198,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2024-10-23</p>
+  <p class="date">2025-02-06</p>
 </section>
 <section id="the-sampling-model-for-polls" class="slide level2">
 <h2>The sampling model for polls</h2>
@@ -209,23 +209,24 @@
 <h2>The sampling model for polls</h2>
 <ul>
 <li><p>To help us understand the connection between polls and what we have learned, let’s construct a situation similar to what pollsters face.</p></li>
-<li><p>To simulate the challenge pollsters encounter in terms of competing with other pollsters for media attention, we will use an urn filled with beads to represent voters, and pretend we are competing for a $25 dollar prize.</p></li>
+<li><p>To simulate the challenge pollsters encounter in terms of competing with other pollsters for media attention, we will use an urn filled with beads to represent voters, and pretend we are competing for a $50 dollar prize.</p></li>
 <li><p>The challenge is to guess the spread between the proportion of blue and red beads in an urn.</p></li>
+<li><p>For this exercise, $1 = 1% of extra credit for HW1.</p></li>
 </ul>
 </section>
 <section id="the-sampling-model-for-polls-2" class="slide level2">
 <h2>The sampling model for polls</h2>
 <ul>
 <li><p>Before making a prediction, you can take a sample (with replacement) from the urn.</p></li>
-<li><p>To reflect the fact that running polls is expensive, it costs you $0.10 for each bead you sample.</p></li>
-<li><p>Therefore, if your sample size is 250, and you win, you will break even since you would have paid $25 to collect your $25 prize.</p></li>
-<li><p>Your entry into the competition can be an interval.</p></li>
+<li><p>To reflect the fact that running polls is expensive, it costs you $0.25 for each bead you sample. For the sake of this exercise, you only have to pay if you win. You can’t pay more than $50.</p></li>
+<li><p>Therefore, if your sample size is 200, and you win, you will break even since you would have paid $50 to collect your $50 prize.</p></li>
+<li><p>Your entry into the competition is an interval.</p></li>
 </ul>
 </section>
 <section id="the-sampling-model-for-polls-3" class="slide level2">
 <h2>The sampling model for polls</h2>
 <ul>
-<li><p>If the interval you submit contains the true proportion, you receive half what you paid and proceed to the second phase of the competition.</p></li>
+<li><p>If the interval you submit contains the true proportion, you proceed to the second phase of the competition.</p></li>
 <li><p>In the second phase, the entry with the smallest interval is selected as the winner.</p></li>
 <li><p>The <strong>dslabs</strong> package includes a function that shows a random draw from this urn:</p></li>
 </ul>
@@ -239,8 +240,8 @@
 <section id="populations-samples-parameters-and-estimates" class="slide level2">
 <h2>Populations, samples, parameters, and estimates</h2>
 <ul>
-<li><p>We want to predict difference proportion of blue beads - proportion of red beads</p></li>
-<li><p>Let’s the proportion of blue <span class="math inline">\(p\)</span></p></li>
+<li><p>We want to predict the difference of proportion of blue beads - proportion of red beads</p></li>
+<li><p>Let’s call the proportion of blue <span class="math inline">\(p\)</span></p></li>
 <li><p>We want to estimate <span class="math inline">\(p - (1-p)\)</span> = <span class="math inline">\(2p - 1\)</span>.</p></li>
 </ul>
 </section>
@@ -529,11 +530,11 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">mean</span>(x_hat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.4499587</code></pre>
+<pre><code>[1] 0.4498414</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">sd</span>(x_hat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.01580187</code></pre>
+<pre><code>[1] 0.01579516</code></pre>
 </div>
 </div>
 </section>

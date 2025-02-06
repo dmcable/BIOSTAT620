@@ -342,18 +342,18 @@
 <li>If we want to determine the probability of two events, say <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, occurring, we can use the multiplication rule:</li>
 </ul>
 <p><span class="math display">\[
-\mbox{Pr}(A \cup B) = \mbox{Pr}(A)\mbox{Pr}(B \mid A)
+\mbox{Pr}(A, B) = \mbox{Pr}(A)\mbox{Pr}(B \mid A)
 \]</span></p>
 </section>
 <section id="multiplication-rule-1" class="slide level2">
 <h2>Multiplication rule</h2>
 <ul>
-<li>For example:</li>
+<li>For example (note that <code>10-value</code> represents the 4 cards with value of 10: 10, Jack, Queen, and King):</li>
 </ul>
 <p><span class="math display">\[
 \mbox{Pr}(\mbox{Blackjack in first hand}) = \\
-\mbox{Pr}(\mbox{Ace first})\mbox{Pr}(\mbox{Face card second}\mid \mbox{Ace first}) +\\
-\mbox{Pr}(\mbox{Face card first})\mbox{Pr}(\mbox{Ace}\mid \mbox{Face card second}) =\\
+\mbox{Pr}(\mbox{Ace first})\mbox{Pr}(\mbox{10-value second}\mid \mbox{Ace first}) +\\
+\mbox{Pr}(\mbox{10-value first})\mbox{Pr}(\mbox{Ace}\mid \mbox{10-value second}) =\\
 \frac{1}{13}\frac{16}{51} + \frac{4}{13}\frac{4}{51} \approx 0.0483
 \]</span></p>
 </section>
@@ -363,7 +363,7 @@
 <li>We can use induction to expand for more events:</li>
 </ul>
 <p><span class="math display">\[
-\mbox{Pr}(A \cup B \cup C) = \mbox{Pr}(A)\mbox{Pr}(B \mid A)\mbox{Pr}(C \mid A \cup B)
+\mbox{Pr}(A, B, C) = \mbox{Pr}(A)\mbox{Pr}(B \mid A)\mbox{Pr}(C \mid A , B)
 \]</span></p>
 </section>
 <section id="multiplication-rule-3" class="slide level2">
@@ -372,7 +372,7 @@
 <li>When dealing with independent events, the multiplication rule becomes simpler:</li>
 </ul>
 <p><span class="math display">\[
-\mbox{Pr}(A \cup B \cup C) = \mbox{Pr}(A)\mbox{Pr}(B)\mbox{Pr}(C)
+\mbox{Pr}(A, B, C) = \mbox{Pr}(A)\mbox{Pr}(B)\mbox{Pr}(C)
 \]</span></p>
 <ul>
 <li>However, we have to be very careful before using this version of the multiplication rule, since assuming independence can result in very different and incorrect probability calculations when events are not actually independent.</li>
@@ -394,7 +394,7 @@
 <li>The multiplication rule also gives us a general formula for computing conditional probabilities:</li>
 </ul>
 <p><span class="math display">\[
-\mbox{Pr}(B \mid A) = \frac{\mbox{Pr}(A \cup B)}{ \mbox{Pr}(A)}
+\mbox{Pr}(B \mid A) = \frac{\mbox{Pr}(A, B)}{ \mbox{Pr}(A)}
 \]</span></p>
 </section>
 <section id="addition-rule" class="slide level2">

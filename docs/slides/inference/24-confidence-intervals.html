@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <meta name="dcterms.date" content="2024-10-23">
+  <meta name="dcterms.date" content="2025-02-06">
   <meta name="keywords" content="Inference">
   <title>BIOSTAT 620: Introduction to Health Data Science – Confidence Intervals</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -198,7 +198,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2024-10-23</p>
+  <p class="date">2025-02-06</p>
 </section>
 <section id="confidence-intervals" class="slide level2">
 <h2>Confidence intervals</h2>
@@ -216,7 +216,7 @@
 <h2>Confidence intervals</h2>
 <ul>
 <li><p>In our competition, you were asked to give an interval.</p></li>
-<li><p>If the interval you submitted includes the <span class="math inline">\(p\)</span>, you receive half the money you spent on your “poll” back and proceed to the next stage of the competition.</p></li>
+<li><p>If the interval you submitted includes the <span class="math inline">\(p\)</span>, you proceed to the next stage of the competition.</p></li>
 </ul>
 </section>
 <section id="confidence-intervals-3" class="slide level2">
@@ -231,7 +231,7 @@
 <h2>Confidence intervals</h2>
 <ul>
 <li><p>Similarly, if you are an election forecaster and predict the spread will be between -100% and 100%, you will be ridiculed for stating the obvious.</p></li>
-<li><p>Even a smaller interval, such as saying the spread will be between -10 and 10%, will not be considered serious.</p></li>
+<li><p>Even a smaller interval, such as saying the spread will be between -10 and 10%, will not be considered seriously.</p></li>
 </ul>
 </section>
 <section id="confidence-intervals-5" class="slide level2">
@@ -265,7 +265,7 @@
 <span id="cb2-3"><a></a>se_hat <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(x_hat<span class="sc">*</span>(<span class="dv">1</span> <span class="sc">-</span> x_hat)<span class="sc">/</span>N) </span>
 <span id="cb2-4"><a></a><span class="fu">c</span>(x_hat <span class="sc">-</span> <span class="fl">1.96</span><span class="sc">*</span>se_hat, x_hat <span class="sc">+</span> <span class="fl">1.96</span><span class="sc">*</span>se_hat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.4072489 0.4687511</code></pre>
+<pre><code>[1] 0.3686485 0.4293515</code></pre>
 </div>
 </div>
 <ul>
@@ -277,7 +277,7 @@
 <span id="cb4-3"><a></a>se_hat <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(x_hat<span class="sc">*</span>(<span class="dv">1</span> <span class="sc">-</span> x_hat)<span class="sc">/</span>N) </span>
 <span id="cb4-4"><a></a><span class="fu">c</span>(x_hat <span class="sc">-</span> <span class="fl">1.96</span><span class="sc">*</span>se_hat, x_hat <span class="sc">+</span> <span class="fl">1.96</span><span class="sc">*</span>se_hat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.4400618 0.5019382</code></pre>
+<pre><code>[1] 0.4330901 0.4949099</code></pre>
 </div>
 </div>
 <ul>
@@ -349,7 +349,7 @@
 <section id="confidence-intervals-12" class="slide level2">
 <h2>Confidence intervals</h2>
 <ul>
-<li><p>In statistics textbooks, confidence interval formulas are given for arbitraty probabilities written as <span class="math inline">\(1-\alpha\)</span>.</p></li>
+<li><p>In statistics textbooks, confidence interval formulas are given for arbitrary probabilities written as <span class="math inline">\(1-\alpha\)</span>.</p></li>
 <li><p>We can obtain the <span class="math inline">\(z\)</span> for the equation above using <code>z = qnorm(1 - alpha / 2)</code> because <span class="math inline">\(1 - \alpha/2 - \alpha/2 = 1 - \alpha\)</span>.</p></li>
 <li><p>So, for example, for <span class="math inline">\(\alpha=0.05\)</span>, <span class="math inline">\(1 - \alpha/2 = 0.975\)</span> and we get the <span class="math inline">\(z=1.96\)</span> we used above:</p></li>
 </ul>
@@ -376,7 +376,7 @@
 <span id="cb14-8"><a></a>}) </span>
 <span id="cb14-9"><a></a><span class="fu">mean</span>(inside) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9457</code></pre>
+<pre><code>[1] 0.9495</code></pre>
 </div>
 </div>
 </section>

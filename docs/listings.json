@@ -23,7 +23,13 @@
       "/slides/dataviz/18-distributions.html",
       "/slides/dataviz/19-dataviz-in-practice.html",
       "/slides/prob/20-intro-to-prob.html",
-      "/slides/prob/21-inference-foundations.html"
+      "/slides/prob/21-inference-foundations.html",
+      "/slides/inference/22-intro-inference.html",
+      "/slides/inference/23-parameters-estimates.html",
+      "/slides/inference/24-confidence-intervals.html",
+      "/slides/inference/25-models.html",
+      "/slides/inference/26-bayes.html",
+      "/slides/inference/27-hierarchical-models.html"
     ]
   },
   {

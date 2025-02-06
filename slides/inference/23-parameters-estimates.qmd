@@ -1,7 +1,7 @@
 ---
 title: "Parameters and Estimates"
 keywords: "Inference"
-date: 2024-10-23
+date: 2025-02-06
 format:
   revealjs:
     theme: night
@@ -39,26 +39,27 @@ tab |> select(-Date) |> knitr::kable("html") |>
 
 - To help us understand the connection between polls and what we have learned, let's construct a situation similar to what pollsters face.
 
-- To simulate the challenge pollsters encounter in terms of competing with other pollsters for media attention, we will use an urn filled with beads to represent voters, and pretend we are competing for a \$25 dollar prize.
+- To simulate the challenge pollsters encounter in terms of competing with other pollsters for media attention, we will use an urn filled with beads to represent voters, and pretend we are competing for a \$50 dollar prize.
 
 - The challenge is to guess the spread between the proportion of blue and red beads in an urn.
 
+- For this exercise, \$1 = 1\% of extra credit for HW1.
 
 ## The sampling model for polls
 
 - Before making a prediction, you can take a sample (with replacement) from the urn.
 
-- To reflect the fact that running polls is expensive, it costs you \$0.10 for each bead you sample.
+- To reflect the fact that running polls is expensive, it costs you \$0.25 for each bead you sample. For the sake of this exercise, you only have to pay if you win. You can't pay more than $50.
 
-- Therefore, if your sample size is 250, and you win, you will break even since you would have paid \$25 to collect your \$25 prize.
+- Therefore, if your sample size is 200, and you win, you will break even since you would have paid \$50 to collect your \$50 prize.
 
-- Your entry into the competition can be an interval.
+- Your entry into the competition is an interval.
 
 
 
 ## The sampling model for polls
 
-- If the interval you submit contains the true proportion, you receive half what you paid and proceed to the second phase of the competition.
+- If the interval you submit contains the true proportion, you proceed to the second phase of the competition.
 
 - In the second phase, the entry with the smallest interval is selected as the winner.
 
@@ -84,9 +85,9 @@ library(dslabs)
 
 ## Populations, samples, parameters, and estimates
 
-- We want to predict difference  proportion of blue beads - proportion of red beads
+- We want to predict the difference of proportion of blue beads - proportion of red beads
 
-- Let's the proportion of blue $p$
+- Let's call the proportion of blue $p$
 
 - We want to estimate $p - (1-p)$ = $2p - 1$.
 

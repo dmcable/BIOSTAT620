@@ -162,18 +162,18 @@ $$
 
 
 $$ 
-\mbox{Pr}(A \cup B) = \mbox{Pr}(A)\mbox{Pr}(B \mid A) 
+\mbox{Pr}(A, B) = \mbox{Pr}(A)\mbox{Pr}(B \mid A) 
 $$ 
 
 ## Multiplication rule
 
 
-- For example:
+- For example (note that `10-value` represents the 4 cards with value of 10: 10, Jack, Queen, and King):
 
 $$ 
 \mbox{Pr}(\mbox{Blackjack in first hand}) = \\
-\mbox{Pr}(\mbox{Ace first})\mbox{Pr}(\mbox{Face card second}\mid \mbox{Ace first}) +\\
-\mbox{Pr}(\mbox{Face card first})\mbox{Pr}(\mbox{Ace}\mid \mbox{Face card second}) =\\
+\mbox{Pr}(\mbox{Ace first})\mbox{Pr}(\mbox{10-value second}\mid \mbox{Ace first}) +\\
+\mbox{Pr}(\mbox{10-value first})\mbox{Pr}(\mbox{Ace}\mid \mbox{10-value second}) =\\
 \frac{1}{13}\frac{16}{51} + \frac{4}{13}\frac{4}{51} \approx 0.0483
 $$ 
 
@@ -186,7 +186,7 @@ $$
 
 
 $$ 
-\mbox{Pr}(A \cup B \cup C) = \mbox{Pr}(A)\mbox{Pr}(B \mid A)\mbox{Pr}(C \mid A \cup B) 
+\mbox{Pr}(A, B, C) = \mbox{Pr}(A)\mbox{Pr}(B \mid A)\mbox{Pr}(C \mid A , B) 
 $$
 
 
@@ -197,7 +197,7 @@ $$
 
 
 $$ 
-\mbox{Pr}(A \cup B \cup C) = \mbox{Pr}(A)\mbox{Pr}(B)\mbox{Pr}(C) 
+\mbox{Pr}(A, B, C) = \mbox{Pr}(A)\mbox{Pr}(B)\mbox{Pr}(C) 
 $$
 
 - However, we have to be very careful before using this version of the multiplication rule, since assuming independence can result in very different and incorrect probability calculations when events are not actually independent.
@@ -222,7 +222,7 @@ $$
 
 
 $$ 
-\mbox{Pr}(B \mid A) = \frac{\mbox{Pr}(A \cup B)}{ \mbox{Pr}(A)} 
+\mbox{Pr}(B \mid A) = \frac{\mbox{Pr}(A, B)}{ \mbox{Pr}(A)} 
 $$
 
 

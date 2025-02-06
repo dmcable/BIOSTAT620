@@ -1,7 +1,7 @@
 ---
 title: "Confidence Intervals"
 keywords: "Inference"
-date: 2024-10-23
+date: 2025-02-06
 format:
   revealjs:
     theme: night
@@ -35,7 +35,7 @@ data.frame(year = as.numeric(time(nhtemp)), temperature = as.numeric(nhtemp)) |>
 
 - In our competition, you were asked to give an interval.
 
-- If the interval you submitted includes the $p$, you receive half the money you spent on your "poll" back and proceed to the next stage of the competition.
+- If the interval you submitted includes the $p$, you proceed to the next stage of the competition.
 
 
 
@@ -54,7 +54,7 @@ data.frame(year = as.numeric(time(nhtemp)), temperature = as.numeric(nhtemp)) |>
 
 - Similarly, if you are an election forecaster and predict the spread will be between -100% and 100%, you will be ridiculed for stating the obvious.
 
-- Even a smaller interval, such as saying the spread will be between -10 and 10%, will not be considered serious.
+- Even a smaller interval, such as saying the spread will be between -10 and 10%, will not be considered seriously.
 
 ## Confidence intervals
 
@@ -166,7 +166,7 @@ pnorm(z) - pnorm(-z)
 
 ## Confidence intervals
 
-- In statistics textbooks, confidence interval formulas are given for arbitraty  probabilities written as $1-\alpha$.
+- In statistics textbooks, confidence interval formulas are given for arbitrary  probabilities written as $1-\alpha$.
 
 - We can obtain the $z$ for the equation above using `z = qnorm(1 - alpha / 2)` because $1 - \alpha/2 - \alpha/2 = 1 - \alpha$.
 
