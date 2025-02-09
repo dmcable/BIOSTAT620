@@ -29,7 +29,11 @@
       "/slides/inference/24-confidence-intervals.html",
       "/slides/inference/25-models.html",
       "/slides/inference/26-bayes.html",
-      "/slides/inference/27-hierarchical-models.html"
+      "/slides/inference/27-hierarchical-models.html",
+      "/slides/linear-models/28-intro-to-linear-models.html",
+      "/slides/linear-models/29-regression.html",
+      "/slides/linear-models/30-multivariate-regression.html",
+      "/slides/linear-models/31-treatment-effect-models.html"
     ]
   },
   {

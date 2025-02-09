@@ -400,7 +400,7 @@ one_poll_per_pollster <- polls |> group_by(pollster) |>
 
 - As a reminder, we have data from $I=15$ pollsters.
 
-- Based on the model assumptions described above, we can mathematically show that the average $\bar{X}$:
+- Based on the model assumptions described above, we can mathematically show the average $\bar{X}$:
 
 ```{r} 
 x_bar <- mean(one_poll_per_pollster$spread) 
@@ -573,7 +573,7 @@ results <- results |>
 
 - However, to keep it simple, we assign a prior to each state that assumes we know nothing about what will happen.
 
-- Given that results from a specific state don't vary significantly from election year to election year, we will assign a standard deviation of 2% or $\tau=0.02$.
+- We will make the imperfect approximation that all states are centered around 0%, and we will assign a standard deviation of 2% or $\tau=0.02$.
 
 
 
@@ -746,7 +746,8 @@ To make sure the variability we observe is not due to pollster effects, let's st
 ```{r poplular-vote-time-trend} 
 one_pollster <- polls_us_election_2016 |>  
   filter(pollster == "Ipsos" & state == "U.S.") |>  
-  mutate(spread = rawpoll_clinton/100 - rawpoll_trump/100) 
+  mutate(spread = rawpoll_clinton/100 - rawpoll_trump/100,
+         p = rawpoll_clinton / (rawpoll_clinton + rawpoll_trump)) 
 ``` 
 
 ## Forecasting
@@ -758,7 +759,7 @@ one_pollster <- polls_us_election_2016 |>
 ```{r} 
 se <- one_pollster |>  
   summarize(empirical = sd(spread),  
-            theoretical = 2*sqrt(mean(spread)*(1 - mean(spread))/min(samplesize))) 
+            theoretical = 2*sqrt(mean(p)*(1 - mean(p)))*mean(1/sqrt(samplesize)))
 se 
 ``` 
 
@@ -766,7 +767,7 @@ se
 
 ## Forecasting
 
-- But the empirical standard deviation is higher than the highest possible theoretical estimate. Furthermore, the spread data does not look normal as the theory would predict:
+- But the empirical standard deviation is higher than the theoretical estimate. Furthermore, the spread data does not look normal as the theory would predict:
 
 ```{r time-trend-variability, echo=FALSE} 
 one_pollster |> ggplot(aes(spread)) + geom_histogram(binwidth = 0.01,  color = I("black")) 
@@ -777,7 +778,7 @@ one_pollster |> ggplot(aes(spread)) + geom_histogram(binwidth = 0.01,  color = I
 
 - The models we have described include pollster-to-pollster variability and sampling error.
 
-- But this plot is for one pollster and the variability we see is certainly not explained by sampling error.
+- But this plot is for one pollster, and the variability we see is certainly not explained by sampling error.
 
 - Where is the extra variability coming from? 
 

@@ -684,7 +684,7 @@
     "href": "slides/inference/27-hierarchical-models.html#computing-a-posterior-2",
     "title": "Hierarchical Models",
     "section": "Computing a posterior",
-    "text": "Computing a posterior\n\nAs a reminder, we have data from \\(I=15\\) pollsters.\nBased on the model assumptions described above, we can mathematically show that the average \\(\\bar{X}\\):\n\n\nx_bar &lt;- mean(one_poll_per_pollster$spread) \n\n\nthis has expected value \\(\\mu\\).\nBut how precise is this estimate?"
+    "text": "Computing a posterior\n\nAs a reminder, we have data from \\(I=15\\) pollsters.\nBased on the model assumptions described above, we can mathematically show the average \\(\\bar{X}\\):\n\n\nx_bar &lt;- mean(one_poll_per_pollster$spread) \n\n\nthis has expected value \\(\\mu\\).\nBut how precise is this estimate?"
   },
   {
     "objectID": "slides/inference/27-hierarchical-models.html#computing-a-posterior-3",
@@ -775,7 +775,7 @@
     "href": "slides/inference/27-hierarchical-models.html#predicting-the-electoral-college-9",
     "title": "Hierarchical Models",
     "section": "Predicting the electoral college",
-    "text": "Predicting the electoral college\n\nHowever, to keep it simple, we assign a prior to each state that assumes we know nothing about what will happen.\nGiven that results from a specific state don’t vary significantly from election year to election year, we will assign a standard deviation of 2% or \\(\\tau=0.02\\)."
+    "text": "Predicting the electoral college\n\nHowever, to keep it simple, we assign a prior to each state that assumes we know nothing about what will happen.\nWe will make the imperfect approximation that all states are centered around 0%, and we will assign a standard deviation of 2% or \\(\\tau=0.02\\)."
   },
   {
     "objectID": "slides/inference/27-hierarchical-models.html#predicting-the-electoral-college-10",
@@ -859,28 +859,28 @@
     "href": "slides/inference/27-hierarchical-models.html#forecasting-1",
     "title": "Hierarchical Models",
     "section": "Forecasting",
-    "text": "Forecasting\nTo make sure the variability we observe is not due to pollster effects, let’s study data from one pollster:\n\none_pollster &lt;- polls_us_election_2016 |&gt;  \n  filter(pollster == \"Ipsos\" & state == \"U.S.\") |&gt;  \n  mutate(spread = rawpoll_clinton/100 - rawpoll_trump/100)"
+    "text": "Forecasting\nTo make sure the variability we observe is not due to pollster effects, let’s study data from one pollster:\n\none_pollster &lt;- polls_us_election_2016 |&gt;  \n  filter(pollster == \"Ipsos\" & state == \"U.S.\") |&gt;  \n  mutate(spread = rawpoll_clinton/100 - rawpoll_trump/100,\n         p = rawpoll_clinton / (rawpoll_clinton + rawpoll_trump))"
   },
   {
     "objectID": "slides/inference/27-hierarchical-models.html#forecasting-2",
     "href": "slides/inference/27-hierarchical-models.html#forecasting-2",
     "title": "Hierarchical Models",
     "section": "Forecasting",
-    "text": "Forecasting\n\nSince there is no pollster effect, then perhaps the theoretical standard error matches the data-derived standard deviation.\nWe compute both here:\n\n\nse &lt;- one_pollster |&gt;  \n  summarize(empirical = sd(spread),  \n            theoretical = 2*sqrt(mean(spread)*(1 - mean(spread))/min(samplesize))) \nse \n\n   empirical theoretical\n1 0.04025194  0.03256719"
+    "text": "Forecasting\n\nSince there is no pollster effect, then perhaps the theoretical standard error matches the data-derived standard deviation.\nWe compute both here:\n\n\nse &lt;- one_pollster |&gt;  \n  summarize(empirical = sd(spread),  \n            theoretical = 2*sqrt(mean(p)*(1 - mean(p)))*mean(1/sqrt(samplesize)))\nse \n\n   empirical theoretical\n1 0.04025194   0.0278079"
   },
   {
     "objectID": "slides/inference/27-hierarchical-models.html#forecasting-3",
     "href": "slides/inference/27-hierarchical-models.html#forecasting-3",
     "title": "Hierarchical Models",
     "section": "Forecasting",
-    "text": "Forecasting\n\nBut the empirical standard deviation is higher than the highest possible theoretical estimate. Furthermore, the spread data does not look normal as the theory would predict:"
+    "text": "Forecasting\n\nBut the empirical standard deviation is higher than the theoretical estimate. Furthermore, the spread data does not look normal as the theory would predict:"
   },
   {
     "objectID": "slides/inference/27-hierarchical-models.html#forecasting-4",
     "href": "slides/inference/27-hierarchical-models.html#forecasting-4",
     "title": "Hierarchical Models",
     "section": "Forecasting",
-    "text": "Forecasting\n\nThe models we have described include pollster-to-pollster variability and sampling error.\nBut this plot is for one pollster and the variability we see is certainly not explained by sampling error.\nWhere is the extra variability coming from?"
+    "text": "Forecasting\n\nThe models we have described include pollster-to-pollster variability and sampling error.\nBut this plot is for one pollster, and the variability we see is certainly not explained by sampling error.\nWhere is the extra variability coming from?"
   },
   {
     "objectID": "slides/inference/27-hierarchical-models.html#forecasting-5",
@@ -6374,7 +6374,7 @@
     "href": "index.html#lectures",
     "title": "BIOSTAT 620 Introduction to Health Data Science",
     "section": "Lectures",
-    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading\n\n\n\n\nJan 09\nProductivity Tools\nIntro, Unix, RStudio\nInstalling R and RStudio on Windows or Mac, Getting Started, Unix\n\n\nJan 14\nProductivity Tools\nQuarto, Git and GitHub\nRStudio Projects, Quarto, Git\n\n\nJan 16\nData processing in R\nR basics, Vectorization\nR Basics, Vectorization\n\n\nJan 16\nData Processing in R\nTidyverse, ggplot2\ndplyr, ggplot2\n\n\nJan 21\nData Processing in R\nTyding data\nReshaping Data\n\n\nJan 21, Jan 23\nWrangling\nIntro, Data Importing, Dates and Times, Locales, Data APIs, Web scraping, Joining tables\nImporting data, dates and times, Locales, Joining Tables, Extracting data from the web\n\n\nJan 28, Jan 30\nData visualization\nDataviz Principles, Distributions, Dataviz in practice\nDistributions, Dataviz Principles\n\n\nFeb 04\nProbability\nIntro, Foundations for Inference\nMonte Carlo, Random Variables & CLT\n\n\nFeb 06\nInference\nIntro, Parameter and estimates, Confidence Intervals\nParameters & Estimates, Confidence Intervals\n\n\nFeb 11, Feb 13\nStatistical Models\nModels, Bayes, Hierarchical Models\nData-driven Models, Bayesian Statistics, Hierarchical Models\n\n\nFeb 18\nMidterm 1\n\nCovers material from Jan 09-Feb 13",
+    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading\n\n\n\n\nJan 09\nProductivity Tools\nIntro, Unix, RStudio\nInstalling R and RStudio on Windows or Mac, Getting Started, Unix\n\n\nJan 14\nProductivity Tools\nQuarto, Git and GitHub\nRStudio Projects, Quarto, Git\n\n\nJan 16\nData processing in R\nR basics, Vectorization\nR Basics, Vectorization\n\n\nJan 16\nData Processing in R\nTidyverse, ggplot2\ndplyr, ggplot2\n\n\nJan 21\nData Processing in R\nTyding data\nReshaping Data\n\n\nJan 21, Jan 23\nWrangling\nIntro, Data Importing, Dates and Times, Locales, Data APIs, Web scraping, Joining tables\nImporting data, dates and times, Locales, Joining Tables, Extracting data from the web\n\n\nJan 28, Jan 30\nData visualization\nDataviz Principles, Distributions, Dataviz in practice\nDistributions, Dataviz Principles\n\n\nFeb 04\nProbability\nIntro, Foundations for Inference\nMonte Carlo, Random Variables & CLT\n\n\nFeb 06\nInference\nIntro, Parameter and estimates, Confidence Intervals\nParameters & Estimates, Confidence Intervals\n\n\nFeb 11, Feb 13\nStatistical Models\nModels, Bayes, Hierarchical Models\nData-driven Models, Bayesian Statistics, Hierarchical Models\n\n\nFeb 18\nMidterm 1\n\nCovers material from Jan 09-Feb 13\n\n\nFeb 20, Feb 25\nLinear models\nIntro, Regression\nRegression, Multivariate Regression\n\n\nFeb 27, Mar 11\nLinear models\nMultivariate regression, Treatment effect models\nMeasurement Error Models, Treatment Effect Models, Association Tests, Association Not Causation",
     "crumbs": [
       "Home"
     ]
@@ -6519,7 +6519,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Topic\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nFirst day\n\n\nIntroduction\n\n\nThu, Jan 09\n\n\n\n\nProductivity Tools\n\n\nUnix\n\n\nThu, Jan 09\n\n\n\n\nProductivity Tools\n\n\nRStudio\n\n\nThu, Jan 09\n\n\n\n\nProductivity Tools\n\n\nQuarto\n\n\nTue, Jan 14\n\n\n\n\nProductivity Tools\n\n\nGit and GitHub\n\n\nTue, Jan 14\n\n\n\n\nR\n\n\nR Basics\n\n\nThu, Jan 16\n\n\n\n\nR\n\n\nVectorization\n\n\nThu, Jan 16\n\n\n\n\nR\n\n\nTidyverse\n\n\nThu, Jan 16\n\n\n\n\nR\n\n\nggplot2\n\n\nThu, Jan 16\n\n\n\n\nR\n\n\nTidying data\n\n\nTue, Jan 21\n\n\n\n\nWrangling\n\n\nIntroduction to Wrangling\n\n\nTue, Jan 21\n\n\n\n\nWrangling\n\n\nImporting files\n\n\nTue, Jan 21\n\n\n\n\nWrangling\n\n\nDates And Times\n\n\nTue, Jan 21\n\n\n\n\nWrangling\n\n\nLocales\n\n\nTue, Jan 21\n\n\n\n\nWrangling\n\n\nData APIs\n\n\nThu, Jan 23\n\n\n\n\nWrangling\n\n\nWeb Scraping\n\n\nThu, Jan 23\n\n\n\n\nWrangling\n\n\nJoining Tables\n\n\nThu, Jan 23\n\n\n\n\nData Visualization\n\n\nData Visualization Principles\n\n\nTue, Jan 28\n\n\n\n\nData Visualization\n\n\nDistributions\n\n\nTue, Jan 28\n\n\n\n\nData Visualization\n\n\nDataviz In Practice\n\n\nThu, Jan 30\n\n\n\n\nProbability\n\n\nIntroduction to Probability\n\n\nTue, Feb 04\n\n\n\n\nProbability\n\n\nFoundations of Statistical Inference\n\n\nTue, Feb 04\n\n\n\n\nInference\n\n\nIntroduction to Statistical Inference and Models\n\n\nThu, Feb 06\n\n\n\n\nInference\n\n\nParameters and Estimates\n\n\nThu, Feb 06\n\n\n\n\nInference\n\n\nConfidence Intervals\n\n\nThu, Feb 06\n\n\n\n\nInference\n\n\nData-driven models\n\n\nTue, Feb 11\n\n\n\n\nInference\n\n\nBayesian Models\n\n\nTue, Feb 11\n\n\n\n\nInference\n\n\nHierarchical Models\n\n\nThu, Feb 13\n\n\n\n\n\nNo matching items",
+    "text": "Topic\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nFirst day\n\n\nIntroduction\n\n\nThu, Jan 09\n\n\n\n\nProductivity Tools\n\n\nUnix\n\n\nThu, Jan 09\n\n\n\n\nProductivity Tools\n\n\nRStudio\n\n\nThu, Jan 09\n\n\n\n\nProductivity Tools\n\n\nQuarto\n\n\nTue, Jan 14\n\n\n\n\nProductivity Tools\n\n\nGit and GitHub\n\n\nTue, Jan 14\n\n\n\n\nR\n\n\nR Basics\n\n\nThu, Jan 16\n\n\n\n\nR\n\n\nVectorization\n\n\nThu, Jan 16\n\n\n\n\nR\n\n\nTidyverse\n\n\nThu, Jan 16\n\n\n\n\nR\n\n\nggplot2\n\n\nThu, Jan 16\n\n\n\n\nR\n\n\nTidying data\n\n\nTue, Jan 21\n\n\n\n\nWrangling\n\n\nIntroduction to Wrangling\n\n\nTue, Jan 21\n\n\n\n\nWrangling\n\n\nImporting files\n\n\nTue, Jan 21\n\n\n\n\nWrangling\n\n\nDates And Times\n\n\nTue, Jan 21\n\n\n\n\nWrangling\n\n\nLocales\n\n\nTue, Jan 21\n\n\n\n\nWrangling\n\n\nData APIs\n\n\nThu, Jan 23\n\n\n\n\nWrangling\n\n\nWeb Scraping\n\n\nThu, Jan 23\n\n\n\n\nWrangling\n\n\nJoining Tables\n\n\nThu, Jan 23\n\n\n\n\nData Visualization\n\n\nData Visualization Principles\n\n\nTue, Jan 28\n\n\n\n\nData Visualization\n\n\nDistributions\n\n\nTue, Jan 28\n\n\n\n\nData Visualization\n\n\nDataviz In Practice\n\n\nThu, Jan 30\n\n\n\n\nProbability\n\n\nIntroduction to Probability\n\n\nTue, Feb 04\n\n\n\n\nProbability\n\n\nFoundations of Statistical Inference\n\n\nTue, Feb 04\n\n\n\n\nInference\n\n\nIntroduction to Statistical Inference and Models\n\n\nThu, Feb 06\n\n\n\n\nInference\n\n\nParameters and Estimates\n\n\nThu, Feb 06\n\n\n\n\nInference\n\n\nConfidence Intervals\n\n\nThu, Feb 06\n\n\n\n\nInference\n\n\nData-driven models\n\n\nTue, Feb 11\n\n\n\n\nInference\n\n\nBayesian Models\n\n\nTue, Feb 11\n\n\n\n\nInference\n\n\nHierarchical Models\n\n\nThu, Feb 13\n\n\n\n\nLinear Models\n\n\nIntroduction\n\n\nThu, Feb 20\n\n\n\n\nLinear Models\n\n\nRegression\n\n\nThu, Feb 20\n\n\n\n\nLinear Models\n\n\nMultivariate Regression\n\n\nThu, Feb 27\n\n\n\n\nLinear Models\n\n\nTreatment Effect Models\n\n\nTue, Mar 11\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Slides"
     ]
@@ -11390,7 +11390,7 @@
     "href": "slides/inference/26-bayes.html#priors-and-posteriors-5",
     "title": "Bayesian Models",
     "section": "Priors and posteriors",
-    "text": "Priors and posteriors\n\nWe can now use calculus and a version of Bayes’ Theorem to derive the distribution of \\(\\mu\\) conditional of the data, referred to as the posterior distribution.\nSpecifically, we can show the \\(\\mu \\mid \\bar{X}\\) follows a normal distribution with expected value:\n\n\\[\n\\begin{aligned}\n\\mbox{E}(\\mu \\mid \\bar{X}) &= B \\theta + (1-B) \\bar{X}\\\\\n&= \\theta + (1-B)(\\bar{X}-\\theta)\\\\\n\\mbox{with } B &= \\frac{\\sigma^2/N}{\\sigma^2/N+\\tau^2} \\mbox{ and }\n\\mbox{SE}(\\mu \\mid \\bar{X})^2 = \\frac{1}{1/\\sigma^2+1/\\tau^2}\n\\end{aligned}\n\\]"
+    "text": "Priors and posteriors\n\nWe can now use calculus and a version of Bayes’ Theorem to derive the distribution of \\(\\mu\\) conditional of the data, referred to as the posterior distribution.\nSpecifically, we can show the \\(\\mu \\mid \\bar{X}\\) follows a normal distribution with expected value:\n\n\\[\n\\begin{aligned}\n\\mbox{E}(\\mu \\mid \\bar{X}) &= B \\theta + (1-B) \\bar{X}\\\\\n&= \\theta + (1-B)(\\bar{X}-\\theta)\\\\\n\\mbox{with } B &= \\frac{\\sigma^2/N}{\\sigma^2/N+\\tau^2} \\mbox{ and }\n\\mbox{SE}(\\mu \\mid \\bar{X})^2 = \\frac{1}{N/\\sigma^2+1/\\tau^2}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "slides/inference/26-bayes.html#priors-and-posteriors-6",
@@ -11446,7 +11446,7 @@
     "href": "slides/inference/26-bayes.html#example-5",
     "title": "Bayesian Models",
     "section": "Example",
-    "text": "Example\n\nAccording to this calculation, we are 100% sure Clinton will win the popular vote, which seems too overconfident.\nIt is not in agreement with FiveThirtyEight’s 81.4%.\nWhat explains this difference?\nThere is a level of uncertainty that we are not yet describing, and for which we will need to learn about hierarchical modesl*."
+    "text": "Example\n\nAccording to this calculation, we are 100% sure Clinton will win the popular vote, which seems too overconfident.\nIt is not in agreement with FiveThirtyEight’s 81.4%.\nWhat explains this difference?\nThere is a level of uncertainty that we are not yet describing, and for which we will need to learn about hierarchical models."
   },
   {
     "objectID": "slides/inference/25-models.html#data-driven-models",
@@ -11467,14 +11467,14 @@
     "href": "slides/inference/25-models.html#data-driven-models-2",
     "title": "Data-driven models",
     "section": "Data-driven models",
-    "text": "Data-driven models\n\nHowever, these introductions are just scratching the surface, and readers interested in statistical modeling should supplement the material presented in this book with additional references."
+    "text": "Data-driven models\n\nHowever, these introductions are just scratching the surface, and readers interested in statistical modeling should supplement the material presented here with additional references."
   },
   {
     "objectID": "slides/inference/25-models.html#case-study-poll-aggregators",
     "href": "slides/inference/25-models.html#case-study-poll-aggregators",
     "title": "Data-driven models",
     "section": "Case study: poll aggregators",
-    "text": "Case study: poll aggregators\n\nWe generate results for 12 polls taken the week before the election.\nWe mimic sample sizes from actual polls, construct, and report 95% confidence intervals for each of the 12 polls.\nWe save the results from this simulation in a data frame and add a poll ID column."
+    "text": "Case study: poll aggregators\n\nWe generate results for 12 polls taken the week before the 2016 election.\nWe mimic sample sizes from actual polls, construct, and report 95% confidence intervals for each of the 12 polls.\nWe save the results from this simulation in a data frame and add a poll ID column."
   },
   {
     "objectID": "slides/inference/25-models.html#case-study-poll-aggregators-1",
@@ -11565,7 +11565,7 @@
     "href": "slides/inference/25-models.html#case-study-poll-aggregators-13",
     "title": "Data-driven models",
     "section": "Case study: poll aggregators",
-    "text": "Case study: poll aggregators\n\nThe data does not appear to be normally distributed\nThe standard error appears to be larger than 0.0066232.\nThe theory is not working her\nThis motivates the use of a data-driven model."
+    "text": "Case study: poll aggregators\n\nThe data does not appear to be normally distributed\nThe standard error appears to be larger than 0.0066232.\nThe theory is not working here.\nThis motivates the use of a data-driven model."
   },
   {
     "objectID": "slides/inference/25-models.html#beyond-the-sampling-model",
@@ -11586,7 +11586,7 @@
     "href": "slides/inference/25-models.html#beyond-the-sampling-model-2",
     "title": "Data-driven models",
     "section": "Beyond the sampling model",
-    "text": "Beyond the sampling model\n\nThis plot reveals an unexpected result.\nThe standard error predicted by theory is between 0.018 and 0.033:\n\n\npolls |&gt; group_by(pollster) |&gt;  \n  filter(n() &gt;= 6) |&gt; \n  summarize(se = 2*sqrt(p_hat*(1 - p_hat)/median(samplesize))) \n\n# A tibble: 5 × 2\n  pollster                     se\n  &lt;fct&gt;                     &lt;dbl&gt;\n1 ABC News/Washington Post 0.0265\n2 IBD/TIPP                 0.0333\n3 Ipsos                    0.0225\n4 The Times-Picayune/Lucid 0.0196\n5 USC Dornsife/LA Times    0.0183\n\n\n\nThis agrees with the within poll variation we see."
+    "text": "Beyond the sampling model\n\nThis plot reveals an unexpected result.\nThe standard error for each pollster predicted by theory is between 0.018 and 0.033:\n\n\npolls |&gt; group_by(pollster) |&gt;  \n  filter(n() &gt;= 6) |&gt; \n  summarize(se = 2*sqrt(p_hat*(1 - p_hat)/median(samplesize))) \n\n# A tibble: 5 × 2\n  pollster                     se\n  &lt;fct&gt;                     &lt;dbl&gt;\n1 ABC News/Washington Post 0.0265\n2 IBD/TIPP                 0.0333\n3 Ipsos                    0.0225\n4 The Times-Picayune/Lucid 0.0196\n5 USC Dornsife/LA Times    0.0183\n\n\n\nThis agrees with the within poll variation we see."
   },
   {
     "objectID": "slides/inference/25-models.html#beyond-the-sampling-model-3",
@@ -11656,7 +11656,7 @@
     "href": "slides/inference/25-models.html#estimating-the-sd-1",
     "title": "Data-driven models",
     "section": "Estimating the SD",
-    "text": "Estimating the SD\n\nTheory tells us that we can estimate the urn model \\(\\sigma\\) with the sample standard deviation defined as:\n\n\\[\ns = \\sqrt{ \\frac{1}{N-1} \\sum_{i=1}^N (X_i - \\bar{X})^2 }\n\\]\n\nUnlike for the population standard deviation definition, we now divide by \\(N-1\\).\nThis makes \\(s\\) a better estimate of \\(\\sigma\\).\nThere is a mathematical explanation for this, which is explained in most statistics textbooks."
+    "text": "Estimating the SD\n\nTheory tells us that we can estimate the urn model \\(\\sigma\\) with the sample standard deviation defined as:\n\n\\[\ns = \\sqrt{ \\frac{1}{N-1} \\sum_{i=1}^N (X_i - \\bar{X})^2 }\n\\]\n\nUnlike for the population standard deviation definition, we now divide by \\(N-1\\).\nThis makes \\(s\\) a better estimate of \\(\\sigma\\). This is explained mathematically in most statistics textbooks."
   },
   {
     "objectID": "slides/inference/25-models.html#estimating-the-sd-2",
@@ -11670,21 +11670,21 @@
     "href": "slides/inference/25-models.html#computing-a-confidence-interval",
     "title": "Data-driven models",
     "section": "Computing a confidence interval",
-    "text": "Computing a confidence interval\n\nWe are now ready to form a new confidence interval based on our new data-driven model:\n\n\nresults &lt;- one_poll_per_pollster |&gt;  \n  summarize(avg = mean(spread),  \n            se = sd(spread)/sqrt(length(spread))) |&gt;  \n  mutate(start = avg - 1.96*se,  \n         end = avg + 1.96*se)  \nround(results*100, 1) \n\n  avg  se start end\n1 2.9 0.6   1.7 4.1\n\n\n\nOur confidence interval is wider now since it incorporates the pollster variability.\nIt does include the election night result of 2.1%.\nAlso, note that it was small enough not to include 0, which means we were confident Clinton would win the popular vote."
+    "text": "Computing a confidence interval\n\n\nWe are now ready to form a new confidence interval based on our new data-driven model:\n\n\nresults &lt;- one_poll_per_pollster |&gt;  \n  summarize(avg = mean(spread),  \n            se = sd(spread)/sqrt(length(spread))) |&gt;  \n  mutate(start = avg - 1.96*se,  \n         end = avg + 1.96*se)  \nround(results*100, 1) \n\n  avg  se start end\n1 2.9 0.6   1.7 4.1\n\n\n\nOur confidence interval is wider now since it incorporates the pollster variability.\nIt does include the election night result of 2.1%.\nAlso, note that it was small enough not to include 0, which means we were confident Clinton would win the popular vote."
   },
   {
     "objectID": "slides/inference/25-models.html#the-t-distribution",
     "href": "slides/inference/25-models.html#the-t-distribution",
     "title": "Data-driven models",
     "section": "The t-distribution",
-    "text": "The t-distribution\n\nAbove, we made use of the CLT with a sample size of 15.\nBecause we are estimating a second parameters \\(\\sigma\\), further variability is introduced into our confidence interval, which results in intervals that are too small."
+    "text": "The t-distribution\n\nAbove, we made use of the CLT with a sample size of 15.\nBecause we are estimating a second parameter \\(\\sigma\\), further variability is introduced into our confidence interval, which results in intervals that are too small."
   },
   {
     "objectID": "slides/inference/25-models.html#the-t-distribution-1",
     "href": "slides/inference/25-models.html#the-t-distribution-1",
     "title": "Data-driven models",
     "section": "The t-distribution",
-    "text": "The t-distribution\n\nFor very large sample sizes, this extra variability is negligible, but in general, for values smaller than 30, we need to be cautious about using the CLT.\nHowever, if the data in the urn is known to follow a normal distribution, then we actually have mathematical theory that tells us how much bigger we need to make the intervals to account for the estimation of \\(\\sigma\\).\nApplying this theory, we can construct confidence intervals for any \\(N\\).\nBut again, this works only if the data in the urn is known to follow a normal distribution.\nSo for the 0, 1 data of our previous urn model, this theory definitely does not apply."
+    "text": "The t-distribution\n\n\nFor very large sample sizes, this extra variability is negligible, but in general, for values smaller than 30, we need to be cautious about using the CLT.\nHowever, if the data in the urn is known to follow a normal distribution, then we actually have mathematical theory that tells us how much bigger we need to make the intervals to account for the estimation of \\(\\sigma\\).\nApplying this theory, we can construct confidence intervals for any \\(N\\).\nBut again, this works only if the data in the urn is known to follow a normal distribution.\nSo for the 0, 1 data of our previous urn model, this theory definitely does not apply."
   },
   {
     "objectID": "slides/inference/25-models.html#the-t-distribution-2",
@@ -11740,7 +11740,7 @@
     "href": "slides/inference/25-models.html#the-t-distribution-9",
     "title": "Data-driven models",
     "section": "The t-distribution",
-    "text": "The t-distribution\n\nNote that using the t-distribution and the t-statistic is the basis for t-tests, a widely used approach for computing p-values.\nTo learn more about t-tests, you can consult any statistics textbook.\nThe t-distribution can also be used to model errors in bigger deviations that are more likely than with the normal distribution, as seen in the densities we previously observed.\nFiveThirtyEight uses the t-distribution to generate errors that better model the deviations we see in election data."
+    "text": "The t-distribution\n\n\nNote that using the t-distribution and the t-statistic is the basis for t-tests, a widely used approach for computing p-values.\nTo learn more about t-tests, you can consult any statistics textbook.\nThe t-distribution can also be used to model errors in bigger deviations that are more likely than with the normal distribution, as seen in the densities we previously observed.\nFiveThirtyEight uses the t-distribution to generate errors that better model the deviations we see in election data."
   },
   {
     "objectID": "slides/inference/25-models.html#the-t-distribution-10",

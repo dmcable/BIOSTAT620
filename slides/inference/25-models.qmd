@@ -28,7 +28,7 @@ set.seed(2)
 
 ## Data-driven models
 
-- However, these introductions are just scratching the surface, and readers interested in statistical modeling should supplement the material presented in this book with additional references.
+- However, these introductions are just scratching the surface, and readers interested in statistical modeling should supplement the material presented here with additional references.
 
 
 
@@ -36,7 +36,7 @@ set.seed(2)
 ## Case study: poll aggregators
 
 
-- We generate results for 12 polls taken the week before the election.
+- We generate results for 12 polls taken the week before the 2016 election.
 
 - We mimic sample sizes from actual polls, construct, and report 95% confidence intervals for each of the 12 polls.
 
@@ -225,7 +225,7 @@ polls |> ggplot(aes(spread)) + geom_histogram(color = "black", binwidth = .01)
 
 - The standard error appears to be larger than `r moe`.
 
-- The theory is not working her
+- The theory is not working here.
 
 - This motivates the use of a **data-driven model**.
 
@@ -256,7 +256,7 @@ polls |> group_by(pollster) |>
 
 - This plot reveals an unexpected result.
 
-- The standard error predicted by theory is between 0.018 and 0.033:
+- The standard error for each pollster predicted by theory is between 0.018 and 0.033:
 
 ```{r} 
 polls |> group_by(pollster) |>  
@@ -374,7 +374,6 @@ $$
 
 - Theory tells us that we can estimate the urn model $\sigma$ with the _sample standard deviation_ defined as:
 
-
 $$
 s = \sqrt{ \frac{1}{N-1} \sum_{i=1}^N (X_i - \bar{X})^2 } 
 $$
@@ -382,9 +381,7 @@ $$
 
 - Unlike for the population standard deviation definition, we now divide by $N-1$.
 
-- This makes $s$ a better estimate of $\sigma$.
-
-- There is a mathematical explanation for this, which is explained in most statistics textbooks.
+- This makes $s$ a better estimate of $\sigma$. This is explained mathematically in most statistics textbooks.
 
 ## Estimating the SD
 
@@ -395,7 +392,7 @@ sd(one_poll_per_pollster$spread)
 ``` 
 
 ## Computing a confidence interval
-
+<div style="font-size: 85%;">
 - We are now ready to form a new confidence interval based on our new data-driven model:
 
 ```{r} 
@@ -412,17 +409,16 @@ round(results*100, 1)
 - It does include the election night result of 2.1%.
 
 - Also, note that it was small enough not to include 0, which means we were confident Clinton would win the popular vote.
-
-
+</div>
 ## The t-distribution
 
 - Above, we made use of the CLT with a sample size of 15.
 
-- Because we are estimating a second parameters $\sigma$, further variability is introduced into our confidence interval, which results in intervals that are too small.
+- Because we are estimating a second parameter $\sigma$, further variability is introduced into our confidence interval, which results in intervals that are too small.
 
 
 ## The t-distribution
-
+<div style="font-size: 85%;">
 - For very large sample sizes, this extra variability is negligible, but in general, for values smaller than 30, we need to be cautious about using the CLT.
 
 - However, if the data in the urn is known to follow a normal distribution, then we actually have mathematical theory that tells us how much bigger we need to make the intervals to account for the estimation of $\sigma$.
@@ -432,7 +428,7 @@ round(results*100, 1)
 - But again, this works only if **the data in the urn is known to follow a normal distribution**.
 
 - So for the 0, 1 data of our previous urn model, this theory definitely does not apply.
-
+</div>
 
 ---
 
@@ -543,7 +539,7 @@ round(ttest_ci*100, 1)
 
 
 ## The t-distribution
-
+<div style="font-size: 85%;">
 - Note that using the t-distribution and the t-statistic is the basis for *t-tests*, a widely used approach for computing p-values.
 
 - To learn more about t-tests, you can consult any statistics textbook.
@@ -551,7 +547,7 @@ round(ttest_ci*100, 1)
 - The t-distribution can also be used to model errors in bigger deviations that are more likely than with the normal distribution, as seen in the densities we previously observed.
 
 - FiveThirtyEight uses the t-distribution to generate errors that better model the deviations we see in election data.
-
+</div>
 
 
 ## The t-distribution

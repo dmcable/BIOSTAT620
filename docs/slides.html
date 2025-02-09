@@ -79,7 +79,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-keywords','listing-title','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
+      page: 30,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
@@ -189,6 +190,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./final-project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Final Project</span></a>
   </div>
 </li>
     </ul>
@@ -512,7 +519,7 @@ Date
 <span class="listing-date">Thu, Feb 06</span>
 </td>
 </tr>
-<tr data-index="25" data-listing-date-sort="1739250000000" data-listing-file-modified-sort="1738798074183" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2470" data-listing-title-sort="Data-driven models" data-listing-filename-sort="25-models.qmd">
+<tr data-index="25" data-listing-date-sort="1739250000000" data-listing-file-modified-sort="1739121858316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2472" data-listing-title-sort="Data-driven models" data-listing-filename-sort="25-models.qmd">
 <td>
 <span class="listing-keywords">Inference</span>
 </td>
@@ -523,7 +530,7 @@ Date
 <span class="listing-date">Tue, Feb 11</span>
 </td>
 </tr>
-<tr data-index="26" data-listing-date-sort="1739250000000" data-listing-file-modified-sort="1738798105225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1793" data-listing-title-sort="Bayesian Models" data-listing-filename-sort="26-bayes.qmd">
+<tr data-index="26" data-listing-date-sort="1739250000000" data-listing-file-modified-sort="1739122808530" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1793" data-listing-title-sort="Bayesian Models" data-listing-filename-sort="26-bayes.qmd">
 <td>
 <span class="listing-keywords">Inference</span>
 </td>
@@ -534,7 +541,7 @@ Date
 <span class="listing-date">Tue, Feb 11</span>
 </td>
 </tr>
-<tr data-index="27" data-listing-date-sort="1739422800000" data-listing-file-modified-sort="1738798115796" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4521" data-listing-title-sort="Hierarchical Models" data-listing-filename-sort="27-hierarchical-models.qmd">
+<tr data-index="27" data-listing-date-sort="1739422800000" data-listing-file-modified-sort="1739127142949" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4530" data-listing-title-sort="Hierarchical Models" data-listing-filename-sort="27-hierarchical-models.qmd">
 <td>
 <span class="listing-keywords">Inference</span>
 </td>
@@ -545,11 +552,58 @@ Date
 <span class="listing-date">Thu, Feb 13</span>
 </td>
 </tr>
+<tr data-index="28" data-listing-date-sort="1740027600000" data-listing-file-modified-sort="1739127446097" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="68" data-listing-title-sort="Introduction" data-listing-filename-sort="28-intro-to-linear-models.qmd">
+<td>
+<span class="listing-keywords">Linear Models</span>
+</td>
+<td>
+<a href="./slides/linear-models/28-intro-to-linear-models.html" class="title listing-title">Introduction</a>
+</td>
+<td>
+<span class="listing-date">Thu, Feb 20</span>
+</td>
+</tr>
+<tr data-index="29" data-listing-date-sort="1740027600000" data-listing-file-modified-sort="1739127568648" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="37" data-listing-word-count-sort="7387" data-listing-title-sort="Regression" data-listing-filename-sort="29-regression.qmd">
+<td>
+<span class="listing-keywords">Linear Models</span>
+</td>
+<td>
+<a href="./slides/linear-models/29-regression.html" class="title listing-title">Regression</a>
+</td>
+<td>
+<span class="listing-date">Thu, Feb 20</span>
+</td>
+</tr>
+<tr data-index="30" data-listing-date-sort="1740632400000" data-listing-file-modified-sort="1739127475857" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2508" data-listing-title-sort="Multivariate Regression" data-listing-filename-sort="30-multivariate-regression.qmd">
+<td>
+<span class="listing-keywords">Linear Models</span>
+</td>
+<td>
+<a href="./slides/linear-models/30-multivariate-regression.html" class="title listing-title">Multivariate Regression</a>
+</td>
+<td>
+<span class="listing-date">Thu, Feb 27</span>
+</td>
+</tr>
+<tr data-index="31" data-listing-date-sort="1741665600000" data-listing-file-modified-sort="1739127603948" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3331" data-listing-title-sort="Treatment Effect Models" data-listing-filename-sort="31-treatment-effect-models.qmd">
+<td>
+<span class="listing-keywords">Linear Models</span>
+</td>
+<td>
+<a href="./slides/linear-models/31-treatment-effect-models.html" class="title listing-title">Treatment Effect Models</a>
+</td>
+<td>
+<span class="listing-date">Tue, Mar 11</span>
+</td>
+</tr>
 </tbody>
 </table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="slides-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 <!-- 
       - slides/prob/*.qmd

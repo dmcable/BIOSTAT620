@@ -219,13 +219,13 @@
 <section id="data-driven-models-2" class="slide level2">
 <h2>Data-driven models</h2>
 <ul>
-<li>However, these introductions are just scratching the surface, and readers interested in statistical modeling should supplement the material presented in this book with additional references.</li>
+<li>However, these introductions are just scratching the surface, and readers interested in statistical modeling should supplement the material presented here with additional references.</li>
 </ul>
 </section>
 <section id="case-study-poll-aggregators" class="slide level2">
 <h2>Case study: poll aggregators</h2>
 <ul>
-<li><p>We generate results for 12 polls taken the week before the election.</p></li>
+<li><p>We generate results for 12 polls taken the week before the 2016 election.</p></li>
 <li><p>We mimic sample sizes from actual polls, construct, and report 95% confidence intervals for each of the 12 polls.</p></li>
 <li><p>We save the results from this simulation in a data frame and add a poll ID column.</p></li>
 </ul>
@@ -380,7 +380,7 @@
 <ul>
 <li><p>The data does not appear to be normally distributed</p></li>
 <li><p>The standard error appears to be larger than 0.0066232.</p></li>
-<li><p>The theory is not working her</p></li>
+<li><p>The theory is not working here.</p></li>
 <li><p>This motivates the use of a <strong>data-driven model</strong>.</p></li>
 </ul>
 </section>
@@ -422,7 +422,7 @@
 <h2>Beyond the sampling model</h2>
 <ul>
 <li><p>This plot reveals an unexpected result.</p></li>
-<li><p>The standard error predicted by theory is between 0.018 and 0.033:</p></li>
+<li><p>The standard error for each pollster predicted by theory is between 0.018 and 0.033:</p></li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>polls <span class="sc">|&gt;</span> <span class="fu">group_by</span>(pollster) <span class="sc">|&gt;</span>  </span>
@@ -537,8 +537,7 @@ s = \sqrt{ \frac{1}{N-1} \sum_{i=1}^N (X_i - \bar{X})^2 }
 \]</span></p>
 <ul>
 <li><p>Unlike for the population standard deviation definition, we now divide by <span class="math inline">\(N-1\)</span>.</p></li>
-<li><p>This makes <span class="math inline">\(s\)</span> a better estimate of <span class="math inline">\(\sigma\)</span>.</p></li>
-<li><p>There is a mathematical explanation for this, which is explained in most statistics textbooks.</p></li>
+<li><p>This makes <span class="math inline">\(s\)</span> a better estimate of <span class="math inline">\(\sigma\)</span>. This is explained mathematically in most statistics textbooks.</p></li>
 </ul>
 </section>
 <section id="estimating-the-sd-2" class="slide level2">
@@ -555,6 +554,7 @@ s = \sqrt{ \frac{1}{N-1} \sum_{i=1}^N (X_i - \bar{X})^2 }
 </section>
 <section id="computing-a-confidence-interval" class="slide level2">
 <h2>Computing a confidence interval</h2>
+<div style="font-size: 85%;">
 <ul>
 <li>We are now ready to form a new confidence interval based on our new data-driven model:</li>
 </ul>
@@ -575,16 +575,18 @@ s = \sqrt{ \frac{1}{N-1} \sum_{i=1}^N (X_i - \bar{X})^2 }
 <li><p>It does include the election night result of 2.1%.</p></li>
 <li><p>Also, note that it was small enough not to include 0, which means we were confident Clinton would win the popular vote.</p></li>
 </ul>
+</div>
 </section>
 <section id="the-t-distribution" class="slide level2">
 <h2>The t-distribution</h2>
 <ul>
 <li><p>Above, we made use of the CLT with a sample size of 15.</p></li>
-<li><p>Because we are estimating a second parameters <span class="math inline">\(\sigma\)</span>, further variability is introduced into our confidence interval, which results in intervals that are too small.</p></li>
+<li><p>Because we are estimating a second parameter <span class="math inline">\(\sigma\)</span>, further variability is introduced into our confidence interval, which results in intervals that are too small.</p></li>
 </ul>
 </section>
 <section id="the-t-distribution-1" class="slide level2">
 <h2>The t-distribution</h2>
+<div style="font-size: 85%;">
 <ul>
 <li><p>For very large sample sizes, this extra variability is negligible, but in general, for values smaller than 30, we need to be cautious about using the CLT.</p></li>
 <li><p>However, if the data in the urn is known to follow a normal distribution, then we actually have mathematical theory that tells us how much bigger we need to make the intervals to account for the estimation of <span class="math inline">\(\sigma\)</span>.</p></li>
@@ -592,6 +594,7 @@ s = \sqrt{ \frac{1}{N-1} \sum_{i=1}^N (X_i - \bar{X})^2 }
 <li><p>But again, this works only if <strong>the data in the urn is known to follow a normal distribution</strong>.</p></li>
 <li><p>So for the 0, 1 data of our previous urn model, this theory definitely does not apply.</p></li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 
@@ -707,12 +710,14 @@ t = \frac{\bar{X} - \mu}{s/\sqrt{N}}
 </section>
 <section id="the-t-distribution-9" class="slide level2">
 <h2>The t-distribution</h2>
+<div style="font-size: 85%;">
 <ul>
 <li><p>Note that using the t-distribution and the t-statistic is the basis for <em>t-tests</em>, a widely used approach for computing p-values.</p></li>
 <li><p>To learn more about t-tests, you can consult any statistics textbook.</p></li>
 <li><p>The t-distribution can also be used to model errors in bigger deviations that are more likely than with the normal distribution, as seen in the densities we previously observed.</p></li>
 <li><p>FiveThirtyEight uses the t-distribution to generate errors that better model the deviations we see in election data.</p></li>
 </ul>
+</div>
 </section>
 <section id="the-t-distribution-10" class="slide level2">
 <h2>The t-distribution</h2>
