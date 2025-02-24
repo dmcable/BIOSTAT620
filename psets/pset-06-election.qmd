@@ -1,16 +1,16 @@
 ---
-title: Problem set 7 
-date: 2024-11-4
+title: Problem set 6
+date: 2025-03-02
 execute: 
   eval: false
 ---
 
-For this problem set we want you to predict the election. You will enter you predictions to [this form](https://forms.gle/kREjqXK5WqGsojGWA). You you will report a prediction of the number of electoral votes for Harris and an interval. You will do the same for the popular vote. We will give prizes for those that report the shortest interval but with the true result inside the interval.
+For this problem set we want you to predict the 2024 election. You you will report a prediction of the number of electoral votes for Harris and an interval. You will do the same for the popular vote. You will compare your accuracy to the true results.
 
 1. Read in the data provided here:
 
 ```{r}
-url <- "https://projects.fivethirtyeight.com/polls/data/president_polls.csv"
+url <- "https://raw.githubusercontent.com/dmcable/BIOSTAT620/refs/heads/main/data/president_polls.csv"
 ```
 
 Examine the data frame paying particular attention to the `poll_id` `question_id`, `population`, and `candidate`. Note that some polls have more than one question based on different population types.
@@ -53,12 +53,11 @@ dat <- dat |>
 
 4. We are going to focus on the Harris versus Trump comparison. Redefine `dat` to only include the rows providing information for Harris and Trump. Then pivot the dataset so that the percentages for Harris and Trump are in their own columns. Note that for pivot to work you will have to remove some columns. To avoid this keep only the columns you are pivoting and along with `poll_id`, `question_id`, `state`, `pollster`, `start_date`, `end_date`, `numeric_grade`, `sample_size`.  Once you accomplish the pivot, add a column called `spread` with the difference between Harris and Trump. 
 
-Note that the values stored in `spread` are estimates of the popular vote difference that we will use to predict for the competition: 
+Note that the values stored in `spread` are estimates of the popular vote difference that we will use to predict: 
 
 **spread = % of the popular vote for Harris - % of the popular vote for Trump**
 
-However, for the calculations in the rest of problem set to be consistent with the sampling model we have been discussing in class, save `spread` as a proportion, not a percentage. But remember to turn it back to a percentage when submitting your entry to the competition.
-
+However, for the calculations in the rest of problem set to be consistent with the sampling model we have been discussing in class, save `spread` as a proportion, not a percentage. But remember to turn it back to a percentage when reporting your answer.
 
 ```{r}
 dat <- dat |>
@@ -96,16 +95,19 @@ popular_vote |>
   ## Your code here
 ```
 
-9. Compute a prediction and an interval for the competition and submit [here](https://forms.gle/kREjqXK5WqGsojGWA)
-Include the code you used to create your confidence interval for the popular vote here:
+9. Compute a prediction and an interval and report the result. Include the code you used to create your confidence interval for the popular vote here:
 
 ```{r}
 ## Your code here
 ```
 
+Harris received a popular vote spread of `-1.5%` vs Trump in the 2024 election. How did your model do? Provide some potential explanations for the performance.
+
+```
+YOUR SHORT ANSWER HERE
+```
 
 We now move on to predicting the electoral votes.
-
 
 10. To obtain the number of electoral votes for each state we will visit this website:
 
@@ -174,13 +176,18 @@ harris_start <- ## Your code here
 14. Use a Bayesian approach to compute posterior means and standard deviations for each state in `results`. Plot the posterior mean versus the observed average with the size of the point proportional to the number of polls.
 
 ```{r}
-### Your code heer
+### Your code here
 ```
 
 
-15. Compute a prediction and an interval for Harris' electoral votes and submit to the competition [here](https://forms.gle/kREjqXK5WqGsojGWA). Include the code you used to create your estimate and interval below.
+15. Compute a prediction and an interval for Harris' electoral votes and show the result. Include the code you used to create your estimate and interval below. 
 
 ```{r}
 ### Your code here
 ```
 
+Harris received 226 electoral votes in the 2024 election. How did your model do? Provide some potential explanations for the performance.
+
+```
+YOUR SHORT ANSWER HERE
+```

@@ -110,9 +110,11 @@ You can use ChatGPT and other AI tools to assist with questions you may have abo
 | Feb 9 | Pset 4 due |
 | Feb 18 | Midterm 1: covers material from Jan 09-Feb 17 |
 | Feb 23 | Pset 5 due |
-| Feb 27 | Start final project. Obtain approval if you want to do a personal project instead. |
+| Feb 27 | Project proposals due. Obtain approval if you want to do a personal project instead. |
+| Mar 02 | Pset 6 due |
 | Mar 04 | No class: Spring break |
 | Mar 06 | No class: Spring break |
+| Mar 16 | Pset 7 due |
 | Apr 01 | Midterm 2: cover material from Jan 09-Mar 27 | 
 | Apr 17 | Final project presentations day 1 |
 | Apr 22 | Final project presentations day 2 |
