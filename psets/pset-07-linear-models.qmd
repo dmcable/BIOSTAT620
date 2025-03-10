@@ -1,6 +1,6 @@
 ---
-title: Problem set 8 
-date: 2024-11-15
+title: Problem set 7 
+date: 2025-03-16
 execute: 
   eval: false
 ---
@@ -104,7 +104,7 @@ puerto_rico_counts |> ## your code here
 ```
 
 
-14. Note twp things: 1) there is a strong week effect and 2) 2017 is lower than expected. Plot the yearly rates (per 1,000)  for 2002-2016:
+14. Note two things: 1) there is a strong week effect and 2) 2017 is lower than expected. Plot the yearly rates (per 1,000)  for 2002-2016:
 
 ```{r}
 weekly_counts |> 

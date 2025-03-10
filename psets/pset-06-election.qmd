@@ -141,7 +141,7 @@ sheet_url <- "https://docs.google.com/spreadsheets/d/1D-edaVHTnZNhVU840EPUhz3Cgd
 raw_res_2020 <- gsheet2tbl(sheet_url) 
 ```
 
-Tidy the `raw_res_2020` dataset so that you have two columns `state` and `party`, with `D` and `R` in the party column to indicate who won in 2020. Add Maine CD-1 (D), Maine CD-2 (R), Nebraska CD-2 (D), and District of Columbia (D) by hand. Save the result to `res_2020`. Hint use the **janitor** `row_to_names` function.
+Tidy the `raw_res_2020` dataset so that you have two columns `state` and `party`, with `D` and `R` in the party column to indicate who won in 2020. Add Maine CD-1 (D), Maine CD-2 (R), Nebraska CD-1 (R), Nebraska CD-2 (D), Nebraska CD-3 (R), and District of Columbia (D) by hand. Save the result to `res_2020`. Hint use the **janitor** `row_to_names` function.
 
 ```{r}
 library(janitor)
@@ -160,7 +160,8 @@ Some ideas and recommendations:
 
 
 ```{r}
-results <- polls |> 
+results <- polls |> filter(!is.na(numeric_grade)) |>
+  mutate(week = floor(as.numeric(difftime(max(end_date), end_date, units = "week"))))
   ### Your code here
 ```
 
