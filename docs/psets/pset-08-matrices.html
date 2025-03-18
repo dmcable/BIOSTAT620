@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-03-25">
 
-<title>BIOSTAT 620 Introduction to Health Data Science – BIOSTAT 620: Introduction to Health Data Science</title>
+<title>Problem set 8 – BIOSTAT 620: Introduction to Health Data Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,24 +21,58 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-59a771eafc306b8a1219ba1ba7bf8705.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-59a771eafc306b8a1219ba1ba7bf8705.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -66,6 +101,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -78,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Problem set 8</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -92,8 +156,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main">
     <a href="https://github.com/dmcable/BIOSTAT620" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
@@ -108,31 +172,31 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Slides</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./psets.html" class="sidebar-item-text sidebar-link">
+  <a href="../psets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Sets</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./final-project.html" class="sidebar-item-text sidebar-link">
+  <a href="../final-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Final Project</span></a>
   </div>
 </li>
@@ -141,25 +205,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#course-information" id="toc-course-information" class="nav-link active" data-scroll-target="#course-information">Course Information</a></li>
-  <li><a href="#lectures" id="toc-lectures" class="nav-link" data-scroll-target="#lectures">Lectures</a></li>
-  <li><a href="#problem-sets" id="toc-problem-sets" class="nav-link" data-scroll-target="#problem-sets">Problem sets</a></li>
-  <li><a href="#office-hour-times" id="toc-office-hour-times" class="nav-link" data-scroll-target="#office-hour-times">Office hour times</a></li>
-  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dmcable/BIOSTAT620/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BIOSTAT 620 Introduction to Health Data Science</h1>
+<h1 class="title">Problem set 8</h1>
 </div>
 
 
@@ -167,6 +221,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 25, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -176,232 +236,84 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="course-information" class="level2">
-<h2 class="anchored" data-anchor-id="course-information">Course Information</h2>
-<ul>
-<li>Instructor: <a href="https://sph.umich.edu/faculty-profiles/cable-dylan.html">Dylan Cable</a> [<a href="mailto:dmcable@umich.edu">dmcable@umich.edu</a>]</li>
-<li>Graduate student instructor: Yize Hao [<a href="mailto:yizehao@umich.edu">yizehao@umich.edu</a>]</li>
-<li>Location: SPH I 1655</li>
-<li>Date and time: Tue &amp; Thu 8:30 - 10:00am</li>
-<li>Textbooks: <a href="https://github.com/rafalab/dsbook-part-1" class="uri">https://github.com/rafalab/dsbook-part-1</a>, <a href="https://github.com/rafalab/dsbook-part-2" class="uri">https://github.com/rafalab/dsbook-part-2</a></li>
-<li>Canvas: <a href="https://umich.instructure.com/courses/727331" class="uri">https://umich.instructure.com/courses/727331</a></li>
-<li>GitHub repo: <a href="https://github.com/dmcable/BIOSTAT620" class="uri">https://github.com/dmcable/BIOSTAT620</a></li>
-<li>Remember to read the <a href="./syllabus.html">syllabus</a>, <a href="https://www.youtube.com/embed/aL_fP5axQV4">listen to SD</a>.</li>
-</ul>
-</section>
-<section id="lectures" class="level2">
-<h2 class="anchored" data-anchor-id="lectures">Lectures</h2>
-<p>Lecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Dates</th>
-<th style="text-align: left;">Topic</th>
-<th style="text-align: left;">Slides</th>
-<th style="text-align: left;">Reading</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Jan 09</td>
-<td style="text-align: left;">Productivity Tools</td>
-<td style="text-align: left;"><a href="./slides/00-intro.html">Intro</a>, <a href="./slides/productivity/01-unix.html">Unix</a>, <a href="./slides/productivity/02-rstudio.html">RStudio</a></td>
-<td style="text-align: left;">Installing R and RStudio on <a href="https://teacherscollege.screenstepslive.com/a/1108074-install-r-and-rstudio-for-windows">Windows</a> or <a href="https://teacherscollege.screenstepslive.com/a/1135059-install-r-and-rstudio-for-mac">Mac</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-1/R/getting-started.html">Getting Started</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/unix.html">Unix</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Jan 14</td>
-<td style="text-align: left;">Productivity Tools</td>
-<td style="text-align: left;"><a href="./slides/productivity/03-quarto.html">Quarto</a>, <a href="./slides/productivity/04-git.html">Git and GitHub</a></td>
-<td style="text-align: left;"><a href="https://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/reproducible-projects.html">RStudio Projects, Quarto</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/git.html">Git</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Jan 16</td>
-<td style="text-align: left;">Data processing in R</td>
-<td style="text-align: left;"><a href="./slides/R/05-r-basics.html">R basics</a>, <a href="./slides/R/06-vectorization.html">Vectorization</a></td>
-<td style="text-align: left;"><a href="http://rafalab.dfci.harvard.edu/dsbook-part-1/R/R-basics.html">R Basics</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-1/R/programming-basics.html#sec-vectorization">Vectorization</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Jan 16</td>
-<td style="text-align: left;">Data Processing in R</td>
-<td style="text-align: left;"><a href="./slides/R/07-tidyverse.html">Tidyverse</a>, <a href="./slides/R/08-ggplot2.html">ggplot2</a></td>
-<td style="text-align: left;"><a href="http://rafalab.dfci.harvard.edu/dsbook-part-1/R/tidyverse.html">dplyr</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/ggplot2.html">ggplot2</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Jan 21</td>
-<td style="text-align: left;">Data Processing in R</td>
-<td style="text-align: left;"><a href="./slides/R/09-tidyr.html">Tyding data</a></td>
-<td style="text-align: left;"><a href="http://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/reshaping-data.html">Reshaping Data</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Jan 21, Jan 23</td>
-<td style="text-align: left;">Wrangling</td>
-<td style="text-align: left;"><a href="./slides/wrangling/10-intro-to-wrangling.html">Intro</a>, <a href="./slides/wrangling/11-importing-files.html">Data Importing</a>, <a href="./slides/wrangling/12-dates-and-times.html">Dates and Times</a>, <a href="./slides/wrangling/13-locales.html">Locales</a>, <a href="./slides/wrangling/14-data-apis.html">Data APIs</a>, <a href="./slides/wrangling/15-web-scraping.html">Web scraping</a>, <a href="./slides/wrangling/16-joining-tables.html">Joining tables</a></td>
-<td style="text-align: left;"><a href="https://rafalab.dfci.harvard.edu/dsbook-part-1/R/importing-data.html">Importing data</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/dates-and-times.html">dates and times</a>, <a href="https://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/locales.html">Locales</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/joining-tables.html">Joining Tables</a>, <a href="https://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/web-scraping.html">Extracting data from the web</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Jan 28, Jan 30</td>
-<td style="text-align: left;">Data visualization</td>
-<td style="text-align: left;"><a href="./slides/dataviz/17-dataviz-principles.html">Dataviz Principles</a>, <a href="./slides/dataviz/18-distributions.html">Distributions</a>, <a href="./slides/dataviz/19-dataviz-in-practice.html">Dataviz in practice</a></td>
-<td style="text-align: left;"><a href="http://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html">Distributions</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/dataviz-principles.html">Dataviz Principles</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Feb 04</td>
-<td style="text-align: left;">Probability</td>
-<td style="text-align: left;"><a href="./slides/prob/20-intro-to-prob.html">Intro</a>, <a href="./slides/prob/21-inference-foundations.html">Foundations for Inference</a></td>
-<td style="text-align: left;"><a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/prob/continuous-probability.html#monte-carlo">Monte Carlo</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/prob/random-variables-sampling-models-clt.html">Random Variables &amp; CLT</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Feb 06</td>
-<td style="text-align: left;">Inference</td>
-<td style="text-align: left;"><a href="./slides/inference/22-intro-inference.html">Intro</a>, <a href="./slides/inference/23-parameters-estimates.html">Parameter and estimates</a>, <a href="./slides/inference/24-confidence-intervals.html">Confidence Intervals</a></td>
-<td style="text-align: left;"><a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/inference/parameters-estimates.html">Parameters &amp; Estimates</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/inference/confidence-intervals.html">Confidence Intervals</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Feb 11, Feb 13</td>
-<td style="text-align: left;">Statistical Models</td>
-<td style="text-align: left;"><a href="./slides/inference/25-models.html">Models</a>, <a href="./slides/inference/26-bayes.html">Bayes</a>, <a href="./slides/inference/27-hierarchical-models.html">Hierarchical Models</a></td>
-<td style="text-align: left;"><a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/inference/models.html">Data-driven Models</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/inference/bayes.html">Bayesian Statistics</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/inference/hierarchical-models.html">Hierarchical Models</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Feb 18</td>
-<td style="text-align: left;">Midterm 1</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Covers material from Jan 09-Feb 13</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Feb 20, Feb 25</td>
-<td style="text-align: left;">Linear models</td>
-<td style="text-align: left;"><a href="./slides/linear-models/28-intro-to-linear-models.html">Intro</a>, <a href="./slides/linear-models/29-regression.html">Regression</a></td>
-<td style="text-align: left;"><a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/regression.html">Regression</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/multivariate-regression.html">Multivariate Regression</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Feb 27, Mar 11</td>
-<td style="text-align: left;">Linear models</td>
-<td style="text-align: left;"><a href="./slides/linear-models/30-multivariate-regression.html">Multivariate regression</a>, <a href="./slides/linear-models/31-treatment-effect-models.html">Treatment effect models</a></td>
-<td style="text-align: left;"><a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/measurement-error-models.html">Measurement Error Models</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/treatment-effect-models.html">Treatment Effect Models</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/association-tests.html">Association Tests</a>, <a href="http://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/association-not-causation.html">Association Not Causation</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Mar 13</td>
-<td style="text-align: left;">High dimensional data</td>
-<td style="text-align: left;"><a href="./slides/highdim/32-linear-algebra-intro.html">Intro to Linear Algebra</a>, <a href="./slides/highdim/33-matrices-in-R.html">Matrices in R</a></td>
-<td style="text-align: left;"><a href="https://rafalab.dfci.harvard.edu/dsbook-part-2/highdim/matrices-in-R.html">Matrices in R</a>, <a href="https://rafalab.dfci.harvard.edu/dsbook-part-2/highdim/linear-algebra.html">Applied Linear Algebra</a>,</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Mar 18</td>
-<td style="text-align: left;">High dimensional data</td>
-<td style="text-align: left;"><a href="./slides/highdim/34-distance.html">Distance</a>, <a href="./slides/highdim/35-dimension-reduction.html">Dimension reduction</a></td>
-<td style="text-align: left;"><a href="https://rafalab.dfci.harvard.edu/dsbook-part-2/highdim/dimension-reduction.html">Dimension Reduction</a></td>
-</tr>
-</tbody>
-</table>
-<!--
+<p>You are not allowed to load any package or use for-loop. For exercises 1 and 3-6 you only get to write one line of code for the solution.</p>
+<p>For better preparation for midterm, we recommend not using chatGPT for this homework.</p>
+<ol type="1">
+<li>Create a 100 by 10 matrix of randomly generated standard normal numbers. Put the result in <code>x</code>. Show the subset of <code>x</code> defined by the first 5 rows and the first 4 columns.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="do">### YOUR ANSWER HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>Apply the three R functions that give you the dimension of <code>x</code>, the number of rows of <code>x</code>, and the number of columns of <code>x</code>, respectively. Print the responses.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">### YOUR ANSWER HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>Generate matrix <code>y</code> obtained from adding the scalar 1 to row 1, the scalar 2 to row 2, and so on, to the matrix <code>x</code>. Show the subset of <code>y</code> defined by the first 5 rows and the first 4 columns.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">### YOUR ANSWER HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="1">
+<li>Generate matrix <code>z</code> obtained from adding the scalar 2 to column 1, the scalar 4 to column 2, and so on, to the matrix <code>y</code>. Hint: Use <code>sweep</code> with <code>FUN = "+"</code>. Show the subset of <code>z</code> defined by the first 5 rows and the first 4 columns.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">### YOUR ANSWER HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="1">
+<li>Compute the average of each row of <code>z</code>. Show the first 10 elements</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">### YOUR ANSWER HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="6" type="1">
+<li>Use matrix multiplication to compute the average of each column of <code>z</code> and store in a single row matrix. Hint define a <span class="math inline">\(1\times n\)</span> matrix <span class="math inline">\((1/n, \dots, 1/n)\)</span> with <span class="math inline">\(n\)</span> the <code>nrow(z)</code>. Show the first 10 elements</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">### YOUR ANSWER HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="7" type="1">
+<li>Use matrix multiplication and other matrix / vector operations to compute the standard deviation of each column of z. Do not use <code>sweep</code> or <code>apply</code>. Print the results. For this exercise, you must only use the following operations: <code>t, -, %*%, *, /,</code> and <code>as.vector</code></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">### YOUR ANSWER HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="8" type="1">
+<li>For each digit in the MNIST training data, compute and print the overall proportion of pixels that are in a <em>grey area</em>, defined as values between 50 and 205, inclusive. Hint: use the <code>read_mnist</code> function from the <code>dslabs</code> package.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">### YOUR ANSWER HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="9" type="1">
+<li>Compute and print the average grey proportion by digit class. Hint: Use logical operators and <code>sapply</code>.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">### YOUR ANSWER HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="10" type="1">
+<li>Make a box plot of grey proportion by digit class. Each point on the boxplot should represent one training image. Hint: Use logical operators and <code>rowMeans</code>.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">### YOUR ANSWER HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="11" type="1">
+<li>Use the function <code>solve</code> to solve the following system of equations. Hint: use the function <code>solve</code>. Show the solution.</li>
+</ol>
+<p><span class="math display">\[
+\begin{align}
+x+2y−2z &amp;=−15\\
+2x+y−5z&amp;=−21\\
+x−4y+z&amp;=18
+\end{align}
+\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">### YOUR ANSWER HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-| Nov 25 | Midterm 2 | | Midterm 2: cover material from Sep 04-Nov 22|
-
-| Dec 04 | Machine Learning | [Intro](slides/ml/36-intro-ml.qmd), [Metrics](slides/ml/37-evaluation-metrics.qmd), [Conditionals](slides/ml/38-conditionals.qmd), [Smoothing](slides/ml/39-smoothing.qmd)|[Notation and terminology](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/notation-and-terminology.html), [Evaluation Metrics](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/evaluation-metrics.html), [conditional probabilities](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/conditionals.html), [smoothing](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/smoothing.html) |
-|  Dec 09, Dec 11 | Machine Learning | [kNN](slides/ml/40-knn.qmd), [Resampling methods](slides/ml/41-resampling-methods.qmd), [caret package](slides/ml/42-caret.qmd), [Algorithms](slides/ml/43-algorithms.qmd), [ML in practice](slides/ml/44-ml-in-practice.qmd)|[Resampling methods](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/resampling-methods.html), [ML algorithms](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/algorithms.html), [ML in practice](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/ml-in-practice.html) |
-| Dec 16, Dec 18 | Other topics  | [Association is not causation](slides/other-topics/45-association-not-causation.qmd), [Shiny](slides/other-topics/46-shiny.qmd), [Shiny example code](https://github.com/datasciencelabs/2024/tree/main/shiny)| [Association is not causation](https://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/association-not-causation.html) |
--->
-</section>
-<section id="problem-sets" class="level2">
-<h2 class="anchored" data-anchor-id="problem-sets">Problem sets</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Problem set</th>
-<th style="text-align: left;">Topic</th>
-<th style="text-align: left;">Due Date (11:59pm)</th>
-<th style="text-align: left;">Difficulty</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="psets/pset-01-unix-quarto.html">01</a></td>
-<td style="text-align: left;">Unix, Quarto</td>
-<td style="text-align: left;">Jan 19</td>
-<td style="text-align: left;">easy</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="psets/pset-02-R-data-analysis.html">02</a></td>
-<td style="text-align: left;">Data analysis with R</td>
-<td style="text-align: left;">Jan 26</td>
-<td style="text-align: left;">medium</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="./psets/pset-03-wrangling.html">03</a></td>
-<td style="text-align: left;">Wrangling</td>
-<td style="text-align: left;">Feb 2</td>
-<td style="text-align: left;">medium</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="./psets/pset-04-dataviz.html">04</a></td>
-<td style="text-align: left;">Dataviz</td>
-<td style="text-align: left;">Feb 9</td>
-<td style="text-align: left;">medium</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="./psets/pset-05-prob.html">05</a></td>
-<td style="text-align: left;">Probability</td>
-<td style="text-align: left;">Feb 23</td>
-<td style="text-align: left;">medium</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="./psets/pset-06-election.html">06</a></td>
-<td style="text-align: left;">Predict the election</td>
-<td style="text-align: left;">Mar 02</td>
-<td style="text-align: left;">hard</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="./psets/pset-07-linear-models.html">07</a></td>
-<td style="text-align: left;">Excess mortality after Hurricane María</td>
-<td style="text-align: left;">Mar 16</td>
-<td style="text-align: left;">medium</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="./psets/pset-08-matrices.html">08</a></td>
-<td style="text-align: left;">Matrices</td>
-<td style="text-align: left;">March 25</td>
-<td style="text-align: left;">easy</td>
-</tr>
-</tbody>
-</table>
-<!--
-| [10](psets/pset-10-ml.qmd)          | Digit reading | Dec 16   | hard | 
-|Final Project| Your choice | Dec 20   | hard  |-->
-</section>
-<section id="office-hour-times" class="level2">
-<h2 class="anchored" data-anchor-id="office-hour-times">Office hour times</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Meeting</th>
-<th>Time</th>
-<th>Location</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Dylan Cable</td>
-<td>Wed 2:00-3:00PM</td>
-<td>SPH I 4635</td>
-</tr>
-<tr class="even">
-<td>Yize Hao</td>
-<td>Fri 10:00-11:00AM</td>
-<td>SPH II M4034</td>
-</tr>
-</tbody>
-</table>
-<!--| Nikhil Vytla   | Wed      2:00-3:00PM     | Kresge 201         |
-| Yuan Wang | Fri    1:00-2:00PM     | [Zoom](https://harvard.zoom.us/j/98901120095?pwd=CrhPTA0Nco2rY6ggzYIfq6kQmP4VZn.1) |-->
-</section>
-<section id="acknowledgments" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
-<p>We thank <a href="https://github.com/matackett">Maria Tackett</a> and <a href="https://github.com/mine-cetinkaya-rundel">Mine Çetinkaya-Rundel</a> for sharing their <a href="https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main">web page template</a>, which we used in creating this website. We thank <a href="https://github.com/rafalab">Rafael Irizarry</a> for sharing materials.</p>
-
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -826,4 +738,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dmcable/BIOSTAT620/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/dmcable/BIOSTAT620/blob/main/psets/pset-08-matrices.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

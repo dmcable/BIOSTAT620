@@ -1,0 +1,86 @@
+---
+title: Problem set 8
+date: 2024-03-25
+---
+
+You are not allowed to load any package or use for-loop. For exercises 1 and 3-6 you only get to write one line of code for the solution.
+
+For better preparation for midterm, we recommend not using chatGPT for this homework.
+
+1. Create a 100 by 10 matrix of randomly generated standard normal numbers. Put the result in `x`. Show the subset of `x` defined by the first 5 rows and the first 4 columns.
+
+```{r}
+set.seed(2025)
+### YOUR ANSWER HERE
+```
+
+2. Apply the three R functions that give you the dimension of `x`, the number of rows of `x`, and the number of columns of `x`, respectively. Print the responses.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+3. Generate matrix `y` obtained from adding the scalar 1 to row 1, the scalar 2 to row 2, and so on, to the matrix `x`. Show the subset of `y` defined by the first 5 rows and the first 4 columns.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+4. Generate matrix `z` obtained from adding the scalar 2 to column 1, the scalar 4 to column 2, and so on, to the matrix `y`. Hint: Use `sweep` with `FUN = "+"`. Show the subset of `z` defined by the first 5 rows and the first 4 columns.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+5. Compute the average of each row of `z`. Show the first 10 elements
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+6. Use matrix multiplication to compute the average of each column of `z` and store in a single row matrix. Hint define a $1\times n$ matrix $(1/n, \dots, 1/n)$ with $n$ the `nrow(z)`. Show the first 10 elements
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+7. Use matrix multiplication and other matrix / vector operations to compute the standard deviation of each column of z. Do not use `sweep` or `apply`. Print the results. For this exercise, you must only use the following operations: `t, -, %*%, *, /,` and `as.vector`
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+8. For each digit in the MNIST training data, compute and print the overall proportion of pixels that are in a *grey area*, defined as values between 50 and 205, inclusive. Hint: use the `read_mnist` function from the `dslabs` package.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+9. Compute and print the average grey proportion by digit class. Hint: Use logical operators and `sapply`.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+10. Make a box plot of grey proportion by digit class. Each point on the boxplot should represent one training image. Hint: Use logical operators and `rowMeans`.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+11. Use the function `solve` to solve the following system of equations. Hint: use the function `solve`. Show the solution.
+
+$$
+\begin{align}
+x+2y−2z &=−15\\
+2x+y−5z&=−21\\
+x−4y+z&=18
+\end{align}
+$$
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+
+
