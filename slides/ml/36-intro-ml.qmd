@@ -1,8 +1,8 @@
 ---
 title: "Introduction"
-author: "Rafael A. Irizarry"
+author: "Dylan Cable"
 keywords: "Machine Learning"
-date: "2024-12-02"
+date: "2025-03-20"
 format:
   revealjs:
     theme: night

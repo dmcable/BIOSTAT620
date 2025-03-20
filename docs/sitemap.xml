@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/syllabus.html</loc>
-    <lastmod>2025-02-24T01:46:24.111Z</lastmod>
+    <lastmod>2025-03-19T22:58:25.057Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/productivity/04-git.html</loc>
@@ -46,19 +46,19 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/ml/42-caret.html</loc>
-    <lastmod>2025-01-08T21:19:45.697Z</lastmod>
+    <lastmod>2025-03-19T22:57:30.395Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/ml/36-intro-ml.html</loc>
-    <lastmod>2025-01-08T21:19:45.695Z</lastmod>
+    <lastmod>2025-03-19T22:56:21.656Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/ml/43-algorithms.html</loc>
-    <lastmod>2025-01-08T21:19:45.699Z</lastmod>
+    <lastmod>2025-03-19T22:57:46.719Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/ml/38-conditionals.html</loc>
-    <lastmod>2025-01-08T21:19:45.696Z</lastmod>
+    <lastmod>2025-03-19T22:56:48.915Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/R/08-ggplot2.html</loc>
@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/index.html</loc>
-    <lastmod>2025-03-18T22:44:25.048Z</lastmod>
+    <lastmod>2025-03-19T22:55:56.829Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/psets/pset-08-linear-models.html</loc>
@@ -146,7 +146,7 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides.html</loc>
-    <lastmod>2025-03-13T11:41:02.478Z</lastmod>
+    <lastmod>2025-03-19T22:58:07.993Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/psets.html</loc>
@@ -190,23 +190,23 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/ml/44-ml-in-practice.html</loc>
-    <lastmod>2025-01-08T21:19:45.699Z</lastmod>
+    <lastmod>2025-03-19T23:01:56.463Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/ml/41-resampling-methods.html</loc>
-    <lastmod>2025-01-08T21:19:45.697Z</lastmod>
+    <lastmod>2025-03-19T22:57:10.387Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/ml/37-evaluation-metrics.html</loc>
-    <lastmod>2025-01-08T21:19:45.695Z</lastmod>
+    <lastmod>2025-03-19T22:56:37.917Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/ml/40-knn.html</loc>
-    <lastmod>2025-01-08T21:19:45.696Z</lastmod>
+    <lastmod>2025-03-19T22:57:05.137Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/ml/39-smoothing.html</loc>
-    <lastmod>2025-01-08T21:19:45.696Z</lastmod>
+    <lastmod>2025-03-19T22:56:53.818Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/wrangling/10-intro-to-wrangling.html</loc>
