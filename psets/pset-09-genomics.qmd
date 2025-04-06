@@ -1,0 +1,129 @@
+---
+title: Problem set 9
+date: 2025-04-13
+---
+
+This problem set explores the analysis of high dimensional data in the application area of spatial transcriptomics. For reference, consult the following papers:
+
+* [Robust decomposition of cell type mixtures in spatial transcriptomics](https://www.nature.com/articles/s41587-021-00830-w)
+* [Cell type-specific inference of differential expression in spatial transcriptomics](https://www.nature.com/articles/s41592-022-01575-3)
+
+### Load in the data
+
+We begin by loading in the data and packages (note that `counts` is a sparse matrix):
+
+```{r, eval = FALSE}
+# required packages
+library(ggplot2)
+library(Matrix)
+library(tidyverse)
+
+#data
+counts <- readRDS('gene_counts.rds') # gene counts matrix
+coords <- readRDS('cell_coords.rds') # cell coords matrix
+
+neuron_cells <- readRDS('neuron_cells.rds') # list of neuron cell barcodes.
+other_cells <- readRDS('other_cells.rds') # list of non-neuron cell barcodes.
+
+positive_genes <- readRDS('positive_genes.rds') # list of genes specific for neurons
+negative_genes <- readRDS('negative_genes.rds') # list of genes specific for not neurons
+other_genes <- readRDS('other_genes.rds') # selected list of other genes
+
+all_genes <- c(positive_genes, negative_genes, other_genes) # all genes
+small_counts <- as.matrix(counts[all_genes, c(neuron_cells, other_cells)]) # subset of the counts
+```
+
+### Data visualization
+
+1. Begin by visualizing the coordinates of the cells in 2D space. Hint: this information is contained in the `coords` dataframe.
+
+```{r}
+set.seed(2025)
+### YOUR ANSWER HERE
+```
+
+2. Let's now visualize the expression of the Hpca gene, which is specific for neurons. Begin by creating a histogram of the counts of the gene. Hint: examine the `counts` matrix.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+3. Make a spatial plot of the gene expression of this gene. Use the cell coordinates as the spatial coordinates, and use gene expression counts as the color. Set a maximum threshold for your color scale based on the histogram above.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+### Distance
+
+4. Now, make a spatial plot of the cell types. Create a dataframe `plot_df` containing only the neurons and the non-neurons. Plot the neurons and non-neurons as two different colors. Hint: the neuron barcodes are in `neuron_cells`, and the non-neuron barcodes are in `other_cells`. 
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+5. Using only the cells selected above in `plot_df`, compute the distance matrix pairwise between each cell (hint: use `rdist` from `fields`). and compute the k-nearest-neighbors with `K = 25` (hint use `get.knn` from `FNN`). Choose the first cell, and visualize the spatial locations of the k nearest neighbors relative to that cell.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+6. For each cell, calculate the proportion of neighbors that are neurons, and visualize these proportions spatially. 
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+### Smoothing
+
+7. Using `loess`, fit a 2D spatial smoothing function to the neuron proportion values. Use `degree = 1` and `span = 0.05`. Create a spatial plot with the color as the smooth fit. 
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+8. Visualize a 1-dimensional section of the smooth function. Filter for `y` within `50` of `3000`. Plot both the proportion and the fitted smooth values in two separate colors.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+### Dimension reduction
+
+9. Using a subset of the counts (`small_counts`), perform a PCA (hint: use `prcomp`). Plot the first principal component (hint: check the `rotation` variable of the `prcomp` object) vs the total cellular count.  
+
+```{r}
+### YOUR ANSWER HERE
+```
+Comment on your finding:
+
+YOUR SHORT ANSWER HERE
+
+10. To mitigate this issue, we will normalize `small_counts` by dividing each cell by the sum of the total counts. Hint: use the `sweep` function. Repeate the PCA with the normalized count matrix. Make a plot of percent of variance explained for each of the first 500 PCs (threshold this plot at 5% variance explained). 
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+11. Make spatial plots visualizing the first four PCs in spatial coordinates.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+12. For the first 20 pcs, compute the average weight for each of the following sets of genes: `positive_genes`, `negative_genes`, and `other_genes`. Create a `geom_point` plot of these with PC index as the x-axis, average weight as the y axis, and gene list type as the color.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+13. Now, remake the previous plot for the first five PCs and include standard error bars.
+
+```{r}
+### YOUR ANSWER HERE
+```
+
+
+Which of the first 5 PCs appear to have statistically significant differences across gene types?
+
+YOUR SHORT ANSWER HERE

@@ -57,7 +57,8 @@ Mar 13 | High dimensional data| [Intro to Linear Algebra](slides/highdim/32-line
 | [05](psets/pset-05-prob.qmd)          | Probability | Feb 23   | medium | 
 | [06](psets/pset-06-election.qmd)          | Predict the election | Mar 02   |  hard | 
 | [07](psets/pset-07-linear-models.qmd)     | Excess mortality after Hurricane María | Mar 16   |  medium | 
-| [08](psets/pset-08-matrices.qmd)   | Matrices | March 25  | easy | 
+| [08](psets/pset-08-matrices.qmd)   | Matrices | March 25  | easy |
+| [09](psets/pset-09-genomics.qmd)   | Genomics (High dimensional data) | April 13  | medium | 
 
 
 <!--
