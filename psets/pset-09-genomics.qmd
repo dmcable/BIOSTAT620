@@ -10,24 +10,36 @@ This problem set explores the analysis of high dimensional data in the applicati
 
 ### Load in the data
 
-We begin by loading in the data and packages (note that `counts` is a sparse matrix):
+We begin by downloading the data. Hint: run this once and leave it as `eval = FALSE` in your script.
 
 ```{r, eval = FALSE}
+# download data
+dir.create('data')
+file_list <- c('gene_counts', 'cell_coords', 'neuron_cells', 'other_cells',
+               'positive_genes', 'negative_genes', 'other_genes')
+for(filename in file_list) {
+  download.file(paste0('https://github.com/dmcable/BIOSTAT620/raw/main/data/p9/',filename,'.rds'), 
+                destfile = paste0('data/',filename,'.rds'))
+}
+```
+Next, we load in the data and packages (note that `counts` is a sparse matrix):
+
+```{r}
 # required packages
 library(ggplot2)
 library(Matrix)
 library(tidyverse)
 
-#data
-counts <- readRDS('gene_counts.rds') # gene counts matrix
-coords <- readRDS('cell_coords.rds') # cell coords matrix
+# load data
+counts <- readRDS('data/gene_counts.rds') # gene counts matrix
+coords <- readRDS('data/cell_coords.rds') # cell coords matrix
 
-neuron_cells <- readRDS('neuron_cells.rds') # list of neuron cell barcodes.
-other_cells <- readRDS('other_cells.rds') # list of non-neuron cell barcodes.
+neuron_cells <- readRDS('data/neuron_cells.rds') # list of neuron cell barcodes.
+other_cells <- readRDS('data/other_cells.rds') # list of non-neuron cell barcodes.
 
-positive_genes <- readRDS('positive_genes.rds') # list of genes specific for neurons
-negative_genes <- readRDS('negative_genes.rds') # list of genes specific for not neurons
-other_genes <- readRDS('other_genes.rds') # selected list of other genes
+positive_genes <- readRDS('data/positive_genes.rds') # list of genes specific for neurons
+negative_genes <- readRDS('data/negative_genes.rds') # list of genes specific for not neurons
+other_genes <- readRDS('data/other_genes.rds') # selected list of other genes
 
 all_genes <- c(positive_genes, negative_genes, other_genes) # all genes
 small_counts <- as.matrix(counts[all_genes, c(neuron_cells, other_cells)]) # subset of the counts
