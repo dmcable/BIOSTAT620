@@ -84,6 +84,7 @@ set.seed(2025)
 
 ```{r}
 ### YOUR ANSWER HERE
+
 ```
 
 ### Smoothing
@@ -102,7 +103,7 @@ set.seed(2025)
 
 ### Dimension reduction
 
-9. Using a subset of the counts (`small_counts`), perform a PCA (hint: use `prcomp`). Plot the first principal component (hint: check the `rotation` variable of the `prcomp` object) vs the total cellular count.  
+9. Using a subset of the counts (`small_counts`), perform a PCA (hint: use `prcomp`). Plot the first principal component (hint: check the `x` variable of the `prcomp` object) vs the total cellular count.  
 
 ```{r}
 ### YOUR ANSWER HERE
