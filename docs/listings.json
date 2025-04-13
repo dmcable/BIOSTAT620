@@ -46,7 +46,9 @@
       "/slides/ml/41-resampling-methods.html",
       "/slides/ml/42-caret.html",
       "/slides/ml/43-algorithms.html",
-      "/slides/ml/44-ml-in-practice.html"
+      "/slides/ml/44-ml-in-practice.html",
+      "/slides/other-topics/45-association-not-causation.html",
+      "/slides/other-topics/46-shiny.html"
     ]
   },
   {
@@ -60,7 +62,8 @@
       "/psets/pset-06-election.html",
       "/psets/pset-07-linear-models.html",
       "/psets/pset-08-matrices.html",
-      "/psets/pset-09-genomics.html"
+      "/psets/pset-09-genomics.html",
+      "/psets/pset-10-ml.html"
     ]
   }
 ]

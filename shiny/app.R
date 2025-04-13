@@ -1,5 +1,3 @@
-## TO DO
-## add an action button (all dates) and an observeEvent in server
 # -- Set up
 library(tidyverse)
 library(lubridate)

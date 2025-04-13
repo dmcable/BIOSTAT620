@@ -15,6 +15,7 @@ listing:
       - slides/linear-models/*.qmd
       - slides/highdim/*.qmd
       - slides/ml/*.qmd
+      - slides/other-topics/*.qmd
       
     type: table
     fields: [keywords, title, date]

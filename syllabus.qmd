@@ -117,7 +117,9 @@ You can use ChatGPT and other AI tools to assist with questions you may have abo
 | Mar 16 | Pset 7 due |
 | Mar 25 | Pset 8 due |
 | Apr 01 | Midterm 2: cover material from Jan 09-Mar 27 | 
+| Apr 13 | Pset 9 due |
 | Apr 17 | Final project presentations day 1 |
+| Apr 20 | Pset 10 due |
 | Apr 22 | Final project presentations day 2 |
 | Apr 22 | Last day of class |
 | Apr 24 | Final Project due | 

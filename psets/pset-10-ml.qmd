@@ -1,17 +1,17 @@
 ---
 title: Problem set 10
-date: 2024-12-16
+date: 2025-04-20
 execute: 
   eval: false
 ---
 
-The data for this problem set is provided by this link: `https://github.com/datasciencelabs/2024/raw/refs/heads/main/data/pset-10-mnist.rds`
+The data for this problem set is provided by this link: `https://github.com/dmcable/BIOSTAT620/raw/refs/heads/main/data/pset-10-mnist.rds`
 
 Read this object into R. For example, you can use:
 
 ```{r}
 fn <- tempfile()
-download.file("https://github.com/datasciencelabs/2024/raw/refs/heads/main/data/pset-10-mnist.rds", fn)
+download.file("https://github.com/dmcable/BIOSTAT620/raw/refs/heads/main/data/pset-10-mnist.rds", fn)
 dat <- readRDS(fn)
 file.remove(fn)
 ```
@@ -33,9 +33,9 @@ You will submit:
 
 2. A quarto file that reproduces your analysis and provides brief explanations for your choices. 
 
-**If your code reproduces the result**, your grade will be your accuracy  rounded up the closest integer. So,for example, if your accuracy is .993 your grade will be 100%. 
+**If your code reproduces the result**, your grade will be your accuracy  rounded up the closest integer. So, for example, if your accuracy is .993 your grade will be 100%. Depending on the distribution of accuracy values, the teaching staff may issue an update about the grading system used.
 
-You will have two opportunities to submit your predictions and see your accuracy before your submitting your final predictions.
+You will have one opportunities to redo your predictions after you see your accuracy from your first submission.
 
 
 

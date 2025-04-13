@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/syllabus.html</loc>
-    <lastmod>2025-03-19T22:58:25.057Z</lastmod>
+    <lastmod>2025-04-13T22:29:34.676Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/productivity/04-git.html</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/other-topics/46-shiny.html</loc>
-    <lastmod>2025-01-08T21:19:45.701Z</lastmod>
+    <lastmod>2025-04-13T22:33:11.107Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/inference/27-hierarchical-models.html</loc>
@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/index.html</loc>
-    <lastmod>2025-04-06T21:22:43.039Z</lastmod>
+    <lastmod>2025-04-13T22:41:38.885Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/psets/pset-08-linear-models.html</loc>
@@ -134,7 +134,7 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/psets/pset-10-ml.html</loc>
-    <lastmod>2025-01-08T21:19:45.487Z</lastmod>
+    <lastmod>2025-04-13T22:28:33.721Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/psets/pset-02-r-vectorization.html</loc>
@@ -146,11 +146,11 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides.html</loc>
-    <lastmod>2025-03-19T22:58:07.993Z</lastmod>
+    <lastmod>2025-04-13T22:37:54.109Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/psets.html</loc>
-    <lastmod>2025-04-06T21:22:22.577Z</lastmod>
+    <lastmod>2025-04-13T22:37:18.576Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/dataviz/18-distributions.html</loc>
@@ -234,7 +234,7 @@
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/other-topics/45-association-not-causation.html</loc>
-    <lastmod>2025-01-08T21:19:45.701Z</lastmod>
+    <lastmod>2025-04-13T22:38:27.369Z</lastmod>
   </url>
   <url>
     <loc>https://dmcable.github.io/BIOSTAT620/slides/productivity/03-quarto.html</loc>

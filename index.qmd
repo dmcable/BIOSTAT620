@@ -35,8 +35,9 @@ Jan 16 | Data processing in R | [R basics](slides/R/05-r-basics.qmd), [Vectoriza
 Mar 13 | High dimensional data| [Intro to Linear Algebra](slides/highdim/32-linear-algebra-intro.qmd), [Matrices in R](slides/highdim/33-matrices-in-R.qmd) | [Matrices in R](https://rafalab.dfci.harvard.edu/dsbook-part-2/highdim/matrices-in-R.html), [Applied Linear Algebra](https://rafalab.dfci.harvard.edu/dsbook-part-2/highdim/linear-algebra.html), |
 | Mar 18 | High dimensional data | [Distance](slides/highdim/34-distance.qmd), [Dimension reduction](slides/highdim/35-dimension-reduction.qmd) |[Dimension Reduction](https://rafalab.dfci.harvard.edu/dsbook-part-2/highdim/dimension-reduction.html) |
 | Mar 20 | Machine Learning | [Intro](slides/ml/36-intro-ml.qmd), [Metrics](slides/ml/37-evaluation-metrics.qmd), [Conditionals](slides/ml/38-conditionals.qmd), [Smoothing](slides/ml/39-smoothing.qmd)|[Notation and terminology](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/notation-and-terminology.html), [Evaluation Metrics](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/evaluation-metrics.html), [conditional probabilities](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/conditionals.html), [smoothing](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/smoothing.html) |
-|  Mar 25, Mar 27 | Machine Learning | [kNN](slides/ml/40-knn.qmd), [Resampling methods](slides/ml/41-resampling-methods.qmd), [caret package](slides/ml/42-caret.qmd), [Algorithms](slides/ml/43-algorithms.qmd), [ML in practice](slides/ml/44-ml-in-practice.qmd)|[Resampling methods](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/resampling-methods.html), [ML algorithms](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/algorithms.html), [ML in practice](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/ml-in-practice.html) |
-
+|  Mar 25, Mar 27, Apr 03, Apr 08 | Machine Learning | [kNN](slides/ml/40-knn.qmd), [Resampling methods](slides/ml/41-resampling-methods.qmd), [caret package](slides/ml/42-caret.qmd), [Algorithms](slides/ml/43-algorithms.qmd), [ML in practice](slides/ml/44-ml-in-practice.qmd)|[Resampling methods](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/resampling-methods.html), [ML algorithms](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/algorithms.html), [ML in practice](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/ml-in-practice.html) |
+| Apr 1 | Midterm 2 | | Midterm 2: covers material from Jan 09-Mar 27|
+| Apr 10, Apr 15 | Other topics  | [Association is not causation](slides/other-topics/45-association-not-causation.qmd), [Shiny](slides/other-topics/46-shiny.qmd), [Shiny example code](https://github.com/dmcable/BIOSTAT620/tree/main/shiny)| [Association is not causation](https://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/association-not-causation.html) |
 
 <!--
 
@@ -57,13 +58,12 @@ Mar 13 | High dimensional data| [Intro to Linear Algebra](slides/highdim/32-line
 | [05](psets/pset-05-prob.qmd)          | Probability | Feb 23   | medium | 
 | [06](psets/pset-06-election.qmd)          | Predict the election | Mar 02   |  hard | 
 | [07](psets/pset-07-linear-models.qmd)     | Excess mortality after Hurricane María | Mar 16   |  medium | 
-| [08](psets/pset-08-matrices.qmd)   | Matrices | March 25  | easy |
-| [09](psets/pset-09-genomics.qmd)   | Genomics (High dimensional data) | April 13  | medium | 
+| [08](psets/pset-08-matrices.qmd)   | Matrices | Mar 25  | easy |
+| [09](psets/pset-09-genomics.qmd)   | Genomics (High dimensional data) | Apr 13  | medium |
+| [10](psets/pset-10-ml.qmd)          | Digit reading | Apr 20   | hard | 
+| Final Project | Your choice | Apr 24   | hard  |
 
 
-<!--
-| [10](psets/pset-10-ml.qmd)          | Digit reading | Dec 16   | hard | 
-|Final Project| Your choice | Dec 20   | hard  |-->
 
 ## Office hour times
 

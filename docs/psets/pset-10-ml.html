@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-12-16">
+<meta name="dcterms.date" content="2025-04-20">
 
 <title>Problem set 10 – BIOSTAT 620: Introduction to Health Data Science</title>
 <style>
@@ -165,6 +165,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../final-project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Final Project</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -189,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 16, 2024</p>
+      <p class="date">April 20, 2025</p>
     </div>
   </div>
   
@@ -201,11 +207,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The data for this problem set is provided by this link: <code>https://github.com/datasciencelabs/2024/raw/refs/heads/main/data/pset-10-mnist.rds</code></p>
+<p>The data for this problem set is provided by this link: <code>https://github.com/dmcable/BIOSTAT620/raw/refs/heads/main/data/pset-10-mnist.rds</code></p>
 <p>Read this object into R. For example, you can use:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>fn <span class="ot">&lt;-</span> <span class="fu">tempfile</span>()</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://github.com/datasciencelabs/2024/raw/refs/heads/main/data/pset-10-mnist.rds"</span>, fn)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://github.com/dmcable/BIOSTAT620/raw/refs/heads/main/data/pset-10-mnist.rds"</span>, fn)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(fn)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">file.remove</span>(fn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -220,8 +226,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>The file <code>digit_predictions.rds</code></p></li>
 <li><p>A quarto file that reproduces your analysis and provides brief explanations for your choices.</p></li>
 </ol>
-<p><strong>If your code reproduces the result</strong>, your grade will be your accuracy rounded up the closest integer. So,for example, if your accuracy is .993 your grade will be 100%.</p>
-<p>You will have two opportunities to submit your predictions and see your accuracy before your submitting your final predictions.</p>
+<p><strong>If your code reproduces the result</strong>, your grade will be your accuracy rounded up the closest integer. So, for example, if your accuracy is .993 your grade will be 100%. Depending on the distribution of accuracy values, the teaching staff may issue an update about the grading system used.</p>
+<p>You will have one opportunities to redo your predictions after you see your accuracy from your first submission.</p>
 
 
 
