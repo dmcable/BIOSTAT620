@@ -12,15 +12,11 @@ execute:
 
 ## Motivation
 
-<https://rconnect.dfci.harvard.edu/covidpr/>
+![](img/example-4.png)
 
 ## Motivation
 
-![](img/example-1.png)
-
-## Motivation
-
-![](img/example-2.png)
+![](img/example-5.png)
 
 ## Motivation
 

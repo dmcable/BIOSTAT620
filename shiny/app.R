@@ -6,7 +6,7 @@ library(shiny)
 library(shinythemes)
 library(plotly)
 
-download.file("https://github.com/rafalab/covidpr/raw/refs/heads/main/rdas/data.rda", "data.rda")
+download.file("https://github.com/dmcable/BIOSTAT620/raw/refs/heads/main/shiny/data.rda", "data.rda")
 
 source("functions.R")
 
